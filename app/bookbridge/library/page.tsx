@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { books, CATEGORIES, bookCoverUrl, coverUrl, getCategoryIcon, type Category } from "../data";
+import CategoryPicker from "../components/CategoryPicker";
 
 interface OLBook {
   key: string;
@@ -119,8 +120,10 @@ function getCoverUrl(book: OLBook): string {
   return "";
 }
 
-function buildDetailUrl(book: OLBook): string {
-  const cats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
+function buildDetailUrl(book: OLBook & { _detectedCategory?: Category }): string {
+  const cats = book._detectedCategory
+    ? [book._detectedCategory]
+    : detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
   const params = new URLSearchParams({
     title: book.title,
     author: book.author_name?.[0] ?? "Unknown",
@@ -136,6 +139,9 @@ function buildDetailUrl(book: OLBook): string {
   return `/bookbridge/book/${id}?${params.toString()}`;
 }
 
+// Cache for AI-detected categories to avoid re-fetching
+const categoryCache: Record<string, Category | "none"> = {};
+
 export default function LibraryPage() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<Category | "all">("all");
@@ -143,6 +149,49 @@ export default function LibraryPage() {
   const [searching, setSearching] = useState(false);
   const [searched, setSearched] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [aiCategories, setAiCategories] = useState<Record<string, Category | "none">>({});
+  const [pickerBook, setPickerBook] = useState<OLBook | null>(null);
+  const [categorizing, setCategorizing] = useState<string | null>(null);
+
+  const categorizeWithAI = useCallback(async (book: OLBook) => {
+    const cacheKey = book.key;
+    if (categoryCache[cacheKey]) return;
+    if (categorizing === cacheKey) return;
+
+    // First try keyword detection
+    const kwCats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
+    if (kwCats.length > 0) {
+      categoryCache[cacheKey] = kwCats[0];
+      setAiCategories(prev => ({ ...prev, [cacheKey]: kwCats[0] }));
+      return;
+    }
+
+    // Fall back to AI
+    setCategorizing(cacheKey);
+    try {
+      const res = await fetch("/api/categorize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: book.title,
+          author: book.author_name?.[0] ?? "Unknown",
+          subjects: book.subject ?? [],
+        }),
+      });
+      const data = await res.json();
+      if (data.confidence === "high" && data.category !== "none") {
+        categoryCache[cacheKey] = data.category;
+        setAiCategories(prev => ({ ...prev, [cacheKey]: data.category }));
+      } else {
+        // AI not confident — ask user
+        setPickerBook(book);
+      }
+    } catch {
+      // silently fail
+    } finally {
+      setCategorizing(null);
+    }
+  }, [categorizing]);
 
   const doSearch = useCallback(async (q: string) => {
     if (!q.trim()) {
@@ -156,13 +205,16 @@ export default function LibraryPage() {
     try {
       const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(q)}&limit=20`);
       const data = await res.json();
-      setResults(data.docs ?? []);
+      const docs: OLBook[] = data.docs ?? [];
+      setResults(docs);
+      // Auto-categorize first 5 results with AI
+      docs.slice(0, 5).forEach(book => categorizeWithAI(book));
     } catch {
       setResults([]);
     } finally {
       setSearching(false);
     }
-  }, []);
+  }, [categorizeWithAI]);
 
   useEffect(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -187,15 +239,40 @@ export default function LibraryPage() {
     return matchCat;
   });
 
+  const getBookCategory = (book: OLBook): Category | null => {
+    const aiCat = aiCategories[book.key];
+    if (aiCat && aiCat !== "none") return aiCat as Category;
+    const kwCats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
+    return kwCats[0] ?? null;
+  };
+
   const filteredResults = filter === "all"
     ? results
-    : results.filter((r) => {
-        const cats = detectCategories(r.subject ?? [], r.title, r.author_name?.[0]);
-        return cats.includes(filter);
-      });
+    : results.filter((r) => getBookCategory(r) === filter);
+
+  const handleUserPick = (category: string) => {
+    if (!pickerBook) return;
+    const cat = category as Category;
+    categoryCache[pickerBook.key] = cat;
+    setAiCategories(prev => ({ ...prev, [pickerBook.key]: cat }));
+    setPickerBook(null);
+  };
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {pickerBook && (
+        <CategoryPicker
+          bookTitle={pickerBook.title}
+          onPick={handleUserPick}
+          onSkip={() => {
+            if (pickerBook) {
+              categoryCache[pickerBook.key] = "none";
+              setAiCategories(prev => ({ ...prev, [pickerBook.key]: "none" }));
+            }
+            setPickerBook(null);
+          }}
+        />
+      )}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 bg-purple-600 pointer-events-none" />
 
       <nav className="relative z-10 flex items-center gap-4 px-6 py-5 max-w-6xl mx-auto">
@@ -263,45 +340,48 @@ export default function LibraryPage() {
             )}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
               {filteredResults.map((book) => {
-                const cats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
+                const category = getBookCategory(book);
                 const cover = getCoverUrl(book);
+                const isCategorizingThis = categorizing === book.key;
+                const detailUrl = category
+                  ? buildDetailUrl({ ...book, _detectedCategory: category } as OLBook & { _detectedCategory: Category })
+                  : null;
                 return (
-                  <Link
-                    key={book.key}
-                    href={buildDetailUrl(book)}
-                    className="group flex flex-col rounded-xl border border-[var(--prysm-border)] bg-[var(--prysm-surface)] overflow-hidden hover:border-purple-500/40 transition-colors"
-                  >
+                  <div key={book.key} className="group flex flex-col rounded-xl border border-[var(--prysm-border)] bg-[var(--prysm-surface)] overflow-hidden hover:border-purple-500/40 transition-colors">
                     <div className="aspect-[2/3] bg-[var(--prysm-bg)] relative overflow-hidden">
                       {cover ? (
-                        <img
-                          src={cover}
-                          alt={book.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                        />
+                        <img src={cover} alt={book.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-[var(--prysm-muted)] text-xs p-2 text-center">
-                          No Cover
-                        </div>
+                        <div className="w-full h-full flex items-center justify-center text-[var(--prysm-muted)] text-xs p-2 text-center">No Cover</div>
                       )}
                     </div>
                     <div className="p-3 flex flex-col gap-1.5 flex-1">
                       <h3 className="text-sm font-semibold leading-tight line-clamp-2">{book.title}</h3>
                       <p className="text-xs text-[var(--prysm-muted)]">{book.author_name?.[0] ?? "Unknown"}</p>
                       <div className="flex gap-1 flex-wrap mt-auto pt-2">
-                        {(book.subject ?? []).slice(0, 3).map((s) => (
-                          <span key={s} className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 line-clamp-1">
-                            {s}
-                          </span>
-                        ))}
-                        {cats.length > 0 && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-medium">
-                            {getCategoryIcon(cats[0])} {cats[0]}
-                          </span>
+                        {category ? (
+                          <>
+                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-medium">
+                              {getCategoryIcon(category)} {category}
+                            </span>
+                            {detailUrl && (
+                              <Link href={detailUrl} className="text-[10px] px-1.5 py-0.5 rounded bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors">
+                                Start Learning →
+                              </Link>
+                            )}
+                          </>
+                        ) : (
+                          <button
+                            onClick={() => categorizeWithAI(book)}
+                            disabled={isCategorizingThis}
+                            className="text-[10px] px-2 py-1 rounded border border-purple-500/30 text-purple-400 hover:bg-purple-500/10 transition-colors"
+                          >
+                            {isCategorizingThis ? "Thinking..." : "Categorize ✨"}
+                          </button>
                         )}
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>
