@@ -20,9 +20,8 @@ const CATEGORY_KEYWORDS: Record<Category, string[]> = {
   "sci-fi": [
     "science fiction", "sci-fi", "space", "aliens", "dystopia", "robots", "cyberpunk",
     "time travel", "extraterrestrial", "galactic", "starship", "android", "clone",
-    "mutation", "parallel universe", "post-apocalyptic", "space opera", "alien",
-    "interstellar", "futuristic", "fantasy", "supernatural", "magic", "wizards",
-    "dragons", "mythical", "paranormal",
+    "mutation", "parallel universe", "space opera", "alien", "interstellar",
+    "futuristic", "fantasy", "supernatural", "magic", "wizards", "dragons", "mythical", "paranormal",
   ],
   sports: [
     "sports", "athletics", "football", "basketball", "baseball", "soccer", "tennis",
@@ -35,21 +34,51 @@ const CATEGORY_KEYWORDS: Record<Category, string[]> = {
     "technology", "computers", "programming", "engineering", "invention", "software",
     "hardware", "coding", "internet", "startup", "silicon valley", "hacking",
     "artificial intelligence", "machine learning", "data", "innovation", "electronics",
-    "digital", "web", "app", "science", "physics", "chemistry", "biology", "math",
-    "mathematics", "robotics", "automation", "cryptocurrency", "blockchain",
+    "digital", "web", "app", "robotics", "automation", "cryptocurrency", "blockchain",
   ],
   future: [
-    "future", "dystopia", "utopia", "futurism", "cyberpunk", "post-apocalyptic",
-    "2050", "2100", "tomorrow", "next generation", "singularity", "transhumanism",
-    "virtual reality", "augmented reality", "simulation", "apocalypse", "rebuild",
-    "new world", "civilization",
+    "future", "utopia", "futurism", "post-apocalyptic", "2050", "2100",
+    "singularity", "transhumanism", "virtual reality", "augmented reality",
+    "simulation", "apocalypse", "new world",
   ],
   creative: [
     "art", "creativity", "design", "writing", "music", "painting", "drawing",
     "sculpture", "photography", "film", "cinema", "animation", "graphic",
     "illustration", "craft", "diy", "maker", "fashion", "architecture", "theater",
-    "poetry", "dance", "storytelling", "imagination", "inspiration",
-    "creative writing", "fiction writing",
+    "poetry", "dance", "storytelling", "imagination", "creative writing",
+  ],
+  history: [
+    "history", "historical", "ancient", "medieval", "war", "battle", "empire",
+    "civilization", "revolution", "biography", "autobiography", "memoir",
+    "world war", "civil war", "colonial", "dynasty", "archaeology", "mythology",
+    "historical fiction", "renaissance", "victorian", "roman", "greek", "egypt",
+  ],
+  science: [
+    "science", "physics", "chemistry", "biology", "astronomy", "geology",
+    "evolution", "genetics", "neuroscience", "ecology", "climate", "nature",
+    "natural history", "mathematics", "math", "quantum", "relativity", "cosmos",
+    "scientific", "experiment", "research", "discovery",
+  ],
+  "self-help": [
+    "self-help", "self help", "personal development", "psychology", "mindset",
+    "productivity", "motivation", "habits", "success", "leadership", "happiness",
+    "mental health", "wellness", "meditation", "mindfulness", "stoicism",
+    "philosophy", "growth", "confidence", "relationships",
+  ],
+  adventure: [
+    "adventure", "travel", "exploration", "survival", "wilderness", "expedition",
+    "journey", "quest", "outdoors", "hiking", "climbing", "sailing", "diving",
+    "treasure", "mystery", "thriller", "action", "escape", "rescue",
+  ],
+  business: [
+    "business", "entrepreneurship", "startup", "finance", "economics", "money",
+    "investing", "marketing", "management", "strategy", "leadership", "corporate",
+    "innovation", "industry", "commerce", "trade", "negotiation", "networking",
+  ],
+  mystery: [
+    "mystery", "detective", "crime", "thriller", "suspense", "murder", "investigation",
+    "whodunit", "noir", "spy", "espionage", "horror", "ghost", "psychological thriller",
+    "forensic", "serial killer", "heist", "conspiracy",
   ],
 };
 
@@ -66,6 +95,7 @@ function scoreCategories(texts: string[]): Record<Category, number> {
   const lower = texts.map((s) => s.toLowerCase());
   const scores: Record<Category, number> = {
     "sci-fi": 0, sports: 0, tech: 0, future: 0, creative: 0,
+    history: 0, science: 0, "self-help": 0, adventure: 0, business: 0, mystery: 0,
   };
   const isYA = lower.some((s) => s.includes("juvenile fiction") || s.includes("young adult"));
 

@@ -1,23 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CATEGORIES = ["sci-fi", "sports", "tech", "future", "creative"] as const;
+const CATEGORIES = ["sci-fi", "sports", "tech", "future", "creative", "history", "science", "self-help", "adventure", "business", "mystery"] as const;
 
 export async function POST(req: NextRequest) {
   const { title, author, subjects } = await req.json();
 
   const prompt = `You are a book categorizer. Given a book's title, author, and subjects, pick the best matching category from this list:
-- sci-fi: science fiction, fantasy, space, dystopia, robots, magic, supernatural
-- sports: athletics, any sport, fitness, competition
-- tech: technology, computers, programming, engineering, science, innovation
-- future: futurism, post-apocalyptic, utopia, next generation, cyberpunk
-- creative: art, writing, music, design, photography, film, crafts, poetry
+- sci-fi: science fiction, fantasy, space, dystopia, robots, magic, supernatural, aliens
+- sports: athletics, any sport, fitness, competition, coaching
+- tech: technology, computers, programming, engineering, AI, robotics, hacking
+- future: futurism, post-apocalyptic, utopia, cyberpunk, transhumanism
+- creative: art, writing, music, design, photography, film, poetry, theater
+- history: historical events, wars, biographies, ancient civilizations, archaeology
+- science: physics, biology, chemistry, astronomy, nature, evolution, mathematics
+- self-help: psychology, productivity, mindset, personal growth, meditation, philosophy
+- adventure: travel, exploration, survival, wilderness, quests, action, treasure
+- business: entrepreneurship, finance, economics, investing, marketing, leadership
+- mystery: detective, crime, thriller, horror, suspense, spy, conspiracy
 
 Book: "${title}" by ${author}
 Subjects: ${subjects.slice(0, 8).join(", ")}
 
 Respond with ONLY valid JSON, no markdown:
 {
-  "category": "sci-fi" | "sports" | "tech" | "future" | "creative" | "none",
+  "category": "sci-fi" | "sports" | "tech" | "future" | "creative" | "history" | "science" | "self-help" | "adventure" | "business" | "mystery" | "none",
   "confidence": "high" | "low",
   "reason": "one short sentence"
 }

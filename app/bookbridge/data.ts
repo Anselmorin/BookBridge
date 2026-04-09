@@ -8,7 +8,7 @@ export interface Book {
   description: string;
 }
 
-export type Category = "sci-fi" | "sports" | "tech" | "future" | "creative";
+export type Category = "sci-fi" | "sports" | "tech" | "future" | "creative" | "history" | "science" | "self-help" | "adventure" | "business" | "mystery";
 export type Language = "spanish" | "french" | "italian" | "japanese";
 
 export const CATEGORIES: { id: Category; label: string; icon: string }[] = [
@@ -17,6 +17,12 @@ export const CATEGORIES: { id: Category; label: string; icon: string }[] = [
   { id: "tech", label: "Tech", icon: "💻" },
   { id: "future", label: "Future", icon: "🔮" },
   { id: "creative", label: "Creative", icon: "🎨" },
+  { id: "history", label: "History", icon: "📜" },
+  { id: "science", label: "Science", icon: "🔬" },
+  { id: "self-help", label: "Self-Help", icon: "🧠" },
+  { id: "adventure", label: "Adventure", icon: "🗺️" },
+  { id: "business", label: "Business", icon: "💼" },
+  { id: "mystery", label: "Mystery", icon: "🕵️" },
 ];
 
 export const LANGUAGES: { id: Language; label: string; flag: string }[] = [
