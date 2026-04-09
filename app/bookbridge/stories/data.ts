@@ -607,10 +607,10 @@ export const sciFiSeriesJapanese: Series = {
 };
 
 // === NEW STORY IMPORTS ===
-import { sportsSeriesSpanish, techSeriesSpanish, futureSeriesSpanish, creativeSeriesSpanish, historySeriesSpanish, scienceSeriesSpanish, selfHelpSeriesSpanish, adventureSeriesSpanish, mysterySeriesSpanish } from './spanish-new';
-import { sportsSeriesFrench, techSeriesFrench, futureSeriesFrench, creativeSeriesFrench, historySeriesFrench, scienceSeriesFrench, selfHelpSeriesFrench, adventureSeriesFrench, mysterySeriesFrench } from './french-new';
-import { laPartitaEpisode, ilProgrammaEpisode, laCittaDelFuturoEpisode, ilCapolavoroEpisode, historySeriesItalian, scienceSeriesItalian, selfHelpSeriesItalian, adventureSeriesItalian, mysterySeriesItalian } from './italian-new';
-import { sportsSeries as sportsSeriesJapanese, techSeries as techSeriesJapanese, futureSeries as futureSeriesJapaneseNew, creativeSeries as creativeSeriesJapanese, historySeries as historySeriesJapanese, scienceSeriesNew as scienceSeriesJapanese, selfHelpSeries as selfHelpSeriesJapanese, adventureSeries as adventureSeriesJapanese, mysterySeries as mysterySeriesJapanese } from './japanese-new';
+import { sportsSeriesSpanish, techSeriesSpanish, futureSeriesSpanish, creativeSeriesSpanish, historySeriesSpanish, scienceSeriesSpanish, selfHelpSeriesSpanish, adventureSeriesSpanish, mysterySeriesSpanish, businessSeriesSpanish } from './spanish-new';
+import { sportsSeriesFrench, techSeriesFrench, futureSeriesFrench, creativeSeriesFrench, historySeriesFrench, scienceSeriesFrench, selfHelpSeriesFrench, adventureSeriesFrench, mysterySeriesFrench, businessSeriesFrench } from './french-new';
+import { laPartitaEpisode, ilProgrammaEpisode, laCittaDelFuturoEpisode, ilCapolavoroEpisode, historySeriesItalian, scienceSeriesItalian, selfHelpSeriesItalian, adventureSeriesItalian, mysterySeriesItalian, businessSeriesItalian } from './italian-new';
+import { sportsSeries as sportsSeriesJapanese, techSeries as techSeriesJapanese, futureSeries as futureSeriesJapaneseNew, creativeSeries as creativeSeriesJapanese, historySeries as historySeriesJapanese, scienceSeriesNew as scienceSeriesJapanese, selfHelpSeries as selfHelpSeriesJapanese, adventureSeries as adventureSeriesJapanese, mysterySeries as mysterySeriesJapanese, businessSeries as businessSeriesJapanese } from './japanese-new';
 
 // Italian series
 export const sportsSeriesItalian: Series = {
@@ -664,6 +664,7 @@ export const allSeries: Series[] = [
   selfHelpSeriesSpanish,
   adventureSeriesSpanish,
   mysterySeriesSpanish,
+  businessSeriesSpanish,
   // French (new)
   sportsSeriesFrench,
   techSeriesFrench,
@@ -674,6 +675,7 @@ export const allSeries: Series[] = [
   selfHelpSeriesFrench,
   adventureSeriesFrench,
   mysterySeriesFrench,
+  businessSeriesFrench,
   // Italian (new)
   sportsSeriesItalian,
   techSeriesItalian,
@@ -684,6 +686,7 @@ export const allSeries: Series[] = [
   selfHelpSeriesItalian,
   adventureSeriesItalian,
   mysterySeriesItalian,
+  businessSeriesItalian,
   // Japanese (new)
   sportsSeriesJapanese,
   techSeriesJapanese,
@@ -694,6 +697,7 @@ export const allSeries: Series[] = [
   selfHelpSeriesJapanese,
   adventureSeriesJapanese,
   mysterySeriesJapanese,
+  businessSeriesJapanese,
 ];
 
 // Helper functions
