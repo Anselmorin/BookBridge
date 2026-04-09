@@ -2016,6 +2016,245 @@ export const frenchEpisodes = [
   leFantomeDuChateauEpisode
 ];
 
+// ============================================================
+// 💼 BUSINESS — "La Citronnade de Léo" (Léo's Lemonade)
+// ============================================================
+
+export const laCitronnadeDeLeoEpisode: Episode = {
+  id: "la-citronnade-de-leo",
+  title: "La Citronnade de Léo",
+  description: "A ten-year-old boy launches a lemonade stand and discovers what it takes to run a real business",
+  vocab: [
+    { word: "l'entreprise", pronunciation: "lahn-truh-PREEZ", english: "the business" },
+    { word: "vendre", pronunciation: "VAHN-druh", english: "to sell" },
+    { word: "le client", pronunciation: "luh klee-AHN", english: "the customer" },
+    { word: "l'argent", pronunciation: "lar-ZHAHN", english: "the money" },
+    { word: "le prix", pronunciation: "luh PREE", english: "the price" },
+    { word: "le bénéfice", pronunciation: "luh bay-nay-FEES", english: "the profit" },
+    { word: "économiser", pronunciation: "ay-koh-noh-mee-ZAY", english: "to save (money)" },
+    { word: "le plan", pronunciation: "luh PLAHN", english: "the plan" },
+    { word: "l'objectif", pronunciation: "lob-zhek-TEEF", english: "the goal" },
+    { word: "la réussite", pronunciation: "lah ray-oo-SEET", english: "the success" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Big Idea",
+      content: `Léo stared at the broken scooter in the garage. A new one cost forty euros — money he definitely didn't have. But Léo had **un plan**.
+
+"I'm going to start **une entreprise**," he announced at dinner. His older sister Chloé nearly spit out her soup.
+
+"You're ten," she said.
+
+"So? **J'ai un objectif.**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "La Citronnade de Léo."
+
+His mom smiled. "How much will you charge?"
+
+Léo had thought about this. "**Le prix** will be one euro per glass. Lemons cost about twenty cents each. Sugar, water, cups — maybe another thirty cents. That means **le bénéfice** is about fifty cents per glass."
+
+"That's... actually not bad," Chloé admitted.
+
+The next morning, Léo used his pocket money to buy supplies. He set up a small table on the sidewalk outside their house with a bright yellow sign. He squeezed lemons until his hands were sore and mixed the lemonade in a big pitcher.
+
+His first **client** was Madame Dupont from next door. "**Combien ça coûte ?**" How much does it cost?
+
+"**Un euro,**" Léo said proudly. One euro.
+
+Madame Dupont took a sip and smiled. "**C'est délicieux.** Worth every centime."
+
+By the end of the day, Léo had sold twelve glasses. He counted **l'argent** carefully — twelve euros. He subtracted the cost of supplies: four euros and eighty cents.
+
+"**Le bénéfice** is seven euros and twenty cents," he whispered. It wasn't forty euros. Not yet. But **l'entreprise** had begun.`,
+      translatedWords: [
+        { word: "un plan", translation: "a plan" },
+        { word: "une entreprise", translation: "a business" },
+        { word: "J'ai un objectif", translation: "I have a goal" },
+        { word: "Le prix", translation: "The price" },
+        { word: "le bénéfice", translation: "the profit" },
+        { word: "client", translation: "customer" },
+        { word: "Combien ça coûte ?", translation: "How much does it cost?" },
+        { word: "Un euro", translation: "One euro" },
+        { word: "C'est délicieux", translation: "It's delicious" },
+        { word: "l'argent", translation: "the money" },
+        { word: "l'entreprise", translation: "the business" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Growing Pains",
+      content: `By Friday, word had spread. Léo was **vendant** lemonade every afternoon after school, and **les clients** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
+
+"You need to think bigger," Chloé said, watching him turn people away. "**Tu as besoin d'un meilleur plan.**" You need a better plan.
+
+Léo didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk, each cup would cost five cents instead of fifteen. That meant more **bénéfice** per glass.
+
+"Maman, can you drive me to the wholesale store?" he asked.
+
+She raised an eyebrow. "That's a business expense. Are you sure?"
+
+"**C'est un investissement,**" Léo said. It's an investment. He'd heard that word on a TV show about **les entreprises**.
+
+He spent eight euros on two hundred cups and a giant bag of sugar. It felt scary spending **l'argent** to make **l'argent**, but **le plan** made sense on paper.
+
+On Saturday, he added a new flavor — strawberry — and raised **le prix** to one euro fifty. He made a new sign: "DEUX PARFUMS !" Two flavors!
+
+The line stretched down the sidewalk. Kids from school came. Parents came. Even Chloé's friends bought glasses and posted photos online.
+
+By Sunday night, Léo counted everything. He'd sold sixty-eight glasses over the weekend. After all costs, **le bénéfice** was forty-two euros.
+
+He stared at the money. **L'objectif** was forty euros for a scooter. He'd passed it.
+
+"**J'ai réussi !**" he shouted. I did it! He ran downstairs waving the bills.
+
+His mom hugged him. "**Je suis fière de toi.** But what about **l'entreprise**? Are you going to stop?"
+
+Léo looked at the money, then at his lemonade supplies still stacked in the garage. He'd worked hard. People loved his lemonade. Why stop at one scooter?
+
+"No," he said, grinning. "This is just the beginning. **La réussite** is just getting started."
+
+Chloé rolled her eyes but smiled. "Fine. But I want ten percent for marketing advice."
+
+"Five percent," Léo shot back.
+
+"Deal."
+
+**L'entreprise** de Léo was here to stay.`,
+      translatedWords: [
+        { word: "vendant", translation: "selling" },
+        { word: "les clients", translation: "the customers" },
+        { word: "Tu as besoin d'un meilleur plan", translation: "You need a better plan" },
+        { word: "bénéfice", translation: "profit" },
+        { word: "C'est un investissement", translation: "It's an investment" },
+        { word: "les entreprises", translation: "businesses" },
+        { word: "l'argent", translation: "money" },
+        { word: "le plan", translation: "the plan" },
+        { word: "le prix", translation: "the price" },
+        { word: "L'objectif", translation: "The goal" },
+        { word: "le bénéfice", translation: "the profit" },
+        { word: "J'ai réussi !", translation: "I did it!" },
+        { word: "Je suis fière de toi", translation: "I'm proud of you" },
+        { word: "l'entreprise", translation: "the business" },
+        { word: "La réussite", translation: "The success" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Léo regardait la trottinette cassée dans le garage. Une nouvelle coûtait quarante euros — de l'argent qu'il n'avait définitivement pas. Mais Léo avait un plan.
+
+"Je vais créer une entreprise," annonça-t-il au dîner. Sa grande sœur Chloé a failli recracher sa soupe.
+
+"Tu as dix ans," dit-elle.
+
+"Et alors ? J'ai un objectif." Il montra un dessin d'un stand de citronnade avec un grand panneau qui disait "La Citronnade de Léo."
+
+Sa maman sourit. "Combien tu vas demander ?"
+
+Léo avait réfléchi à la question. "Le prix sera d'un euro le verre. Les citrons coûtent environ vingt centimes chacun. Le sucre, l'eau, les gobelets — peut-être encore trente centimes. Ça veut dire que le bénéfice est d'environ cinquante centimes par verre."
+
+"C'est... pas mal en fait," admit Chloé.
+
+Le lendemain matin, Léo utilisa son argent de poche pour acheter des fournitures. Il installa une petite table sur le trottoir devant chez eux avec un panneau jaune vif. Il pressa des citrons jusqu'à avoir mal aux mains et mélangea la citronnade dans un grand pichet.
+
+Son premier client fut Madame Dupont d'à côté. "Combien ça coûte ?"
+
+"Un euro," dit Léo fièrement.
+
+Madame Dupont prit une gorgée et sourit. "C'est délicieux. Ça vaut chaque centime."
+
+À la fin de la journée, Léo avait vendu douze verres. Il compta l'argent soigneusement — douze euros. Il soustrait le coût des fournitures : quatre euros et quatre-vingts centimes.
+
+"Le bénéfice est de sept euros et vingt centimes," murmura-t-il. Ce n'était pas quarante euros. Pas encore. Mais l'entreprise avait commencé.
+
+Vendredi, le bruit s'était répandu. Léo vendait de la citronnade tous les après-midis après l'école, et les clients continuaient à venir. Mais il y avait un problème — il n'avait plus de gobelets avant de manquer de clients.
+
+"Tu dois voir plus grand," dit Chloé en le regardant refuser des gens. "Tu as besoin d'un meilleur plan."
+
+Léo ne voulait pas l'admettre, mais elle avait raison. Ce soir-là, il s'assit à son bureau et nota des chiffres. S'il achetait des gobelets en gros, chaque gobelet coûterait cinq centimes au lieu de quinze. Cela signifiait plus de bénéfice par verre.
+
+"Maman, tu peux m'emmener au magasin de gros ?" demanda-t-il.
+
+Elle leva un sourcil. "C'est une dépense professionnelle. Tu es sûr ?"
+
+"C'est un investissement," dit Léo.
+
+Il dépensa huit euros pour deux cents gobelets et un sac géant de sucre. C'était effrayant de dépenser de l'argent pour gagner de l'argent, mais le plan avait du sens sur papier.
+
+Samedi, il ajouta un nouveau parfum — fraise — et augmenta le prix à un euro cinquante. Il fit un nouveau panneau : "DEUX PARFUMS !"
+
+La file s'étendait le long du trottoir. Des enfants de l'école vinrent. Des parents vinrent. Même les amies de Chloé achetèrent des verres et postèrent des photos en ligne.
+
+Dimanche soir, Léo compta tout. Il avait vendu soixante-huit verres pendant le week-end. Après tous les coûts, le bénéfice était de quarante-deux euros.
+
+Il fixa l'argent du regard. L'objectif était quarante euros pour une trottinette. Il l'avait dépassé.
+
+"J'ai réussi !" cria-t-il. Il descendit les escaliers en courant, agitant les billets.
+
+Sa maman le serra dans ses bras. "Je suis fière de toi. Mais qu'en est-il de l'entreprise ? Tu vas arrêter ?"
+
+Léo regarda l'argent, puis ses fournitures de citronnade encore empilées dans le garage. Il avait travaillé dur. Les gens adoraient sa citronnade. Pourquoi s'arrêter à une trottinette ?
+
+"Non," dit-il en souriant. "Ce n'est que le début. La réussite ne fait que commencer."
+
+Chloé leva les yeux au ciel mais sourit. "D'accord. Mais je veux dix pour cent pour mes conseils en marketing."
+
+"Cinq pour cent," répliqua Léo.
+
+"Marché conclu."
+
+L'entreprise de Léo était là pour rester.`,
+  quiz: [
+    // Fill in the blank (4)
+    { id: "bus-fb1", type: "fill-blank", question: "\"The business\" in French is ___", answer: "l'entreprise" },
+    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in French is ___", answer: "le client" },
+    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in French is ___", answer: "le bénéfice" },
+    { id: "bus-fb4", type: "fill-blank", question: "\"To save (money)\" in French is ___", answer: "économiser" },
+
+    // Multiple choice (4)
+    {
+      id: "bus-mc1",
+      type: "multiple-choice",
+      question: "What does 'vendre' mean?",
+      answer: "to sell",
+      options: ["to buy", "to sell", "to save", "to spend"]
+    },
+    {
+      id: "bus-mc2",
+      type: "multiple-choice",
+      question: "What does 'le prix' mean?",
+      answer: "the price",
+      options: ["the prize", "the price", "the profit", "the plan"]
+    },
+    {
+      id: "bus-mc3",
+      type: "multiple-choice",
+      question: "What does 'l'objectif' mean?",
+      answer: "the goal",
+      options: ["the object", "the obstacle", "the goal", "the opinion"]
+    },
+    {
+      id: "bus-mc4",
+      type: "multiple-choice",
+      question: "What does 'la réussite' mean?",
+      answer: "success",
+      options: ["the recipe", "success", "the result", "the reward"]
+    },
+
+    // Translate (4)
+    { id: "bus-tr1", type: "translate", question: "Translate to French: 'the money'", answer: "l'argent" },
+    { id: "bus-tr2", type: "translate", question: "Translate to English: 'l'entreprise'", answer: "the business" },
+    { id: "bus-tr3", type: "translate", question: "Translate to French: 'the plan'", answer: "le plan" },
+    { id: "bus-tr4", type: "translate", question: "Translate to English: 'économiser'", answer: "to save (money)" }
+  ]
+};
+
+export const businessSeriesFrench: Series = {
+  id: "la-citronnade-de-leo",
+  title: "La Citronnade de Léo",
+  description: "A ten-year-old boy launches a lemonade stand and discovers what it takes to run a real business",
+  category: "business",
+  language: 'french' as any,
+  episodes: [laCitronnadeDeLeoEpisode]
+};
+
 // Combined export
 export const allNewFrenchSeries: Series[] = [
   sportsSeriesFrench,
@@ -2026,7 +2265,8 @@ export const allNewFrenchSeries: Series[] = [
   scienceSeriesFrench,
   selfHelpSeriesFrench,
   adventureSeriesFrench,
-  mysterySeriesFrench
+  mysterySeriesFrench,
+  businessSeriesFrench
 ];
 
 

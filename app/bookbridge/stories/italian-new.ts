@@ -2225,6 +2225,245 @@ export const mysterySeriesItalian = {
   episodes: [ilFantasmaEpisode],
 };
 
+// ============================================================
+// 💼 BUSINESS — "La Limonata di Luca" (Luca's Lemonade)
+// ============================================================
+
+export const laLimonataDiLucaEpisode: Episode = {
+  id: "la-limonata-di-luca",
+  title: "La Limonata di Luca",
+  description: "A ten-year-old boy turns a simple lemonade stand into the hottest business on the block",
+  vocab: [
+    { word: "l'attività", pronunciation: "lat-tee-vee-TAH", english: "the business" },
+    { word: "vendere", pronunciation: "VEN-deh-reh", english: "to sell" },
+    { word: "il cliente", pronunciation: "eel klee-EN-teh", english: "the customer" },
+    { word: "i soldi", pronunciation: "ee SOL-dee", english: "the money" },
+    { word: "il prezzo", pronunciation: "eel PRET-tsoh", english: "the price" },
+    { word: "il guadagno", pronunciation: "eel gwah-DAH-nyoh", english: "the profit" },
+    { word: "risparmiare", pronunciation: "ree-spar-mee-AH-reh", english: "to save (money)" },
+    { word: "il piano", pronunciation: "eel pee-AH-noh", english: "the plan" },
+    { word: "l'obiettivo", pronunciation: "loh-bee-et-TEE-voh", english: "the goal" },
+    { word: "il successo", pronunciation: "eel soo-CHES-soh", english: "the success" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Big Idea",
+      content: `Luca stared at the broken skateboard in the garage. A new one cost forty euros — money he definitely didn't have. But Luca had **un piano**.
+
+"I'm going to start **un'attività**," he announced at dinner. His older sister Giulia almost choked on her pasta.
+
+"You're ten," she said.
+
+"So? **Ho un obiettivo.**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "La Limonata di Luca."
+
+His mom smiled. "How much will you charge?"
+
+Luca had thought about this. "**Il prezzo** will be one euro per glass. Lemons cost about twenty cents each. Sugar, water, cups — maybe another thirty cents. That means **il guadagno** is about fifty cents per glass."
+
+"That's... actually not bad," Giulia admitted.
+
+The next morning, Luca used his pocket money to buy supplies. He set up a small table on the sidewalk with a bright yellow sign. He squeezed lemons until his hands were sore and mixed the lemonade in a big pitcher.
+
+His first **cliente** was Signora Rossi from next door. "**Quanto costa?**" How much does it cost?
+
+"**Un euro,**" Luca said proudly. One euro.
+
+Signora Rossi took a sip and smiled. "**È deliziosa.** Worth every cent."
+
+By the end of the day, Luca had sold twelve glasses. He counted **i soldi** carefully — twelve euros. He subtracted the cost of supplies: four euros and eighty cents.
+
+"**Il guadagno** is seven euros and twenty cents," he whispered. It wasn't forty euros. Not yet. But **l'attività** had begun.`,
+      translatedWords: [
+        { word: "un piano", translation: "a plan" },
+        { word: "un'attività", translation: "a business" },
+        { word: "Ho un obiettivo", translation: "I have a goal" },
+        { word: "Il prezzo", translation: "The price" },
+        { word: "il guadagno", translation: "the profit" },
+        { word: "cliente", translation: "customer" },
+        { word: "Quanto costa?", translation: "How much does it cost?" },
+        { word: "Un euro", translation: "One euro" },
+        { word: "È deliziosa", translation: "It's delicious" },
+        { word: "i soldi", translation: "the money" },
+        { word: "l'attività", translation: "the business" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Growing Pains",
+      content: `By Friday, word had spread. Luca was **vendendo** lemonade every afternoon after school, and **i clienti** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
+
+"You need to think bigger," Giulia said, watching him turn people away. "**Hai bisogno di un piano migliore.**" You need a better plan.
+
+Luca didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk, each cup would cost five cents instead of fifteen. That meant more **guadagno** per glass.
+
+"Mamma, can you drive me to the wholesale store?" he asked.
+
+She raised an eyebrow. "That's a business expense. Are you sure?"
+
+"**È un investimento,**" Luca said. It's an investment. He'd heard that word on a TV show about **le attività**.
+
+He spent eight euros on two hundred cups and a giant bag of sugar. It felt scary spending **soldi** to make **soldi**, but **il piano** made sense on paper.
+
+On Saturday, he added a new flavor — strawberry — and raised **il prezzo** to one euro fifty. He made a new sign: "DUE GUSTI!" Two flavors!
+
+The line stretched down the sidewalk. Kids from school came. Parents came. Even Giulia's friends bought glasses and posted photos online.
+
+By Sunday night, Luca counted everything. He'd sold sixty-eight glasses over the weekend. After all costs, **il guadagno** was forty-two euros.
+
+He stared at the money. **L'obiettivo** was forty euros for a skateboard. He'd passed it.
+
+"**Ce l'ho fatta!**" he shouted. I did it! He ran downstairs waving the bills.
+
+His mom hugged him. "**Sono fiera di te.** But what about **l'attività**? Are you going to stop?"
+
+Luca looked at the money, then at his lemonade supplies still stacked in the garage. He'd worked hard. People loved his lemonade. Why stop at one skateboard?
+
+"No," he said, grinning. "This is just the beginning. **Il successo** is just getting started."
+
+Giulia rolled her eyes but smiled. "Fine. But I want ten percent for marketing advice."
+
+"Five percent," Luca shot back.
+
+"Deal."
+
+**L'attività** di Luca was here to stay.`,
+      translatedWords: [
+        { word: "vendendo", translation: "selling" },
+        { word: "i clienti", translation: "the customers" },
+        { word: "Hai bisogno di un piano migliore", translation: "You need a better plan" },
+        { word: "guadagno", translation: "profit" },
+        { word: "È un investimento", translation: "It's an investment" },
+        { word: "le attività", translation: "businesses" },
+        { word: "soldi", translation: "money" },
+        { word: "il piano", translation: "the plan" },
+        { word: "il prezzo", translation: "the price" },
+        { word: "L'obiettivo", translation: "The goal" },
+        { word: "il guadagno", translation: "the profit" },
+        { word: "Ce l'ho fatta!", translation: "I did it!" },
+        { word: "Sono fiera di te", translation: "I'm proud of you" },
+        { word: "l'attività", translation: "the business" },
+        { word: "Il successo", translation: "The success" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Luca fissava lo skateboard rotto nel garage. Uno nuovo costava quaranta euro — soldi che sicuramente non aveva. Ma Luca aveva un piano.
+
+"Aprirò un'attività," annunciò a cena. La sua sorella maggiore Giulia quasi si strozzò con la pasta.
+
+"Hai dieci anni," disse lei.
+
+"E allora? Ho un obiettivo." Mostrò un disegno di un banchetto di limonata con un grande cartello che diceva "La Limonata di Luca."
+
+La sua mamma sorrise. "Quanto farai pagare?"
+
+Luca ci aveva pensato. "Il prezzo sarà un euro al bicchiere. I limoni costano circa venti centesimi l'uno. Zucchero, acqua, bicchieri — forse altri trenta centesimi. Questo significa che il guadagno è circa cinquanta centesimi a bicchiere."
+
+"In realtà... non è male," ammise Giulia.
+
+La mattina seguente, Luca usò la sua paghetta per comprare le provviste. Sistemò un tavolino sul marciapiede con un cartello giallo vivace. Spremette limoni finché gli facevano male le mani e mescolò la limonata in una grande brocca.
+
+Il suo primo cliente fu la Signora Rossi della porta accanto. "Quanto costa?"
+
+"Un euro," disse Luca con orgoglio.
+
+La Signora Rossi prese un sorso e sorrise. "È deliziosa. Vale ogni centesimo."
+
+Alla fine della giornata, Luca aveva venduto dodici bicchieri. Contò i soldi attentamente — dodici euro. Sottrasse il costo delle provviste: quattro euro e ottanta centesimi.
+
+"Il guadagno è sette euro e venti centesimi," sussurrò. Non erano quaranta euro. Non ancora. Ma l'attività era iniziata.
+
+Entro venerdì, si era sparsa la voce. Luca vendeva limonata ogni pomeriggio dopo la scuola, e i clienti continuavano a venire. Ma c'era un problema — finiva i bicchieri prima di finire i clienti.
+
+"Devi pensare in grande," disse Giulia, guardandolo mandare via la gente. "Hai bisogno di un piano migliore."
+
+Luca non voleva ammetterlo, ma lei aveva ragione. Quella sera si sedette alla scrivania e scrisse dei numeri. Se comprava i bicchieri all'ingrosso, ogni bicchiere sarebbe costato cinque centesimi invece di quindici. Questo significava più guadagno a bicchiere.
+
+"Mamma, puoi portarmi al negozio all'ingrosso?" chiese.
+
+Lei alzò un sopracciglio. "È una spesa aziendale. Sei sicuro?"
+
+"È un investimento," disse Luca.
+
+Spese otto euro per duecento bicchieri e un sacco gigante di zucchero. Faceva paura spendere soldi per fare soldi, ma il piano aveva senso sulla carta.
+
+Sabato aggiunse un nuovo gusto — fragola — e alzò il prezzo a un euro e cinquanta. Fece un nuovo cartello: "DUE GUSTI!"
+
+La fila si estendeva lungo il marciapiede. Bambini della scuola vennero. Genitori vennero. Perfino le amiche di Giulia comprarono bicchieri e postarono foto online.
+
+Domenica sera, Luca contò tutto. Aveva venduto sessantotto bicchieri durante il fine settimana. Dopo tutti i costi, il guadagno era quarantadue euro.
+
+Fissò i soldi. L'obiettivo era quaranta euro per uno skateboard. L'aveva superato.
+
+"Ce l'ho fatta!" gridò. Corse giù per le scale agitando le banconote.
+
+La mamma lo abbracciò. "Sono fiera di te. Ma l'attività? Ti fermi?"
+
+Luca guardò i soldi, poi le provviste di limonata ancora accatastate nel garage. Aveva lavorato sodo. Alla gente piaceva la sua limonata. Perché fermarsi a uno skateboard?
+
+"No," disse sorridendo. "Questo è solo l'inizio. Il successo sta appena cominciando."
+
+Giulia alzò gli occhi al cielo ma sorrise. "Va bene. Ma voglio il dieci per cento per i consigli di marketing."
+
+"Cinque per cento," rispose Luca.
+
+"Affare fatto."
+
+L'attività di Luca era qui per restare.`,
+  quiz: [
+    // Fill in the blank (4)
+    { id: "bus-fb1", type: "fill-blank", question: "\"The business\" in Italian is ___", answer: "l'attività" },
+    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in Italian is ___", answer: "il cliente" },
+    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in Italian is ___", answer: "il guadagno" },
+    { id: "bus-fb4", type: "fill-blank", question: "\"To save (money)\" in Italian is ___", answer: "risparmiare" },
+
+    // Multiple choice (4)
+    {
+      id: "bus-mc1",
+      type: "multiple-choice",
+      question: "What does 'vendere' mean?",
+      answer: "to sell",
+      options: ["to buy", "to sell", "to save", "to spend"]
+    },
+    {
+      id: "bus-mc2",
+      type: "multiple-choice",
+      question: "What does 'il prezzo' mean?",
+      answer: "the price",
+      options: ["the prize", "the price", "the profit", "the plan"]
+    },
+    {
+      id: "bus-mc3",
+      type: "multiple-choice",
+      question: "What does 'l'obiettivo' mean?",
+      answer: "the goal",
+      options: ["the object", "the obstacle", "the goal", "the opinion"]
+    },
+    {
+      id: "bus-mc4",
+      type: "multiple-choice",
+      question: "What does 'il successo' mean?",
+      answer: "success",
+      options: ["the successor", "success", "the suggestion", "the support"]
+    },
+
+    // Translate (4)
+    { id: "bus-tr1", type: "translate", question: "Translate to Italian: 'the money'", answer: "i soldi" },
+    { id: "bus-tr2", type: "translate", question: "Translate to English: 'l'attività'", answer: "the business" },
+    { id: "bus-tr3", type: "translate", question: "Translate to Italian: 'the plan'", answer: "il piano" },
+    { id: "bus-tr4", type: "translate", question: "Translate to English: 'risparmiare'", answer: "to save (money)" }
+  ]
+};
+
+export const businessSeriesItalian = {
+  id: 'la-limonata-di-luca',
+  title: 'La Limonata di Luca',
+  description: 'A ten-year-old boy turns a simple lemonade stand into the hottest business on the block',
+  category: 'business',
+  language: 'italian' as any,
+  episodes: [laLimonataDiLucaEpisode],
+};
+
 // ─── All Italian series (for convenience imports) ────────────────────────────
 export const allItalianSeries = [
   sportsSeriesItalian,
@@ -2236,6 +2475,7 @@ export const allItalianSeries = [
   selfHelpSeriesItalian,
   adventureSeriesItalian,
   mysterySeriesItalian,
+  businessSeriesItalian,
 ];
 
 

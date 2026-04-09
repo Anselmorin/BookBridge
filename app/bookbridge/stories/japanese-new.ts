@@ -1864,6 +1864,243 @@ export const mysterySeries: Series = {
 };
 
 
+// ============================================================
+// 💼 BUSINESS — "レモネードのゆめ" (The Lemonade Dream)
+// ============================================================
+
+export const lemonadeBusinessEpisode: Episode = {
+  id: "remonedo-no-yume",
+  title: "レモネードのゆめ",
+  description: "A ten-year-old boy starts a lemonade stand and learns what it takes to run a real business",
+  vocab: [
+    { word: "ビジネス", pronunciation: "bi-ji-ne-su", english: "business" },
+    { word: "売る (うる)", pronunciation: "u-ru", english: "to sell" },
+    { word: "お客さん (おきゃくさん)", pronunciation: "o-kya-ku-san", english: "the customer" },
+    { word: "お金 (おかね)", pronunciation: "o-ka-ne", english: "money" },
+    { word: "値段 (ねだん)", pronunciation: "ne-dan", english: "the price" },
+    { word: "利益 (りえき)", pronunciation: "ri-e-ki", english: "the profit" },
+    { word: "貯金する (ちょきんする)", pronunciation: "cho-kin su-ru", english: "to save (money)" },
+    { word: "計画 (けいかく)", pronunciation: "ke-i-ka-ku", english: "the plan" },
+    { word: "目標 (もくひょう)", pronunciation: "mo-ku-hyō", english: "the goal" },
+    { word: "成功 (せいこう)", pronunciation: "se-i-kō", english: "success" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Big Idea",
+      content: `Haruto stared at the broken skateboard in the hallway. A new one cost four thousand yen — money he definitely didn't have. But Haruto had **計画** (a plan).
+
+"I'm going to start **ビジネス**," he announced at dinner. His older sister Yuki nearly dropped her chopsticks.
+
+"You're ten," she said.
+
+"So? **目標があるんだ。**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "ハルトのレモネード" — Haruto's Lemonade.
+
+His mom smiled. "How much will you charge?"
+
+Haruto had thought about this. "**値段** will be one hundred yen per cup. Lemons cost about twenty yen each. Sugar, water, cups — maybe another thirty yen. That means **利益** is about fifty yen per cup."
+
+"That's... actually not bad," Yuki admitted.
+
+The next morning, Haruto used his allowance to buy supplies. He set up a small table outside their apartment building with a bright yellow sign. He squeezed lemons until his hands were sore and mixed the lemonade in a big pitcher.
+
+His first **お客さん** was Tanaka-san from the third floor. "**いくらですか？**" How much is it?
+
+"**百円です,**" Haruto said proudly. One hundred yen.
+
+Tanaka-san took a sip and smiled. "**おいしい！** Worth every yen."
+
+By the end of the day, Haruto had sold twelve cups. He counted **お金** carefully — twelve hundred yen. He subtracted the cost of supplies: four hundred and eighty yen.
+
+"**利益** is seven hundred and twenty yen," he whispered. It wasn't four thousand yen. Not yet. But the **ビジネス** had begun.`,
+      translatedWords: [
+        { word: "計画", translation: "a plan" },
+        { word: "ビジネス", translation: "business" },
+        { word: "目標があるんだ", translation: "I have a goal" },
+        { word: "値段", translation: "The price" },
+        { word: "利益", translation: "the profit" },
+        { word: "お客さん", translation: "customer" },
+        { word: "いくらですか？", translation: "How much is it?" },
+        { word: "百円です", translation: "It's one hundred yen" },
+        { word: "おいしい！", translation: "Delicious!" },
+        { word: "お金", translation: "money" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Growing Pains",
+      content: `By Friday, word had spread. Haruto was **売っている** (selling) lemonade every afternoon after school, and **お客さんたち** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
+
+"You need to think bigger," Yuki said, watching him turn people away. "**もっといい計画が必要だよ。**" You need a better plan.
+
+Haruto didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk, each cup would cost five yen instead of fifteen. That meant more **利益** per cup.
+
+"Mom, can you take me to the big store?" he asked.
+
+She raised an eyebrow. "That's a business expense. Are you sure?"
+
+"**投資だよ,**" Haruto said. It's an investment. He'd heard that word on a TV show about **ビジネス**.
+
+He spent eight hundred yen on two hundred cups and a big bag of sugar. It felt scary spending **お金** to make **お金**, but **計画** made sense on paper.
+
+On Saturday, he added a new flavor — strawberry — and raised **値段** to one hundred fifty yen. He made a new sign: "二つの味！" Two flavors!
+
+The line stretched down the sidewalk. Kids from school came. Parents came. Even Yuki's friends bought cups and posted photos online.
+
+By Sunday night, Haruto counted everything. He'd sold sixty-eight cups over the weekend. After all costs, **利益** was four thousand two hundred yen.
+
+He stared at the money. **目標** was four thousand yen for a skateboard. He'd passed it.
+
+"**やった！**" he shouted. I did it! He ran to the living room waving the bills.
+
+His mom hugged him. "**すごいね。** But what about the **ビジネス**? Are you going to stop?"
+
+Haruto looked at the money, then at his lemonade supplies still stacked in the kitchen. He'd worked hard. People loved his lemonade. Why stop at one skateboard?
+
+"No," he said, grinning. "This is just the beginning. **成功** is just getting started."
+
+Yuki rolled her eyes but smiled. "Fine. But I want ten percent for marketing advice."
+
+"Five percent," Haruto shot back.
+
+"Deal."
+
+Haruto's **ビジネス** was here to stay.`,
+      translatedWords: [
+        { word: "売っている", translation: "selling" },
+        { word: "お客さんたち", translation: "the customers" },
+        { word: "もっといい計画が必要だよ", translation: "You need a better plan" },
+        { word: "利益", translation: "profit" },
+        { word: "投資だよ", translation: "It's an investment" },
+        { word: "ビジネス", translation: "business" },
+        { word: "お金", translation: "money" },
+        { word: "計画", translation: "the plan" },
+        { word: "値段", translation: "the price" },
+        { word: "目標", translation: "The goal" },
+        { word: "やった！", translation: "I did it!" },
+        { word: "すごいね", translation: "That's amazing" },
+        { word: "成功", translation: "success" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `ハルトは廊下にある壊れたスケートボードを見つめていた。新しいのは四千円もする。絶対に持っていないお金だ。でもハルトには計画があった。
+
+「ビジネスを始めるよ」と夕食で宣言した。姉のユキは箸を落としそうになった。
+
+「あんた十歳でしょ」と彼女は言った。
+
+「だから何？目標があるんだ」彼は「ハルトのレモネード」と大きく書かれた看板付きのレモネードスタンドの絵を見せた。
+
+お母さんは微笑んだ。「いくらにするの？」
+
+ハルトはこれについて考えていた。「値段は一杯百円。レモンは一個約二十円。砂糖、水、コップで約三十円。つまり利益は一杯あたり約五十円だよ。」
+
+「それは...実は悪くないね」とユキは認めた。
+
+翌朝、ハルトはお小遣いで材料を買った。アパートの前に小さなテーブルを置き、明るい黄色の看板を立てた。手が痛くなるまでレモンを絞り、大きなピッチャーでレモネードを作った。
+
+最初のお客さんは三階の田中さんだった。「いくらですか？」
+
+「百円です」とハルトは誇らしげに言った。
+
+田中さんは一口飲んで微笑んだ。「おいしい！百円の価値があるね。」
+
+一日の終わりまでに、ハルトは十二杯売った。お金を丁寧に数えた——千二百円。材料費を引いた：四百八十円。
+
+「利益は七百二十円」と彼はつぶやいた。四千円じゃない。まだ。でもビジネスは始まった。
+
+金曜日までに、噂は広まっていた。ハルトは毎日放課後にレモネードを売っていて、お客さんたちは来続けた。でも問題があった——お客さんがいなくなる前にコップがなくなってしまうのだ。
+
+「もっと大きく考えないと」とユキは人を断る彼を見ながら言った。「もっといい計画が必要だよ。」
+
+ハルトは認めたくなかったが、彼女は正しかった。その夜、机に座って数字を書いた。まとめ買いすればコップ一個が十五円じゃなくて五円になる。つまり一杯あたりの利益が増える。
+
+「お母さん、大きいお店に連れて行ってくれる？」と聞いた。
+
+お母さんは眉を上げた。「それはビジネスの経費よ。いいの？」
+
+「投資だよ」とハルトは言った。
+
+八百円で二百個のコップと大きな砂糖の袋を買った。お金を使ってお金を稼ぐのは怖かったが、計画は紙の上では理にかなっていた。
+
+土曜日、新しい味——いちご——を追加し、値段を百五十円に上げた。新しい看板を作った：「二つの味！」
+
+列は歩道に沿って伸びた。学校の子供たちが来た。親たちが来た。ユキの友達まで買って写真をネットに載せた。
+
+日曜の夜、ハルトは全部数えた。週末に六十八杯売った。全ての費用の後、利益は四千二百円だった。
+
+お金を見つめた。目標はスケートボードの四千円。超えていた。
+
+「やった！」と叫んだ。お札を振りながらリビングに走った。
+
+お母さんはハルトを抱きしめた。「すごいね。でもビジネスはどうするの？やめるの？」
+
+ハルトはお金を見て、それからキッチンにまだ積んであるレモネードの材料を見た。一生懸命働いた。みんなレモネードが大好きだった。なぜスケートボード一つでやめるんだ？
+
+「やめない」と彼はにっこり笑って言った。「これはまだ始まりだよ。成功はこれからだ。」
+
+ユキは目をくるりとさせたが微笑んだ。「わかった。でもマーケティングのアドバイス料として十パーセントもらうからね。」
+
+「五パーセント」とハルトは返した。
+
+「それで手を打とう。」
+
+ハルトのビジネスはここに留まることになった。`,
+  quiz: [
+    // Fill in the blank (4)
+    { id: "bus-fb1", type: "fill-blank", question: "\"Business\" in Japanese is ___", answer: "ビジネス" },
+    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in Japanese is ___", answer: "お客さん" },
+    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in Japanese is ___", answer: "利益" },
+    { id: "bus-fb4", type: "fill-blank", question: "\"To save money\" in Japanese is ___", answer: "貯金する" },
+
+    // Multiple choice (4)
+    {
+      id: "bus-mc1",
+      type: "multiple-choice",
+      question: "What does '売る' mean?",
+      answer: "to sell",
+      options: ["to buy", "to sell", "to save", "to spend"]
+    },
+    {
+      id: "bus-mc2",
+      type: "multiple-choice",
+      question: "What does '値段' mean?",
+      answer: "the price",
+      options: ["the value", "the price", "the profit", "the plan"]
+    },
+    {
+      id: "bus-mc3",
+      type: "multiple-choice",
+      question: "What does '目標' mean?",
+      answer: "the goal",
+      options: ["the eye", "the mark", "the goal", "the model"]
+    },
+    {
+      id: "bus-mc4",
+      type: "multiple-choice",
+      question: "What does '成功' mean?",
+      answer: "success",
+      options: ["achievement", "success", "growth", "effort"]
+    },
+
+    // Translate (4)
+    { id: "bus-tr1", type: "translate", question: "Translate to Japanese: 'money'", answer: "お金" },
+    { id: "bus-tr2", type: "translate", question: "Translate to English: 'ビジネス'", answer: "business" },
+    { id: "bus-tr3", type: "translate", question: "Translate to Japanese: 'the plan'", answer: "計画" },
+    { id: "bus-tr4", type: "translate", question: "Translate to English: '貯金する'", answer: "to save (money)" }
+  ]
+};
+
+export const businessSeries: Series = {
+  id: "remonedo-no-yume",
+  title: "レモネードのゆめ",
+  description: "A ten-year-old boy starts a lemonade stand and learns what it takes to run a real business",
+  category: "business",
+  language: 'japanese' as any,
+  episodes: [lemonadeBusinessEpisode]
+};
+
+
 // 📦 ALL SERIES EXPORT
 // ============================================================
 
@@ -1877,4 +2114,5 @@ export const allNewJapaneseSeries: Series[] = [
   selfHelpSeries,
   adventureSeries,
   mysterySeries,
+  businessSeries,
 ];

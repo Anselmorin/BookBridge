@@ -2048,6 +2048,245 @@ export const mysterySeriesSpanish: Series = {
 };
 
 // ============================================================
+// 💼 BUSINESS — "La Limonada de Lucas" (Lucas's Lemonade)
+// ============================================================
+
+export const laLimonadaDeLucasEpisode1: Episode = {
+  id: "la-limonada-de-lucas",
+  title: "La Limonada de Lucas",
+  description: "A ten-year-old boy turns a simple lemonade stand into the hottest business on the block",
+  vocab: [
+    { word: "el negocio", pronunciation: "el neh-GOH-see-oh", english: "the business" },
+    { word: "vender", pronunciation: "ven-DER", english: "to sell" },
+    { word: "el cliente", pronunciation: "el klee-EN-teh", english: "the customer" },
+    { word: "el dinero", pronunciation: "el dee-NEH-roh", english: "the money" },
+    { word: "el precio", pronunciation: "el PREH-see-oh", english: "the price" },
+    { word: "la ganancia", pronunciation: "lah gah-NAHN-see-ah", english: "the profit" },
+    { word: "ahorrar", pronunciation: "ah-oh-RRAR", english: "to save (money)" },
+    { word: "el plan", pronunciation: "el PLAHN", english: "the plan" },
+    { word: "la meta", pronunciation: "lah MEH-tah", english: "the goal" },
+    { word: "el éxito", pronunciation: "el EK-see-toh", english: "the success" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Big Idea",
+      content: `Lucas stared at the broken skateboard in the garage. A new one cost forty dollars — money he definitely didn't have. But Lucas had **un plan**.
+
+"I'm going to start **un negocio**," he announced at dinner. His older sister Camila almost choked on her rice.
+
+"You're ten," she said.
+
+"So? **Tengo una meta.**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "La Limonada de Lucas."
+
+His mom smiled. "How much will you charge?"
+
+Lucas had thought about this. "**El precio** will be one dollar per cup. Lemons cost about twenty cents each. Sugar, water, cups — maybe another thirty cents. That means **la ganancia** is about fifty cents per cup."
+
+"That's... actually not bad," Camila admitted.
+
+The next morning, Lucas used his allowance to buy supplies. He set up a small table at the end of the driveway with a bright yellow sign. He squeezed lemons until his hands were sore and mixed the lemonade in a big pitcher.
+
+His first **cliente** was Mr. Hernández from next door. "**¿Cuánto cuesta?**" How much does it cost?
+
+"**Un dólar,**" Lucas said proudly. One dollar.
+
+Mr. Hernández took a sip and smiled. "**Está deliciosa.** Worth every penny."
+
+By the end of the day, Lucas had sold twelve cups. He counted **el dinero** carefully — twelve dollars. He subtracted the cost of supplies: four dollars and eighty cents.
+
+"**La ganancia** is seven dollars and twenty cents," he whispered. It wasn't forty dollars. Not yet. But **el negocio** had begun.`,
+      translatedWords: [
+        { word: "un plan", translation: "a plan" },
+        { word: "un negocio", translation: "a business" },
+        { word: "Tengo una meta", translation: "I have a goal" },
+        { word: "El precio", translation: "The price" },
+        { word: "la ganancia", translation: "the profit" },
+        { word: "cliente", translation: "customer" },
+        { word: "¿Cuánto cuesta?", translation: "How much does it cost?" },
+        { word: "Un dólar", translation: "One dollar" },
+        { word: "Está deliciosa", translation: "It's delicious" },
+        { word: "el dinero", translation: "the money" },
+        { word: "el negocio", translation: "the business" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Growing Pains",
+      content: `By Friday, word had spread. Lucas was **vendiendo** lemonade every afternoon after school, and **los clientes** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
+
+"You need to think bigger," Camila said, sitting on the porch watching him turn people away. "**Necesitas un mejor plan.**" You need a better plan.
+
+Lucas didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk from the warehouse store, each cup would cost five cents instead of fifteen. That meant more **ganancia** per cup.
+
+"Mom, can you drive me to the warehouse store?" he asked.
+
+She raised an eyebrow. "That's a business expense. Are you sure?"
+
+"**Es una inversión,**" Lucas said. It's an investment. He'd heard that word on a TV show about **negocios**.
+
+He spent eight dollars on two hundred cups and a giant bag of sugar. It felt scary spending **dinero** to make **dinero**, but **el plan** made sense on paper.
+
+On Saturday, he added a new flavor — strawberry — and raised **el precio** to a dollar fifty. He made a new sign: "¡DOS SABORES!" Two flavors!
+
+The line stretched down the sidewalk. Kids from school came. Parents came. Even Camila's friends bought cups and posted pictures online.
+
+By Sunday night, Lucas counted everything. He'd sold sixty-eight cups over the weekend. After all costs, **la ganancia** was forty-two dollars.
+
+He stared at the money. **La meta** was forty dollars for a skateboard. He'd passed it.
+
+"**¡Lo logré!**" he shouted. I did it! He ran downstairs waving the bills.
+
+His mom hugged him. "**Estoy orgullosa de ti.** But what about **el negocio**? Are you going to stop?"
+
+Lucas looked at the money, then at his lemonade supplies still stacked in the garage. He'd worked hard. People loved his lemonade. Why stop at one skateboard?
+
+"No," he said, grinning. "This is just the beginning. **El éxito** is just getting started."
+
+Camila rolled her eyes but smiled. "Fine. But I want ten percent for marketing advice."
+
+"Five percent," Lucas shot back.
+
+"Deal."
+
+**El negocio** de Lucas was here to stay.`,
+      translatedWords: [
+        { word: "vendiendo", translation: "selling" },
+        { word: "los clientes", translation: "the customers" },
+        { word: "Necesitas un mejor plan", translation: "You need a better plan" },
+        { word: "ganancia", translation: "profit" },
+        { word: "Es una inversión", translation: "It's an investment" },
+        { word: "negocios", translation: "businesses" },
+        { word: "dinero", translation: "money" },
+        { word: "el plan", translation: "the plan" },
+        { word: "el precio", translation: "the price" },
+        { word: "La meta", translation: "The goal" },
+        { word: "la ganancia", translation: "the profit" },
+        { word: "¡Lo logré!", translation: "I did it!" },
+        { word: "Estoy orgullosa de ti", translation: "I'm proud of you" },
+        { word: "el negocio", translation: "the business" },
+        { word: "El éxito", translation: "The success" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Lucas miró la patineta rota en el garaje. Una nueva costaba cuarenta dólares — dinero que definitivamente no tenía. Pero Lucas tenía un plan.
+
+"Voy a empezar un negocio," anunció en la cena. Su hermana mayor Camila casi se atragantó con el arroz.
+
+"Tienes diez años," dijo ella.
+
+"¿Y qué? Tengo una meta." Levantó un dibujo de un puesto de limonada con un letrero grande que decía "La Limonada de Lucas."
+
+Su mamá sonrió. "¿Cuánto vas a cobrar?"
+
+Lucas había pensado en esto. "El precio será un dólar por vaso. Los limones cuestan unos veinte centavos cada uno. Azúcar, agua, vasos — tal vez otros treinta centavos. Eso significa que la ganancia es unos cincuenta centavos por vaso."
+
+"Eso... en realidad no está mal," admitió Camila.
+
+A la mañana siguiente, Lucas usó su mesada para comprar provisiones. Puso una mesa pequeña al final de la entrada con un letrero amarillo brillante. Exprimió limones hasta que le dolían las manos y mezcló la limonada en una jarra grande.
+
+Su primer cliente fue el señor Hernández del lado. "¿Cuánto cuesta?"
+
+"Un dólar," dijo Lucas con orgullo.
+
+El señor Hernández tomó un sorbo y sonrió. "Está deliciosa. Vale cada centavo."
+
+Al final del día, Lucas había vendido doce vasos. Contó el dinero cuidadosamente — doce dólares. Restó el costo de las provisiones: cuatro dólares con ochenta centavos.
+
+"La ganancia es siete dólares con veinte centavos," susurró. No eran cuarenta dólares. Todavía no. Pero el negocio había comenzado.
+
+Para el viernes, se había corrido la voz. Lucas estaba vendiendo limonada todas las tardes después de la escuela, y los clientes seguían llegando. Pero había un problema — se quedaba sin vasos antes de quedarse sin clientes.
+
+"Necesitas pensar en grande," dijo Camila, sentada en el porche viéndolo rechazar gente. "Necesitas un mejor plan."
+
+Lucas no quería admitirlo, pero ella tenía razón. Esa noche, se sentó en su escritorio y anotó números. Si compraba vasos al por mayor en la tienda de mayoreo, cada vaso costaría cinco centavos en vez de quince. Eso significaba más ganancia por vaso.
+
+"Mamá, ¿me puedes llevar a la tienda de mayoreo?" preguntó.
+
+Ella levantó una ceja. "Eso es un gasto del negocio. ¿Estás seguro?"
+
+"Es una inversión," dijo Lucas.
+
+Gastó ocho dólares en doscientos vasos y una bolsa gigante de azúcar. Se sentía aterrador gastar dinero para hacer dinero, pero el plan tenía sentido en papel.
+
+El sábado, agregó un nuevo sabor — fresa — y subió el precio a un dólar cincuenta. Hizo un nuevo letrero: "¡DOS SABORES!"
+
+La fila se extendía por la banqueta. Niños de la escuela vinieron. Padres vinieron. Hasta las amigas de Camila compraron vasos y publicaron fotos en internet.
+
+El domingo por la noche, Lucas contó todo. Había vendido sesenta y ocho vasos durante el fin de semana. Después de todos los costos, la ganancia fue de cuarenta y dos dólares.
+
+Se quedó mirando el dinero. La meta eran cuarenta dólares para una patineta. La había superado.
+
+"¡Lo logré!" gritó. Bajó corriendo las escaleras agitando los billetes.
+
+Su mamá lo abrazó. "Estoy orgullosa de ti. Pero ¿qué pasa con el negocio? ¿Vas a parar?"
+
+Lucas miró el dinero, luego sus provisiones de limonada todavía apiladas en el garaje. Había trabajado duro. A la gente le encantaba su limonada. ¿Por qué parar en una patineta?
+
+"No," dijo, sonriendo. "Esto es solo el comienzo. El éxito apenas está empezando."
+
+Camila puso los ojos en blanco pero sonrió. "Está bien. Pero quiero diez por ciento por consejo de marketing."
+
+"Cinco por ciento," respondió Lucas.
+
+"Trato hecho."
+
+El negocio de Lucas llegó para quedarse.`,
+  quiz: [
+    // Fill in the blank (4)
+    { id: "bus-fb1", type: "fill-blank", question: "\"The business\" in Spanish is ___", answer: "el negocio" },
+    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in Spanish is ___", answer: "el cliente" },
+    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in Spanish is ___", answer: "la ganancia" },
+    { id: "bus-fb4", type: "fill-blank", question: "\"To save (money)\" in Spanish is ___", answer: "ahorrar" },
+
+    // Multiple choice (4)
+    {
+      id: "bus-mc1",
+      type: "multiple-choice",
+      question: "What does 'vender' mean?",
+      answer: "to sell",
+      options: ["to buy", "to sell", "to save", "to spend"]
+    },
+    {
+      id: "bus-mc2",
+      type: "multiple-choice",
+      question: "What does 'el precio' mean?",
+      answer: "the price",
+      options: ["the prize", "the price", "the profit", "the plan"]
+    },
+    {
+      id: "bus-mc3",
+      type: "multiple-choice",
+      question: "What does 'la meta' mean?",
+      answer: "the goal",
+      options: ["the metal", "the market", "the goal", "the money"]
+    },
+    {
+      id: "bus-mc4",
+      type: "multiple-choice",
+      question: "What does 'el éxito' mean?",
+      answer: "success",
+      options: ["the exit", "success", "the expense", "the example"]
+    },
+
+    // Translate (4)
+    { id: "bus-tr1", type: "translate", question: "Translate to Spanish: 'the money'", answer: "el dinero" },
+    { id: "bus-tr2", type: "translate", question: "Translate to English: 'el negocio'", answer: "the business" },
+    { id: "bus-tr3", type: "translate", question: "Translate to Spanish: 'the plan'", answer: "el plan" },
+    { id: "bus-tr4", type: "translate", question: "Translate to English: 'ahorrar'", answer: "to save (money)" }
+  ]
+};
+
+export const businessSeriesSpanish: Series = {
+  id: "la-limonada-de-lucas",
+  title: "La Limonada de Lucas",
+  description: "A ten-year-old boy turns a simple lemonade stand into the hottest business on the block",
+  category: "business",
+  language: "spanish",
+  episodes: [laLimonadaDeLucasEpisode1]
+};
+
+// ============================================================
 // COMBINED EXPORT
 // ============================================================
 
@@ -2060,6 +2299,7 @@ export const allNewSpanishSeries: Series[] = [
   scienceSeriesSpanish,
   selfHelpSeriesSpanish,
   adventureSeriesSpanish,
-  mysterySeriesSpanish
+  mysterySeriesSpanish,
+  businessSeriesSpanish
 ];
 
