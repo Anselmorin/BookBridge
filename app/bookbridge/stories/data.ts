@@ -607,47 +607,10 @@ export const sciFiSeriesJapanese: Series = {
 };
 
 // === NEW STORY IMPORTS ===
-import { sportsSeriesSpanish, techSeriesSpanish, futureSeriesSpanish, creativeSeriesSpanish } from './spanish-new';
-import { leMatchEpisode, leProgrammeEpisode, laVilleDeDemainEpisode, leChefDoeuvreEpisode } from './french-new';
-import { laPartitaEpisode, ilProgrammaEpisode, laCittaDelFuturoEpisode, ilCapolavoroEpisode } from './italian-new';
-import { sportsSeries as sportsSeriesJapanese, techSeries as techSeriesJapanese, futureSeries as futureSeriesJapaneseNew, creativeSeries as creativeSeriesJapanese } from './japanese-new';
-
-// French series
-export const sportsSeriesFrench: Series = {
-  id: 'le-match',
-  title: 'Le Match',
-  description: 'A basketball championship story about courage and teamwork',
-  category: 'sports',
-  language: 'french' as any,
-  episodes: [leMatchEpisode]
-};
-
-export const techSeriesFrench: Series = {
-  id: 'le-programme',
-  title: 'Le Programme',
-  description: 'A hackathon adventure building a recycling robot',
-  category: 'tech',
-  language: 'french' as any,
-  episodes: [leProgrammeEpisode]
-};
-
-export const futureSeriesFrench: Series = {
-  id: 'la-ville-de-demain',
-  title: 'La Ville de Demain',
-  description: 'A futuristic adventure in Néo-Lyon, 2089',
-  category: 'future',
-  language: 'french' as any,
-  episodes: [laVilleDeDemainEpisode]
-};
-
-export const creativeSeriesFrench: Series = {
-  id: 'le-chef-doeuvre',
-  title: "Le Chef-d'œuvre",
-  description: 'A street artist finds their voice in Paris',
-  category: 'creative',
-  language: 'french' as any,
-  episodes: [leChefDoeuvreEpisode]
-};
+import { sportsSeriesSpanish, techSeriesSpanish, futureSeriesSpanish, creativeSeriesSpanish, historySeriesSpanish, scienceSeriesSpanish, selfHelpSeriesSpanish, adventureSeriesSpanish, mysterySeriesSpanish } from './spanish-new';
+import { sportsSeriesFrench, techSeriesFrench, futureSeriesFrench, creativeSeriesFrench, historySeriesFrench, scienceSeriesFrench, selfHelpSeriesFrench, adventureSeriesFrench, mysterySeriesFrench } from './french-new';
+import { laPartitaEpisode, ilProgrammaEpisode, laCittaDelFuturoEpisode, ilCapolavoroEpisode, historySeriesItalian, scienceSeriesItalian, selfHelpSeriesItalian, adventureSeriesItalian, mysterySeriesItalian } from './italian-new';
+import { sportsSeries as sportsSeriesJapanese, techSeries as techSeriesJapanese, futureSeries as futureSeriesJapaneseNew, creativeSeries as creativeSeriesJapanese, historySeries as historySeriesJapanese, scienceSeriesNew as scienceSeriesJapanese, selfHelpSeries as selfHelpSeriesJapanese, adventureSeries as adventureSeriesJapanese, mysterySeries as mysterySeriesJapanese } from './japanese-new';
 
 // Italian series
 export const sportsSeriesItalian: Series = {
@@ -696,21 +659,41 @@ export const allSeries: Series[] = [
   techSeriesSpanish,
   futureSeriesSpanish,
   creativeSeriesSpanish,
+  historySeriesSpanish,
+  scienceSeriesSpanish,
+  selfHelpSeriesSpanish,
+  adventureSeriesSpanish,
+  mysterySeriesSpanish,
   // French (new)
   sportsSeriesFrench,
   techSeriesFrench,
   futureSeriesFrench,
   creativeSeriesFrench,
+  historySeriesFrench,
+  scienceSeriesFrench,
+  selfHelpSeriesFrench,
+  adventureSeriesFrench,
+  mysterySeriesFrench,
   // Italian (new)
   sportsSeriesItalian,
   techSeriesItalian,
   futureSeriesItalian,
   creativeSeriesItalian,
+  historySeriesItalian,
+  scienceSeriesItalian,
+  selfHelpSeriesItalian,
+  adventureSeriesItalian,
+  mysterySeriesItalian,
   // Japanese (new)
   sportsSeriesJapanese,
   techSeriesJapanese,
   futureSeriesJapaneseNew,
   creativeSeriesJapanese,
+  historySeriesJapanese,
+  scienceSeriesJapanese,
+  selfHelpSeriesJapanese,
+  adventureSeriesJapanese,
+  mysterySeriesJapanese,
 ];
 
 // Helper functions

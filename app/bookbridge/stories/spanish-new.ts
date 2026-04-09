@@ -1188,9 +1188,878 @@ export const creativeSeriesSpanish: Series = {
   episodes: [elMuralEpisode1]
 };
 
+// allNewSpanishSeries is exported at the bottom of the file (after all Series definitions)
+
+// ============================================================
+// 📜 HISTORY — "El Imperio Azteca" (The Aztec Empire)
+// ============================================================
+
+export const elImperioAztecaEpisode1: Episode = {
+  id: "el-imperio-azteca",
+  title: "El Imperio Azteca",
+  description: "A young historian discovers the magnificent world of the Aztec Empire through an ancient codex",
+  vocab: [
+    { word: "el imperio", pronunciation: "el im-PEH-ree-oh", english: "the empire" },
+    { word: "el templo", pronunciation: "el TEM-ploh", english: "the temple" },
+    { word: "la historia", pronunciation: "lah ees-TOR-ee-ah", english: "the history" },
+    { word: "el guerrero", pronunciation: "el geh-REH-roh", english: "the warrior" },
+    { word: "el mercado", pronunciation: "el mer-KAH-doh", english: "the market" },
+    { word: "construir", pronunciation: "kon-stroo-EER", english: "to build" },
+    { word: "el pueblo", pronunciation: "el PWEH-bloh", english: "the people/town" },
+    { word: "antiguo/a", pronunciation: "an-TEE-gwoh", english: "ancient/old" },
+    { word: "el conocimiento", pronunciation: "el koh-noh-see-mee-EN-toh", english: "the knowledge" },
+    { word: "descubrir", pronunciation: "des-koo-BREER", english: "to discover" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Ancient Codex",
+      content: `Twelve-year-old Emilio found the old book in his grandmother's attic on a rainy Tuesday. It was wrapped in cloth and smelled like dust and something sweeter — like dried flowers. On the cover, strange symbols he didn't recognize.
+
+"**Abuela**," he called downstairs. "What is this?"
+
+His grandmother climbed the creaky stairs slowly, her eyes widening when she saw what he was holding. "**¡Ay, mijo!**" she breathed. "That's a codex — a copy of **el conocimiento** of the **antiguo** Aztec civilization."
+
+Emilio sat cross-legged on the floor and carefully opened the first page. The illustrations were incredible — a massive city built on a lake, enormous **templos** rising toward the sky, and thousands of people streaming through a colorful **mercado**.
+
+"This was **el pueblo**?" he asked, pointing at the painted city.
+
+His grandmother nodded. "That was Tenochtitlan — the heart of **el imperio** Azteca. The greatest city in the world at the time. Over two hundred thousand people lived there."
+
+Emilio stared at the image. **Construir** a city on water? That seemed impossible. But there it was, painted carefully in the **antiguo** codex. He traced one of the **templos** with his finger — a stepped pyramid reaching toward a painted sky.
+
+"I want to **descubrir** everything about it," he said.
+
+"**Bueno,**" his grandmother smiled, settling into the old armchair by the dusty window. "Then let's start at the beginning. **La historia** of the Aztecs is one of the greatest stories ever told."`,
+      translatedWords: [
+        { word: "Abuela", translation: "Grandmother" },
+        { word: "¡Ay, mijo!", translation: "Oh, my son!" },
+        { word: "el conocimiento", translation: "the knowledge" },
+        { word: "antiguo", translation: "ancient/old" },
+        { word: "templos", translation: "temples" },
+        { word: "mercado", translation: "market" },
+        { word: "el pueblo", translation: "the people/city" },
+        { word: "el imperio", translation: "the empire" },
+        { word: "Construir", translation: "To build" },
+        { word: "descubrir", translation: "to discover" },
+        { word: "Bueno", translation: "Good/Well" },
+        { word: "La historia", translation: "The history" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Warriors and Markets",
+      content: `Emilio and his grandmother sat at the kitchen table, the codex open between them, a pot of hot chocolate steaming on the stove. **La historia** of the Aztec Empire unfolded page by page.
+
+"Look at this," Emilio said, pointing to a fierce figure in jaguar armor. "A **guerrero**?"
+
+"Not just any **guerrero**," his grandmother said. "A Jaguar Warrior. The most elite fighters in **el imperio**. They had to capture twelve enemies in battle before earning that armor." She ran her finger under the painted figure reverently. "Imagine having that kind of courage."
+
+Emilio tried to imagine it. **El guerrero** in the painting had an eagle-feather headdress and a shield painted with jaguar spots. He looked like he could fight a mountain and win.
+
+The next pages showed **el mercado** of Tlatelolco — the greatest market in **el imperio**. Emilio's eyes went wide. There were stalls selling cacao beans, jade jewelry, exotic feathers, medicine made from **antiguo** plants, and foods he'd never heard of. The market had an area the size of four soccer fields, and thousands of people traded there every single day.
+
+"**Construyeron** all of this?" he whispered. They built all of this?
+
+"**Construyeron** cities, causeways, aqueducts — roads across water," his grandmother said. "**El conocimiento** of Aztec engineers was extraordinary. They built Tenochtitlan in the middle of Lake Texcoco and turned it into the largest city in the world at the time. No European city could match it."
+
+"**Antiguo** but brilliant," Emilio said softly. He looked at the painted **mercado**, the painted **templos**, the painted **guerreros** marching in procession. 
+
+"**La historia** is incredible," he said at last. "Why don't they teach more of this in school?"
+
+His grandmother refilled his hot chocolate and smiled.
+
+"That, **mijo,** is exactly the right question to ask."`,
+      translatedWords: [
+        { word: "La historia", translation: "The history" },
+        { word: "guerrero", translation: "warrior" },
+        { word: "el guerrero", translation: "the warrior" },
+        { word: "el imperio", translation: "the empire" },
+        { word: "el mercado", translation: "the market" },
+        { word: "antiguo", translation: "ancient" },
+        { word: "Construyeron", translation: "They built" },
+        { word: "el conocimiento", translation: "the knowledge" },
+        { word: "Antiguo", translation: "Ancient" },
+        { word: "templos", translation: "temples" },
+        { word: "guerreros", translation: "warriors" },
+        { word: "La historia", translation: "The history" },
+        { word: "mijo", translation: "my son (term of endearment)" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Emilio encontró el libro antiguo en el ático de su abuela un martes lluvioso. Estaba envuelto en tela y olía a polvo y algo dulce. En la cubierta había símbolos extraños.
+
+"Abuela," llamó. "¿Qué es esto?"
+
+Su abuela subió las crujientes escaleras lentamente. "¡Ay, mijo! Eso es un códice — una copia del conocimiento de la antigua civilización azteca."
+
+Emilio abrió cuidadosamente la primera página. Las ilustraciones eran increíbles — una ciudad masiva construida en un lago, enormes templos y miles de personas en un colorido mercado.
+
+"¿Este era el pueblo?" preguntó.
+
+"Eso era Tenochtitlán — el corazón del Imperio Azteca. La ciudad más grande del mundo. Más de doscientas mil personas vivían allí."
+
+"Quiero descubrir todo sobre ello."
+
+"Bueno. La historia de los Aztecas es una de las más grandes jamás contadas."
+
+Emilio y su abuela se sentaron a la mesa, el códice abierto entre ellos. La historia del Imperio Azteca se desplegaba página a página.
+
+"¿Un guerrero?" preguntó Emilio, señalando una figura feroz.
+
+"Un Guerrero Jaguar. Los combatientes más élite del imperio. Tenían que capturar doce enemigos antes de ganar esa armadura."
+
+Las páginas siguientes mostraban el mercado de Tlatelolco. Había puestos que vendían granos de cacao, joyería de jade, plumas exóticas y medicina de plantas antiguas.
+
+"¿Construyeron todo esto?"
+
+"Construyeron ciudades, calzadas, acueductos. El conocimiento de los ingenieros aztecas era extraordinario."
+
+"Antiguo pero brillante," dijo Emilio suavemente. "La historia es increíble. ¿Por qué no enseñan más de esto en la escuela?"
+
+Su abuela sonrió. "Esa, mijo, es exactamente la pregunta correcta."`,
+  quiz: [
+    { id: "az-fb1", type: "fill-blank", question: "The great Aztec city was called Tenochtitlan — it was the heart of __________ (the empire).", answer: "el imperio" },
+    { id: "az-fb2", type: "fill-blank", question: "The __________ (warrior) wore jaguar armor and an eagle feather headdress.", answer: "guerrero" },
+    { id: "az-fb3", type: "fill-blank", question: "Emilio wanted to __________ (discover) everything about the Aztecs.", answer: "descubrir" },
+    { id: "az-fb4", type: "fill-blank", question: "The __________ (market) had stalls selling cacao and jade jewelry.", answer: "mercado" },
+    { id: "az-mc1", type: "multiple-choice", question: "What does 'el imperio' mean?", answer: "the empire", options: ["the temple", "the empire", "the army", "the palace"] },
+    { id: "az-mc2", type: "multiple-choice", question: "What does 'construir' mean?", answer: "to build", options: ["to explore", "to conquer", "to build", "to discover"] },
+    { id: "az-mc3", type: "multiple-choice", question: "What does 'antiguo' mean?", answer: "ancient/old", options: ["beautiful", "ancient/old", "powerful", "sacred"] },
+    { id: "az-mc4", type: "multiple-choice", question: "What does 'el pueblo' mean?", answer: "the people/town", options: ["the army", "the palace", "the market", "the people/town"] },
+    { id: "az-tr1", type: "translate", question: "Translate to Spanish: 'the history'", answer: "la historia" },
+    { id: "az-tr2", type: "translate", question: "Translate to English: 'el conocimiento'", answer: "the knowledge" },
+    { id: "az-tr3", type: "translate", question: "Translate to Spanish: 'the temple'", answer: "el templo" },
+    { id: "az-tr4", type: "translate", question: "Translate to English: 'descubrir'", answer: "to discover" }
+  ]
+};
+
+// ============================================================
+// 🔬 SCIENCE — "El Laboratorio Secreto" (The Secret Laboratory)
+// ============================================================
+
+export const elLaboratorioEpisode1: Episode = {
+  id: "el-laboratorio-secreto",
+  title: "El Laboratorio Secreto",
+  description: "A science-obsessed girl uses the scientific method to solve a botany mystery threatening her school garden",
+  vocab: [
+    { word: "el experimento", pronunciation: "el eks-peh-ree-MEN-toh", english: "the experiment" },
+    { word: "la planta", pronunciation: "lah PLAN-tah", english: "the plant" },
+    { word: "observar", pronunciation: "ob-ser-BAR", english: "to observe" },
+    { word: "la hipótesis", pronunciation: "lah ee-POH-teh-sees", english: "the hypothesis" },
+    { word: "el resultado", pronunciation: "el res-sul-TAH-doh", english: "the result" },
+    { word: "crecer", pronunciation: "kreh-SER", english: "to grow" },
+    { word: "la semilla", pronunciation: "lah seh-MEE-yah", english: "the seed" },
+    { word: "el laboratorio", pronunciation: "el lah-boh-rah-TOR-ee-oh", english: "the laboratory" },
+    { word: "mezclar", pronunciation: "mes-KLAR", english: "to mix" },
+    { word: "la solución", pronunciation: "lah soh-loo-see-OHN", english: "the solution" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Dying Garden",
+      content: `Every Monday morning, Daniela checked on the school garden before class. She'd been doing it since third grade. The tomatoes, the sunflowers, the bean plants — she knew every single one like they were her friends. She even gave them names.
+
+So when she arrived on the first day of October and found half of them wilting, she knew something was seriously wrong.
+
+"**¿Qué te pasó?**" she whispered to a sagging sunflower. What happened to you?
+
+The leaves were yellow and curling at the edges. The soil looked fine. There'd been plenty of rain. But the **plantas** weren't **creciendo** — they were dying. And the damage had happened fast, overnight almost.
+
+Daniela pulled out her science journal and clicked her pen. This was now an official **experimento**.
+
+"**Hipótesis número uno:**" she wrote carefully. "**La planta** is sick because of the soil. **La semilla** might have been infected with something."
+
+She took a soil sample in a little plastic bag, pulled a wilting leaf from three different **plantas**, and headed inside to **el laboratorio**. Her hands were already tingling with that electric feeling she got whenever a real mystery needed solving.
+
+**El laboratorio** was empty at this hour — perfect. She laid out her samples on the black counter, snapped on her safety glasses, and got to work. **Observar** first. Always **observar** before jumping to conclusions.
+
+Whatever was hurting her garden, she was going to find it. And she was going to fix it.`,
+      translatedWords: [
+        { word: "¿Qué te pasó?", translation: "What happened to you?" },
+        { word: "plantas", translation: "plants" },
+        { word: "creciendo", translation: "growing" },
+        { word: "experimento", translation: "experiment" },
+        { word: "Hipótesis número uno", translation: "Hypothesis number one" },
+        { word: "La planta", translation: "The plant" },
+        { word: "La semilla", translation: "The seed" },
+        { word: "el laboratorio", translation: "the laboratory" },
+        { word: "Observar", translation: "To observe" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Experiment",
+      content: `Daniela spent her entire lunch break in **el laboratorio**. Under the microscope, the soil looked normal — no fungus, no bugs, no unusual particles. But when she tested the pH levels with the kit from the supply cabinet, she found it.
+
+The soil was too acidic. Way too acidic.
+
+"**¡Ajá!**" she whispered to the empty room. Eureka!
+
+She wrote in her journal: "**El resultado** of soil test — pH is 4.2. Normal for vegetable garden should be 6.0 to 7.0. **Hipótesis** confirmed: soil chemistry is the problem. But what caused it?"
+
+She thought back. What had changed near the garden recently? The school had painted the chain-link fence last month — a bright new blue. Rain had fallen that week. Could the paint chemicals have washed off the fence and into the garden soil?
+
+She went back outside and collected a water sample from the puddle near the fence post. In **el laboratorio**, she used the test kit to **mezclar** the water with indicator solution. The liquid turned a deep orange-red.
+
+Acidic. Definitely acidic.
+
+"**¡Lo encontré!**" she said aloud. I found it!
+
+The paint chemicals had mixed with rainwater and seeped into the garden soil. That was why the **plantas** weren't **creciendo**. She had her cause. Now she needed **la solución**.
+
+She researched quickly. Agricultural lime — calcium carbonate — could neutralize acidic soil. Just **mezclar** it with water and apply it to the garden beds. Simple, cheap, and proven.
+
+Daniela wrote up her full report: **el experimento**, **la hipótesis**, observations — **observar** the symptoms, test the samples, identify the cause — and **el resultado**: the garden could be completely saved.
+
+She walked into Principal Vargas's office with her journal held out like a trophy.
+
+"I need permission to **mezclar** lime into the garden soil," she said. "I've found **la solución**."
+
+The principal stared at her three-page report for a long moment. Then he stood up and shook her hand.
+
+"**Eres una científica de verdad,**" he said. You are a real scientist. "Let's save our garden."`,
+      translatedWords: [
+        { word: "el laboratorio", translation: "the laboratory" },
+        { word: "¡Ajá!", translation: "Eureka!/Aha!" },
+        { word: "El resultado", translation: "The result" },
+        { word: "Hipótesis", translation: "Hypothesis" },
+        { word: "mezclar", translation: "to mix" },
+        { word: "¡Lo encontré!", translation: "I found it!" },
+        { word: "plantas", translation: "plants" },
+        { word: "creciendo", translation: "growing" },
+        { word: "la solución", translation: "the solution" },
+        { word: "el experimento", translation: "the experiment" },
+        { word: "observar", translation: "to observe" },
+        { word: "Eres una científica de verdad", translation: "You are a real scientist" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Cada lunes por la mañana, Daniela revisaba el jardín de la escuela antes de clase. Lo había hecho desde tercer grado. Conocía cada planta como si fuera su amiga.
+
+Así que cuando llegó el primer día de octubre y encontró la mitad de ellas marchitas, supo que algo estaba muy mal.
+
+"¿Qué te pasó?" susurró a un girasol caído.
+
+Las hojas estaban amarillas y enroscadas. La tierra se veía bien. Pero las plantas no estaban creciendo — se estaban muriendo.
+
+Daniela sacó su cuaderno de ciencias. Esto ahora era un experimento oficial.
+
+"Hipótesis número uno," escribió. "La planta está enferma por el suelo. La semilla podría estar infectada."
+
+Tomó muestras y se dirigió al laboratorio.
+
+El laboratorio estaba vacío. Bajo el microscopio, el suelo se veía normal. Pero cuando probó los niveles de pH, lo encontró — el suelo era demasiado ácido.
+
+"¡Ajá!" susurró.
+
+"El resultado de la prueba — el pH es 4.2. Hipótesis confirmada. Pero ¿qué causó esto?"
+
+Pensó. La escuela había pintado la cerca el mes pasado. La lluvia había caído después.
+
+Tomó una muestra de agua del charco cerca de la cerca. En el laboratorio, usó el kit para mezclar el agua con solución indicadora.
+
+Rojo-naranja. Ácido.
+
+"¡Lo encontré!"
+
+Los químicos de la pintura se habían mezclado con el agua de lluvia y corrido hacia el suelo. Por eso las plantas no estaban creciendo.
+
+La solución: cal agrícola. Solo mezclarla con agua y aplicarla al jardín.
+
+Daniela entró a la oficina del director con su informe.
+
+"Necesito permiso para mezclar cal en el suelo del jardín. He encontrado la solución."
+
+El director la miró, luego se levantó y le dio la mano.
+
+"Eres una científica de verdad."`,
+  quiz: [
+    { id: "lab-fb1", type: "fill-blank", question: "Daniela took her soil samples to **el** __________ (the laboratory).", answer: "laboratorio" },
+    { id: "lab-fb2", type: "fill-blank", question: "The plants were not __________ (growing) because of acid in the soil.", answer: "creciendo" },
+    { id: "lab-fb3", type: "fill-blank", question: "She wrote down her __________ (hypothesis) in her science journal.", answer: "hipótesis" },
+    { id: "lab-fb4", type: "fill-blank", question: "She needed to __________ (mix) lime with water to fix the soil.", answer: "mezclar" },
+    { id: "lab-mc1", type: "multiple-choice", question: "What does 'el experimento' mean?", answer: "the experiment", options: ["the exploration", "the experiment", "the explanation", "the example"] },
+    { id: "lab-mc2", type: "multiple-choice", question: "What does 'observar' mean?", answer: "to observe", options: ["to organize", "to open", "to observe", "to operate"] },
+    { id: "lab-mc3", type: "multiple-choice", question: "What does 'la semilla' mean?", answer: "the seed", options: ["the soil", "the seed", "the sun", "the stem"] },
+    { id: "lab-mc4", type: "multiple-choice", question: "What does 'el resultado' mean?", answer: "the result", options: ["the reason", "the result", "the recipe", "the report"] },
+    { id: "lab-tr1", type: "translate", question: "Translate to Spanish: 'the plant'", answer: "la planta" },
+    { id: "lab-tr2", type: "translate", question: "Translate to English: 'la solución'", answer: "the solution" },
+    { id: "lab-tr3", type: "translate", question: "Translate to Spanish: 'to grow'", answer: "crecer" },
+    { id: "lab-tr4", type: "translate", question: "Translate to English: 'mezclar'", answer: "to mix" }
+  ]
+};
+
+// ============================================================
+// 💪 SELF-HELP — "El Poder Dentro de Ti" (The Power Within You)
+// ============================================================
+
+export const elPoderDentroEpisode1: Episode = {
+  id: "el-poder-dentro",
+  title: "El Poder Dentro de Ti",
+  description: "Nervous about a school presentation, Mateo learns to turn anxiety into strength",
+  vocab: [
+    { word: "el miedo", pronunciation: "el mee-EH-doh", english: "the fear" },
+    { word: "la confianza", pronunciation: "lah kon-fee-AN-sah", english: "the confidence" },
+    { word: "intentar", pronunciation: "een-ten-TAR", english: "to try" },
+    { word: "el esfuerzo", pronunciation: "el es-FWER-soh", english: "the effort" },
+    { word: "mejorar", pronunciation: "meh-ho-RAR", english: "to improve" },
+    { word: "creer", pronunciation: "kreh-ER", english: "to believe" },
+    { word: "el error", pronunciation: "el eh-ROHR", english: "the mistake" },
+    { word: "aprender", pronunciation: "ah-pren-DER", english: "to learn" },
+    { word: "la fortaleza", pronunciation: "lah for-tah-LEH-sah", english: "the strength" },
+    { word: "lograr", pronunciation: "loh-GRAR", english: "to achieve" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Biggest Fear",
+      content: `Mateo had been dreading this day for three weeks. He lay awake Sunday night staring at the ceiling, going through his presentation in his head for the thousandth time. Tomorrow, he had to stand up in front of the whole class and talk for five minutes about structural engineering. Five whole minutes. An eternity.
+
+**El miedo** was like a stone in his stomach. Not a little pebble — a boulder.
+
+He knocked on his mom's door. She was still awake, reading by lamplight.
+
+"**Tengo miedo,**" he admitted, sitting on the edge of her bed. I'm scared.
+
+She put down her book. "Tell me everything."
+
+"The presentation. What if I forget everything? What if I go blank in front of twenty-five people? I don't have enough **confianza**." The words came out in a rush. "What if they laugh? What if I fail?"
+
+His mom thought quietly for a moment. "You know what **el miedo** really is?"
+
+"A horrible feeling I want to get rid of?"
+
+She shook her head. "**El miedo** is your body sending you energy. It's preparing you for something important. **La fortaleza** for the moment ahead." She looked at him steadily. "The question isn't how to make **el miedo** disappear. The question is what you do with all that energy it's giving you."
+
+Mateo had never heard anyone describe fear that way before.
+
+"So I should just... **intentar**?" Just try?
+
+"You should **intentar** with everything you have. **El error** is allowed. Every great speaker in history made mistakes and survived them. **La confianza** doesn't mean you'll never fail. It means you'll keep going when you do. And that's how you **mejorar**."
+
+Mateo went back to his room. He read through his notes one more time, then set them down.
+
+"**Puedo hacerlo,**" he whispered to the dark ceiling. I can do it.`,
+      translatedWords: [
+        { word: "El miedo", translation: "The fear" },
+        { word: "Tengo miedo", translation: "I'm scared" },
+        { word: "confianza", translation: "confidence" },
+        { word: "el miedo", translation: "the fear" },
+        { word: "La fortaleza", translation: "The strength" },
+        { word: "intentar", translation: "to try" },
+        { word: "El error", translation: "The mistake" },
+        { word: "La confianza", translation: "The confidence" },
+        { word: "mejorar", translation: "to improve" },
+        { word: "Puedo hacerlo", translation: "I can do it" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Presentation",
+      content: `The next morning, Mateo walked into class carrying his notes and a stomach full of nerves. His best friend Carlos gave him a thumbs up from across the room. It helped — a little.
+
+When Ms. Torres called his name, **el miedo** spiked like electricity. His legs carried him to the front of the room on autopilot.
+
+He looked out at twenty-five faces. Some curious, some bored, two whispering in the back. He opened his mouth.
+
+Nothing came out.
+
+Three seconds of silence. Four. Five. His face went hot. This was **el error** — the big one. **La confianza** had fled the building.
+
+Then he remembered his mother's words. **El miedo** is energy. Use it.
+
+He took one slow breath. He found Carlos's face in the crowd. Carlos gave a tiny nod.
+
+"My presentation," Mateo said — voice a little shaky, but there — "is about how skyscrapers are built. I chose this because I want to **lograr** something big: I want to design buildings someday."
+
+His voice stabilized as he kept going. All that **esfuerzo** — every night practicing in his bedroom mirror — was there in his memory, solid and reliable. The words flowed. He pointed at his diagrams. He even threw in a fact about how the Empire State Building actually gets slightly shorter in summer because heat expands steel.
+
+The class laughed — not at him. With him.
+
+When he sat down, Ms. Torres was smiling. "**Excelente, Mateo.** That took real **confianza.**"
+
+Carlos fist-bumped him. "I knew you could **lograr** it."
+
+Mateo's hands were still trembling, but he was grinning. **El miedo** hadn't disappeared — it had been there the whole time. But he had **intentar**-ed anyway. He had used **el esfuerzo**. He had not stopped when **el error** almost swallowed him.
+
+"**Puedo mejorar** even more next time," he thought. I can improve.
+
+And that felt better than any grade on any report card.`,
+      translatedWords: [
+        { word: "el miedo", translation: "the fear" },
+        { word: "El error", translation: "The mistake" },
+        { word: "La confianza", translation: "The confidence" },
+        { word: "El miedo", translation: "The fear" },
+        { word: "lograr", translation: "to achieve" },
+        { word: "esfuerzo", translation: "effort" },
+        { word: "Excelente, Mateo", translation: "Excellent, Mateo" },
+        { word: "confianza", translation: "confidence" },
+        { word: "intentar", translation: "to try" },
+        { word: "el esfuerzo", translation: "the effort" },
+        { word: "Puedo mejorar", translation: "I can improve" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Mateo había temido este día por tres semanas. Estaba despierto el domingo por la noche mirando el techo. Mañana tenía que pararse frente a toda la clase y hablar por cinco minutos.
+
+El miedo era como una piedra en su estómago.
+
+Tocó la puerta de su mamá.
+
+"Tengo miedo," admitió.
+
+Ella dejó su libro. "Cuéntame todo."
+
+"La presentación. ¿Qué si olvido todo? No tengo suficiente confianza."
+
+Su mamá pensó. "¿Sabes qué es realmente el miedo? El miedo es tu cuerpo enviándote energía. La fortaleza para el momento que viene. La pregunta no es cómo hacer que el miedo desaparezca. La pregunta es qué haces con toda esa energía."
+
+"¿Entonces simplemente debería intentar?"
+
+"Debes intentar con todo lo que tienes. El error está permitido. La confianza no significa que no fallarás. Significa que seguirás adelante cuando lo hagas. Y así es como mejoras."
+
+Mateo volvió a su cuarto.
+
+"Puedo hacerlo," susurró.
+
+A la mañana siguiente, cuando la señorita Torres llamó su nombre, el miedo aumentó. Miró a veinticinco caras. Abrió la boca.
+
+Nada salió.
+
+Tres segundos de silencio. Cuatro. Cinco.
+
+Entonces recordó. El miedo es energía. Úsala.
+
+Tomó un respiro.
+
+"Mi presentación es sobre cómo se construyen los rascacielos. Quiero lograr algo grande: quiero diseñar edificios algún día."
+
+Su voz se estabilizó. Todo el esfuerzo de practicar cada noche estaba allí en su memoria. Las palabras fluyeron.
+
+Cuando se sentó, la señorita Torres sonreía. "Excelente, Mateo. Eso tomó verdadera confianza."
+
+Mateo todavía temblaba, pero sonreía. El miedo había estado allí todo el tiempo. Pero había intentado de todas formas.
+
+"Puedo mejorar aún más la próxima vez," pensó.
+
+Y eso se sentía mejor que cualquier nota.`,
+  quiz: [
+    { id: "pod-fb1", type: "fill-blank", question: "Mateo was full of __________ (fear) about the school presentation.", answer: "miedo" },
+    { id: "pod-fb2", type: "fill-blank", question: "He needed more __________ (confidence) to speak in front of the class.", answer: "confianza" },
+    { id: "pod-fb3", type: "fill-blank", question: "Making an __________ (mistake) is okay — you can learn from it.", answer: "error" },
+    { id: "pod-fb4", type: "fill-blank", question: "He wanted to __________ (achieve) his dream of designing buildings.", answer: "lograr" },
+    { id: "pod-mc1", type: "multiple-choice", question: "What does 'intentar' mean?", answer: "to try", options: ["to imagine", "to interrupt", "to try", "to invite"] },
+    { id: "pod-mc2", type: "multiple-choice", question: "What does 'la fortaleza' mean?", answer: "the strength", options: ["the fortress", "the strength", "the fortune", "the friend"] },
+    { id: "pod-mc3", type: "multiple-choice", question: "What does 'mejorar' mean?", answer: "to improve", options: ["to move", "to measure", "to improve", "to meet"] },
+    { id: "pod-mc4", type: "multiple-choice", question: "What does 'el esfuerzo' mean?", answer: "the effort", options: ["the escape", "the effort", "the example", "the energy"] },
+    { id: "pod-tr1", type: "translate", question: "Translate to Spanish: 'to learn'", answer: "aprender" },
+    { id: "pod-tr2", type: "translate", question: "Translate to English: 'creer'", answer: "to believe" },
+    { id: "pod-tr3", type: "translate", question: "Translate to Spanish: 'the fear'", answer: "el miedo" },
+    { id: "pod-tr4", type: "translate", question: "Translate to English: 'lograr'", answer: "to achieve" }
+  ]
+};
+
+// ============================================================
+// 🏔️ ADVENTURE — "El Explorador" (The Explorer)
+// ============================================================
+
+export const elExploradorEpisode1: Episode = {
+  id: "el-explorador",
+  title: "El Explorador",
+  description: "Twins Javier and Luna trek into the cloud forest to find a legendary waterfall before a storm hits",
+  vocab: [
+    { word: "la montaña", pronunciation: "lah mon-TAH-nyah", english: "the mountain" },
+    { word: "el sendero", pronunciation: "el sen-DEH-roh", english: "the trail/path" },
+    { word: "el bosque", pronunciation: "el BOS-keh", english: "the forest" },
+    { word: "la cascada", pronunciation: "lah kas-KAH-dah", english: "the waterfall" },
+    { word: "peligroso/a", pronunciation: "peh-lee-GROH-soh", english: "dangerous" },
+    { word: "la tormenta", pronunciation: "lah tor-MEN-tah", english: "the storm" },
+    { word: "seguir", pronunciation: "seh-GEER", english: "to follow/continue" },
+    { word: "el mapa", pronunciation: "el MAH-pah", english: "the map" },
+    { word: "perderse", pronunciation: "per-DER-seh", english: "to get lost" },
+    { word: "llegar", pronunciation: "yeh-GAR", english: "to arrive/reach" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — Into the Cloud Forest",
+      content: `The twins had been planning this trek for three months. Javier carried **el mapa** — hand-drawn, slightly faded at the edges, given to them by their grandfather before he passed. It showed a winding path into **el bosque** de las Nubes and, at the very end of the **sendero**, a spot marked with a single blue spiral: **la cascada** Eternidad.
+
+"The most beautiful waterfall in the world," their grandfather had always said, eyes going distant. "And the hardest to find."
+
+This morning, they'd woken before dawn and tiptoed out with their packs. Their parents thought they were hiking the easy trail near the village. They were decidedly not.
+
+**El sendero** started gently — a dirt path through coffee plants and banana trees, birds arguing overhead. Luna checked their GPS backup while Javier followed **el mapa**'s hand-drawn landmarks: "Three bent palms. Check. The rock shaped like a sleeping jaguar. Check. Left turn at the yellow orchid."
+
+"I see the orchid!" Luna said, pointing.
+
+**El bosque** thickened as they climbed higher. The air grew cooler and wetter. Clouds drifted between the trees at eye level — this truly was the cloud forest. Every branch dripped with green moss. Pink orchids grew from the trunks of ancient trees. A tiny hummingbird hovered inches from Javier's nose, examined him with one bright eye, and zipped away.
+
+"**¡Es increíble!**" he breathed. It's incredible.
+
+Luna was already scanning the sky to the west. Dark bruise-colored clouds were building over **la montaña**.
+
+"**Una tormenta se acerca,**" she said quietly. A storm is coming. "We need to move fast, Javi."`,
+      translatedWords: [
+        { word: "el mapa", translation: "the map" },
+        { word: "el bosque", translation: "the forest" },
+        { word: "sendero", translation: "trail/path" },
+        { word: "la cascada", translation: "the waterfall" },
+        { word: "El sendero", translation: "The trail" },
+        { word: "El bosque", translation: "The forest" },
+        { word: "¡Es increíble!", translation: "It's incredible!" },
+        { word: "la montaña", translation: "the mountain" },
+        { word: "Una tormenta se acerca", translation: "A storm is coming" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Race Against the Storm",
+      content: `**El sendero** got steeper. Then narrower. Vines reached across the path. **El mapa** said they were close — only one more ridge to cross. But **la tormenta** was moving faster than expected. Thunder rolled behind **la montaña** like a warning drum.
+
+"**¿Seguimos?**" Luna asked, looking at the darkening sky. Do we continue?
+
+Javier looked at **el mapa**. Then at the sky. Then at **el mapa** again. The path ahead was **peligroso** — the ground was slick with damp moss, and the mist was thickening fast. One wrong step on this ridge and you'd slide a long way down.
+
+"**Seguimos,**" he said finally. We continue. "Abuelo walked this **sendero** himself. We can too."
+
+They pushed on. Luna moved slowly and carefully, testing each foothold before shifting her weight. "**Cuidado**," she warned every few meters. Careful. Javier followed her lead, keeping his eyes on both the path and **el mapa**.
+
+"According to Abuelo, there's one last landmark — a fig tree with roots that spread out like fingers. After that we turn right and we should **llegar**."
+
+"I see it!" Luna stopped suddenly. "Javi — the fig tree! There!"
+
+An enormous old fig tree stood at the ridge's crest, its roots sprawling across the path like the fingers of a giant hand, exactly as **el mapa** showed.
+
+They turned right. **El sendero** curved around a mossy boulder and disappeared into thick mist. Then — they heard it before they saw it. A deep, sustained roar cutting through the storm rumble. Something massive and powerful and alive.
+
+**La cascada.**
+
+They stepped through the final curtain of mist together, and there it was. **La cascada** Eternidad — a fifty-meter wall of white water plunging into a crystal pool below, surrounded by ferns and flowers that grew nowhere else on earth. The spray hit their faces instantly. Behind the water, a rainbow flickered in and out of the mist like something from a dream.
+
+**La tormenta** finally broke directly overhead at that exact moment. Rain hammered down in sheets. Lightning cracked across **la montaña**. But the twins stood at **la cascada** — soaked, breathless, laughing.
+
+"**¡Llegamos!**" Luna threw her arms wide. We made it!
+
+Javier pressed Abuelo's **mapa** to his chest and felt the cold rain and the warm waterfall mist mixing on his face.
+
+"**Llegamos,**" he agreed softly. "**Abuelo tenía razón.**" Grandfather was right.
+
+**La cascada** Eternidad was the most beautiful thing he had ever seen. And it had been worth every step.`,
+      translatedWords: [
+        { word: "El sendero", translation: "The trail" },
+        { word: "el mapa", translation: "the map" },
+        { word: "la tormenta", translation: "the storm" },
+        { word: "¿Seguimos?", translation: "Do we continue?" },
+        { word: "la montaña", translation: "the mountain" },
+        { word: "peligroso", translation: "dangerous" },
+        { word: "Seguimos", translation: "We continue" },
+        { word: "sendero", translation: "trail" },
+        { word: "Cuidado", translation: "Careful" },
+        { word: "llegar", translation: "to arrive/reach" },
+        { word: "La cascada", translation: "The waterfall" },
+        { word: "La tormenta", translation: "The storm" },
+        { word: "¡Llegamos!", translation: "We made it!" },
+        { word: "Abuelo tenía razón", translation: "Grandfather was right" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Los gemelos habían planeado esta caminata por tres meses. Javier llevaba el mapa — dibujado a mano, dado por su abuelo. Mostraba un camino hacia el Bosque de las Nubes y, al final del sendero, una espiral azul: la Cascada Eternidad.
+
+"La cascada más hermosa del mundo," su abuelo siempre decía. "Y la más difícil de encontrar."
+
+Esta mañana se levantaron antes del amanecer. Sus padres pensaban que estaban en el sendero fácil cerca del pueblo. No lo estaban.
+
+El sendero comenzó suavemente. El bosque se espesó mientras subían. Las nubes se deslizaban entre los árboles. Cada rama chorreaba musgo verde. Las orquídeas crecían en troncos antiguos.
+
+"¡Es increíble!" respiró Javier.
+
+Luna ya miraba el cielo. Nubes oscuras se acumulaban sobre la montaña.
+
+"Una tormenta se acerca. Necesitamos movernos rápido."
+
+El sendero se volvió más empinado. El mapa decía que estaban cerca — solo una cresta más. Pero la tormenta se movía rápido.
+
+"¿Seguimos?"
+
+Javier miró el mapa, luego el cielo.
+
+"Seguimos. Abuelo caminó este sendero. Nosotros también podemos."
+
+El sendero era peligroso ahora. "Cuidado," advertía Luna en cada paso difícil.
+
+"Según Abuelo, hay una higuera con raíces como dedos. Después giramos a la derecha y llegaremos."
+
+"¡La veo! ¡Javi, la higuera!"
+
+Giraron a la derecha. El sendero se curvó. Y luego lo escucharon antes de verlo — un rugido profundo y poderoso.
+
+La cascada.
+
+Atravesaron la cortina de niebla y ahí estaba. La Cascada Eternidad — cincuenta metros de agua blanca cayendo en una piscina de cristal. El rocío les golpeó las caras. Un arcoíris parpadeaba detrás del agua.
+
+La tormenta se desató en ese momento exacto. Lluvia. Relámpagos. Pero los gemelos estaban en la cascada, empapados y riendo.
+
+"¡Llegamos!"
+
+Javier apretó el mapa del Abuelo contra su pecho.
+
+"Llegamos. Abuelo tenía razón."
+
+Era lo más hermoso que había visto jamás.`,
+  quiz: [
+    { id: "exp-fb1", type: "fill-blank", question: "The twins followed the __________ (trail) into the cloud forest.", answer: "sendero" },
+    { id: "exp-fb2", type: "fill-blank", question: "They were racing against **la** __________ (the storm).", answer: "tormenta" },
+    { id: "exp-fb3", type: "fill-blank", question: "Javier carried an old __________ (map) from his grandfather.", answer: "mapa" },
+    { id: "exp-fb4", type: "fill-blank", question: "They finally managed to __________ (arrive/reach) the legendary waterfall.", answer: "llegar" },
+    { id: "exp-mc1", type: "multiple-choice", question: "What does 'la montaña' mean?", answer: "the mountain", options: ["the morning", "the mountain", "the monster", "the marsh"] },
+    { id: "exp-mc2", type: "multiple-choice", question: "What does 'el bosque' mean?", answer: "the forest", options: ["the beach", "the brook", "the forest", "the border"] },
+    { id: "exp-mc3", type: "multiple-choice", question: "What does 'peligroso' mean?", answer: "dangerous", options: ["popular", "peaceful", "playful", "dangerous"] },
+    { id: "exp-mc4", type: "multiple-choice", question: "What does 'seguir' mean?", answer: "to follow/continue", options: ["to shout", "to follow/continue", "to swim", "to search"] },
+    { id: "exp-tr1", type: "translate", question: "Translate to Spanish: 'the waterfall'", answer: "la cascada" },
+    { id: "exp-tr2", type: "translate", question: "Translate to English: 'perderse'", answer: "to get lost" },
+    { id: "exp-tr3", type: "translate", question: "Translate to Spanish: 'the forest'", answer: "el bosque" },
+    { id: "exp-tr4", type: "translate", question: "Translate to English: 'la tormenta'", answer: "the storm" }
+  ]
+};
+
+// ============================================================
+// 🔍 MYSTERY — "El Cuadro Robado" (The Stolen Painting)
+// ============================================================
+
+export const elCuadroRobadoEpisode1: Episode = {
+  id: "el-cuadro-robado",
+  title: "El Cuadro Robado",
+  description: "When a priceless painting vanishes from the school art show, only one student detective can crack the case",
+  vocab: [
+    { word: "el misterio", pronunciation: "el mees-TEH-ree-oh", english: "the mystery" },
+    { word: "la pista", pronunciation: "lah PEES-tah", english: "the clue" },
+    { word: "el sospechoso", pronunciation: "el sos-peh-CHOH-soh", english: "the suspect" },
+    { word: "robar", pronunciation: "roh-BAR", english: "to steal" },
+    { word: "investigar", pronunciation: "een-ves-tee-GAR", english: "to investigate" },
+    { word: "el testigo", pronunciation: "el tes-TEE-goh", english: "the witness" },
+    { word: "la prueba", pronunciation: "lah PRWEH-bah", english: "the evidence" },
+    { word: "descubrir", pronunciation: "des-koo-BREER", english: "to discover/uncover" },
+    { word: "culpable", pronunciation: "kool-PAH-bleh", english: "guilty" },
+    { word: "resolver", pronunciation: "reh-sol-BER", english: "to solve" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Missing Masterpiece",
+      content: `The Friday art show was supposed to be the highlight of the school year. Students had spent weeks preparing their work. Parents filled the gymnasium. The buzz of conversation mixed with soft music from the seventh-grade string quartet.
+
+But at exactly 7:14 PM, everything changed.
+
+"**¡El cuadro ha desaparecido!**" came a shout from the back corner. The painting has disappeared!
+
+Thirteen-year-old Valentina — school newspaper reporter, self-declared amateur detective, and the only person in the building who actually carried a notebook everywhere — was at the scene within thirty seconds.
+
+The space on the wall was empty. A small but exquisite painting of the old lighthouse at sunset — the centerpiece of the whole show, created by visiting artist Sr. Medrano — was gone. Just an empty hook remained, and one small detail: a torn scrap of blue fabric caught on the corner of the frame.
+
+"**¿Alguien vio algo?**" Valentina called out. Did anyone see anything?
+
+A small boy in the front row raised his hand timidly. **Un testigo.** A witness. "I saw someone near that wall. They were carrying something flat — like a frame — and walking really fast toward the side door."
+
+Valentina had her pen moving before he finished. "What were they wearing?"
+
+"A blue jacket," the boy said. "With a hood."
+
+**La pista** number one: blue fabric. **La pista** number two: blue hooded jacket, side door exit. Three **sospechosos** to find. **El misterio** had officially begun.
+
+"**Voy a investigar,**" she muttered to herself, already scanning the room. I'm going to investigate.`,
+      translatedWords: [
+        { word: "¡El cuadro ha desaparecido!", translation: "The painting has disappeared!" },
+        { word: "¿Alguien vio algo?", translation: "Did anyone see anything?" },
+        { word: "Un testigo", translation: "A witness" },
+        { word: "La pista", translation: "The clue" },
+        { word: "sospechosos", translation: "suspects" },
+        { word: "El misterio", translation: "The mystery" },
+        { word: "Voy a investigar", translation: "I'm going to investigate" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Following the Clues",
+      content: `Valentina moved through the gymnasium with deliberate calm. She had mentally listed three people wearing blue jackets tonight: Mr. Chen the janitor, eighth-grader Rodrigo Torres, and a parent, Sra. Vega, who had arrived forty minutes late and left early.
+
+She found Rodrigo first. **El sospechoso** número uno.
+
+"I need to ask you something," Valentina said. "Where were you at 7:14 PM?"
+
+Rodrigo rolled his eyes. "At the snack table, eating three pieces of cake. Ask anyone. I definitely didn't **robar** anything."
+
+She checked. Three different people confirmed he'd been at the cake table continuously from 7:00 to 7:20. **La prueba** cleared him completely.
+
+She found Mr. Chen next. He was quietly mopping near the side exit — the same door **el testigo** had mentioned. Interesting placement.
+
+"Were you near the back corner around 7:15?" Valentina asked politely.
+
+Mr. Chen shook his head. "I was right here. And this side door was locked at seven o'clock. It only opens from the inside with the emergency bar."
+
+Valentina's eyes narrowed. If the door was locked and the painting was gone... the painting was still inside. The thief hadn't actually gotten out.
+
+She went back to the empty hook. She knelt and **observó** the floor carefully. Tiny flecks of blue paint — not fabric fiber, actual paint — on the tiles. The kind that scrapes off the back of a canvas when it's pulled off a hook too roughly.
+
+She stood up. She looked at the display table across the room where extra student artwork was stacked in a pile.
+
+Slowly, methodically, she walked over. She began lifting paintings one by one.
+
+Third one in: the lighthouse at sunset, face-down among three student watercolors.
+
+**La prueba** final. The painting was here. The "thief" had panicked and hidden it rather than escaped with it.
+
+Valentina stood up and looked at the room. A girl across the gymnasium was watching her. Face pale. Hands clasped in front of her.
+
+"**¿Eres culpable?**" Valentina said, walking toward her quietly. Are you guilty?
+
+The girl looked at the floor and gave one small nod.
+
+A teacher appeared at Valentina's elbow. "Her name is Clara. Her painting was taken down from the wall to make room for Sr. Medrano's. She was angry."
+
+Valentina looked at Clara — who was now crying quietly, mortified — and felt the anger in the room soften into something more like understanding.
+
+"**El misterio** está **resuelto,**" Valentina wrote in her notebook. The mystery is solved. "And the painting is safe."
+
+She'd used **la pista**, found **la prueba**, and **resuelto** the case.
+
+Not bad for one notebook and forty minutes.`,
+      translatedWords: [
+        { word: "El sospechoso", translation: "The suspect" },
+        { word: "robar", translation: "to steal" },
+        { word: "La prueba", translation: "The evidence" },
+        { word: "el testigo", translation: "the witness" },
+        { word: "observó", translation: "observed" },
+        { word: "¿Eres culpable?", translation: "Are you guilty?" },
+        { word: "El misterio", translation: "The mystery" },
+        { word: "resuelto", translation: "solved" },
+        { word: "la pista", translation: "the clue" },
+        { word: "la prueba", translation: "the evidence" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `El show de arte del viernes era el punto culminante del año escolar. A exactamente las 7:14 PM, algo terrible sucedió.
+
+"¡El cuadro ha desaparecido!" llegó un grito desde la esquina trasera.
+
+Valentina, de trece años — reportera escolar y detectivescuela amateur — llegó a la escena en treinta segundos.
+
+El espacio en la pared estaba vacío. La pequeña pero exquisita pintura del faro al atardecer del artista visitante Sr. Medrano había desaparecido. Solo un gancho vacío y un trozo de tela azul.
+
+"¿Alguien vio algo?"
+
+Un niño levantó la mano. Un testigo. "Vi a alguien cerca de esa pared. Llevaban algo plano y caminaban muy rápido hacia la puerta lateral."
+
+"¿Qué ropa llevaban?"
+
+"Una chaqueta azul con capucha."
+
+La pista número uno: tela azul. La pista número dos: chaqueta azul con capucha. El misterio había comenzado oficialmente.
+
+Valentina tenía tres sospechosos con chaquetas azules: el conserje Chen, el alumno Rodrigo, y la madre Sra. Vega.
+
+Rodrigo — el sospechoso número uno — dijo que estaba en la mesa de pasteles. Tres personas lo confirmaron. La prueba lo liberó.
+
+El señor Chen estaba junto a la puerta lateral. "Esta puerta estaba cerrada a las siete," dijo. "Solo se abre desde adentro."
+
+Si la puerta estaba cerrada... la pintura todavía estaba adentro.
+
+Valentina volvió al gancho vacío. Se arrodilló y observó el suelo. Pequeñas escamas de pintura azul en los azulejos.
+
+Caminó hacia la mesa donde había arte apilado. Levantó los cuadros uno a uno.
+
+El tercero: el faro al atardecer, boca abajo entre acuarelas de estudiantes.
+
+La prueba final. La pintura estaba aquí.
+
+Valentina miró la sala. Una chica la observaba, con la cara pálida.
+
+"¿Eres culpable?" dijo Valentina tranquilamente.
+
+La chica miró el suelo y asintió. Su pintura había sido retirada para hacer espacio al trabajo del Sr. Medrano. Estaba enojada.
+
+"El misterio está resuelto," escribió Valentina en su cuaderno.
+
+No estaba mal para un cuaderno y cuarenta minutos.`,
+  quiz: [
+    { id: "mys-fb1", type: "fill-blank", question: "Valentina followed every __________ (clue) to solve the case.", answer: "pista" },
+    { id: "mys-fb2", type: "fill-blank", question: "The boy was a key __________ (witness) who saw someone near the wall.", answer: "testigo" },
+    { id: "mys-fb3", type: "fill-blank", question: "She needed to __________ (investigate) what really happened.", answer: "investigar" },
+    { id: "mys-fb4", type: "fill-blank", question: "Rodrigo said he definitely didn't __________ (steal) anything.", answer: "robar" },
+    { id: "mys-mc1", type: "multiple-choice", question: "What does 'el misterio' mean?", answer: "the mystery", options: ["the mirror", "the mystery", "the monster", "the market"] },
+    { id: "mys-mc2", type: "multiple-choice", question: "What does 'culpable' mean?", answer: "guilty", options: ["capable", "guilty", "curious", "careful"] },
+    { id: "mys-mc3", type: "multiple-choice", question: "What does 'resolver' mean?", answer: "to solve", options: ["to revolve", "to solve", "to remove", "to restore"] },
+    { id: "mys-mc4", type: "multiple-choice", question: "What does 'descubrir' mean?", answer: "to discover/uncover", options: ["to describe", "to disturb", "to discover/uncover", "to discuss"] },
+    { id: "mys-tr1", type: "translate", question: "Translate to Spanish: 'the suspect'", answer: "el sospechoso" },
+    { id: "mys-tr2", type: "translate", question: "Translate to English: 'la prueba'", answer: "the evidence" },
+    { id: "mys-tr3", type: "translate", question: "Translate to Spanish: 'the clue'", answer: "la pista" },
+    { id: "mys-tr4", type: "translate", question: "Translate to English: 'robar'", answer: "to steal" }
+  ]
+};
+
+// ============================================================
+// SERIES DEFINITIONS — New Categories
+// ============================================================
+
+export const historySeriesSpanish: Series = {
+  id: "el-imperio-azteca",
+  title: "El Imperio Azteca",
+  description: "A young historian discovers the magnificent world of the Aztec Empire through an ancient codex",
+  category: "history",
+  language: "spanish",
+  episodes: [elImperioAztecaEpisode1]
+};
+
+export const scienceSeriesSpanish: Series = {
+  id: "el-laboratorio-secreto",
+  title: "El Laboratorio Secreto",
+  description: "A science-obsessed girl uses the scientific method to solve a botany mystery threatening her school garden",
+  category: "science",
+  language: "spanish",
+  episodes: [elLaboratorioEpisode1]
+};
+
+export const selfHelpSeriesSpanish: Series = {
+  id: "el-poder-dentro",
+  title: "El Poder Dentro de Ti",
+  description: "A shy kid learns to conquer stage fright and find inner strength before a big school presentation",
+  category: "self-help",
+  language: "spanish",
+  episodes: [elPoderDentroEpisode1]
+};
+
+export const adventureSeriesSpanish: Series = {
+  id: "el-explorador",
+  title: "El Explorador",
+  description: "Twin siblings follow their grandfather's map through a Costa Rican cloud forest to find a legendary waterfall",
+  category: "adventure",
+  language: "spanish",
+  episodes: [elExploradorEpisode1]
+};
+
+export const mysterySeriesSpanish: Series = {
+  id: "el-cuadro-robado",
+  title: "El Cuadro Robado",
+  description: "When a priceless painting vanishes from the school art show, only one student detective can crack the case",
+  category: "mystery",
+  language: "spanish",
+  episodes: [elCuadroRobadoEpisode1]
+};
+
+// ============================================================
+// COMBINED EXPORT
+// ============================================================
+
 export const allNewSpanishSeries: Series[] = [
   sportsSeriesSpanish,
   techSeriesSpanish,
   futureSeriesSpanish,
-  creativeSeriesSpanish
+  creativeSeriesSpanish,
+  historySeriesSpanish,
+  scienceSeriesSpanish,
+  selfHelpSeriesSpanish,
+  adventureSeriesSpanish,
+  mysterySeriesSpanish
 ];
+

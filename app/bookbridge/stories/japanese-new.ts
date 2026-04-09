@@ -1022,6 +1022,848 @@ export const creativeSeries: Series = {
 };
 
 // ============================================================
+// ============================================================
+// 📜 HISTORY — "Samurai no Michi" (The Way of the Samurai)
+// ============================================================
+
+export const samuraiNoMichiEpisode: Episode = {
+  id: "samurai-no-michi",
+  title: "Samurai no Michi",
+  description: "A boy discovers the code of the samurai through his grandfather's ancient scroll",
+  vocab: [
+    { word: "samurai", pronunciation: "SAH-moo-rai", english: "samurai/warrior" },
+    { word: "katana", pronunciation: "kah-TAH-nah", english: "sword" },
+    { word: "rekishi", pronunciation: "REH-kee-shee", english: "history" },
+    { word: "shiro", pronunciation: "SHEE-roh", english: "castle" },
+    { word: "sensei", pronunciation: "SEN-say", english: "teacher/master" },
+    { word: "tsuyoi", pronunciation: "TSOO-yoi", english: "strong" },
+    { word: "bushidou", pronunciation: "BOO-shee-doh", english: "the way of the warrior" },
+    { word: "ikusa", pronunciation: "ee-KOO-sah", english: "battle/war" },
+    { word: "hokori", pronunciation: "hoh-KOH-ree", english: "pride/honor" },
+    { word: "mamoru", pronunciation: "mah-MOH-roo", english: "to protect" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Old Scroll",
+      content: `Takeshi found the scroll in his grandfather's workshop — behind the woodworking tools, wrapped in silk cloth that had turned yellow with age. He almost didn't open it. But curiosity won.
+
+Inside was a painting of a **samurai** in full armor, standing before a great **shiro** — a castle with curved roofs and stone walls. The **samurai** held a **katana** at his side, and his face was calm, fearless. Japanese calligraphy ran down the side of the painting.
+
+"**Ojiisan!**" Takeshi called. Grandfather! "**Kore wa nan desu ka?**" What is this?
+
+His grandfather appeared in the doorway, wiping sawdust from his hands. When he saw the scroll, his expression changed — softer, more serious.
+
+"That is our family's **rekishi**," he said quietly. "Our history. That **samurai** is our ancestor — Takeshi Nakamura, born in 1603. You were named after him."
+
+Takeshi stared at the painted warrior. Named after a real **samurai**?
+
+"He served the Tokugawa shogunate," Ojiisan continued, sitting down on his work stool. "He lived by **bushidou** — the way of the warrior. It wasn't just about fighting. **Bushidou** was about **hokori** — honor and pride. About being **tsuyoi** — strong — not just in body, but in character."
+
+"What did he do?"
+
+"He **mamotta** — protected — his lord and his people. He fought in **ikusa** when he had to. But his greatest achievement was peace. He helped build a school for village children."
+
+Takeshi touched the painted face carefully. His ancestor. His name. His **rekishi**.
+
+"Can you teach me about **bushidou**?" he asked.
+
+His grandfather smiled. "That is exactly what a true **samurai** would ask. A warrior's first duty is to **mamoru** — to protect. And the first thing you must protect is your mind. Fill it with **rekishi**. Learn. That is the way."`,
+      translatedWords: [
+        { word: "samurai", translation: "samurai/warrior" },
+        { word: "shiro", translation: "castle" },
+        { word: "katana", translation: "sword" },
+        { word: "Ojiisan!", translation: "Grandfather!" },
+        { word: "Kore wa nan desu ka?", translation: "What is this?" },
+        { word: "rekishi", translation: "history" },
+        { word: "bushidou", translation: "the way of the warrior" },
+        { word: "hokori", translation: "honor/pride" },
+        { word: "tsuyoi", translation: "strong" },
+        { word: "mamotta", translation: "protected" },
+        { word: "ikusa", translation: "battle/war" },
+        { word: "mamoru", translation: "to protect" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Way of the Warrior",
+      content: `Over the following weeks, Ojiisan taught Takeshi about **bushidou** every evening after dinner. They sat in the garden with tea, the old scroll open between them.
+
+"**Bushidou** has seven virtues," Ojiisan said. "Courage. Honor. Loyalty. Respect. Honesty. Compassion. And duty. A **samurai** was **tsuyoi** not because of his **katana**. He was **tsuyoi** because of these."
+
+He told Takeshi stories. About **samurai** who chose mercy over violence. About warriors who wrote poetry before **ikusa** — going into battle with beauty in their hearts. About lords who protected their people's rice fields before their own **shiro**.
+
+"**Rekishi** teaches us that true strength is not about fighting," Ojiisan said. "It's about choosing when NOT to fight. The greatest **samurai** were peacemakers."
+
+Takeshi listened, fascinated. Everything he'd thought he knew about **samurai** — from movies and games — was only half the story. The real **bushidou** was about building character, not just swinging a **katana**.
+
+"The **samurai** code says: protect the weak, honor your word, and never give up," Ojiisan said. "**Mamoru** — protect. That is the heart of everything."
+
+"**Boku mo samurai ni naritai,**" Takeshi said. I want to become a samurai too.
+
+His grandfather laughed warmly. "You already are. **Bushidou** lives in anyone who chooses **hokori** over selfishness. You don't need a **katana** or a **shiro**. You need courage, honesty, and the will to **mamoru** what matters."
+
+Takeshi looked at the scroll one more time. His ancestor's calm face looked back at him across four hundred years.
+
+"**Rekishi** is alive," Takeshi said.
+
+"**Rekishi** lives in us," Ojiisan agreed. "**Sore ga bushidou desu.**" That is the way of the warrior.`,
+      translatedWords: [
+        { word: "Bushidou", translation: "The way of the warrior" },
+        { word: "samurai", translation: "samurai/warrior" },
+        { word: "tsuyoi", translation: "strong" },
+        { word: "katana", translation: "sword" },
+        { word: "ikusa", translation: "battle" },
+        { word: "Rekishi", translation: "History" },
+        { word: "shiro", translation: "castle" },
+        { word: "Mamoru", translation: "To protect" },
+        { word: "Boku mo samurai ni naritai", translation: "I want to become a samurai too" },
+        { word: "bushidou", translation: "the way of the warrior" },
+        { word: "hokori", translation: "honor/pride" },
+        { word: "Sore ga bushidou desu", translation: "That is the way of the warrior" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Takeshi wa ojiisan no koubou de makimono wo mitsukemashita. Naka ni wa samurai no e ga arimashita — shiro no mae ni tatsu, katana wo motsu bushi.
+
+"Ojiisan! Kore wa nan desu ka?"
+
+"Sore wa kazoku no rekishi da. Sono samurai wa senzo — Takeshi Nakamura, 1603-nen umare. Omae wa kare ni chinande nazukerareta."
+
+"Kare wa bushidou de ikita — bushi no michi. Sore wa tatakai dake janai. Bushidou wa hokori — meiyo to hokori. Tsuyoi de aru koto — karada dake janaku, seikaku mo."
+
+"Kare wa mamotta — shugun to hitobito wo. Ikusa de tatakatta. Shikashi, ichiban no gyouseki wa heiwa datta."
+
+"Bushidou wo oshiete kudasai."
+
+"Sore wa hontou no samurai ga kiku koto da. Bushi no saisho no gimu wa mamoru koto."
+
+Maibanshoku no ato, ojiisan wa bushidou wo oshiemashita.
+
+"Bushidou ni wa nanatsu no bitoku ga aru. Yuuki. Meiyo. Chuugi. Sonkei. Shoujiki. Jihi. Gimu. Samurai wa katana no tame ni tsuyoi no dewa nai. Korera no tame ni tsuyoi."
+
+"Hontou no tsuyosa wa tatakawanai koto wo erabu koto. Saikou no samurai wa heiwa no tsukurite datta."
+
+"Boku mo samurai ni naritai."
+
+"Mou samurai da. Bushidou wa hokori wo erabu dare ni demo ikiteiru."
+
+"Rekishi wa ikiteiru."
+
+"Rekishi wa watashi-tachi no naka ni ikiteiru. Sore ga bushidou desu."`,
+  quiz: [
+    { id: "sam-fb1", type: "fill-blank", question: "The warrior's code is called __________ (the way of the warrior).", answer: "bushidou" },
+    { id: "sam-fb2", type: "fill-blank", question: "The samurai held a __________ (sword) at his side.", answer: "katana" },
+    { id: "sam-fb3", type: "fill-blank", question: "A samurai must __________ (protect) the weak.", answer: "mamoru" },
+    { id: "sam-fb4", type: "fill-blank", question: "Takeshi learned about his family's __________ (history).", answer: "rekishi" },
+    { id: "sam-mc1", type: "multiple-choice", question: "What does 'tsuyoi' mean?", answer: "strong", options: ["tall", "tired", "strong", "smart"] },
+    { id: "sam-mc2", type: "multiple-choice", question: "What does 'shiro' mean?", answer: "castle", options: ["white", "castle", "city", "shield"] },
+    { id: "sam-mc3", type: "multiple-choice", question: "What does 'hokori' mean?", answer: "honor/pride", options: ["happiness", "honor/pride", "hope", "home"] },
+    { id: "sam-mc4", type: "multiple-choice", question: "What does 'ikusa' mean?", answer: "battle/war", options: ["island", "illness", "battle/war", "idea"] },
+    { id: "sam-tr1", type: "translate", question: "Translate to English: 'sensei'", answer: "teacher/master" },
+    { id: "sam-tr2", type: "translate", question: "How do you say 'history' in Japanese romaji?", answer: "rekishi" },
+    { id: "sam-tr3", type: "translate", question: "Translate to English: 'mamoru'", answer: "to protect" },
+    { id: "sam-tr4", type: "translate", question: "How do you say 'sword' in Japanese romaji?", answer: "katana" }
+  ]
+};
+
+// ============================================================
+// 🔬 SCIENCE — "Kagaku no Chikara" (The Power of Science)
+// ============================================================
+
+export const kagakuNoChikaraEpisode: Episode = {
+  id: "kagaku-no-chikara",
+  title: "Kagaku no Chikara",
+  description: "A girl builds a weather station on her school rooftop and predicts a typhoon that saves her community",
+  vocab: [
+    { word: "kagaku", pronunciation: "KAH-gah-koo", english: "science" },
+    { word: "tenki", pronunciation: "TEN-kee", english: "weather" },
+    { word: "taifuu", pronunciation: "TAI-foo", english: "typhoon" },
+    { word: "kaze", pronunciation: "KAH-zeh", english: "wind" },
+    { word: "ame", pronunciation: "AH-meh", english: "rain" },
+    { word: "hakaru", pronunciation: "hah-KAH-roo", english: "to measure" },
+    { word: "yosoku", pronunciation: "yoh-SOH-koo", english: "prediction/forecast" },
+    { word: "kiken", pronunciation: "KEE-ken", english: "danger" },
+    { word: "tasukeru", pronunciation: "tah-SOO-keh-roo", english: "to help/save" },
+    { word: "jikken", pronunciation: "JIK-ken", english: "experiment" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Weather Station",
+      content: `Yumi had always been fascinated by **tenki**. While other kids looked at the sky and saw clouds, she saw cumulonimbus towers building toward thunderstorms, cirrus wisps predicting fair **tenki** for tomorrow, and the way **kaze** shifted direction before a storm.
+
+For her science fair project, she decided to build a real weather station on the school rooftop. Not a plastic toy one — a real one.
+
+"**Sensei,**" she said to Mr. Tanaka, her science teacher, "**Okujou ni tenki kansoku sochi wo tsukuritai desu.**" I want to build a weather observation device on the rooftop.
+
+Mr. Tanaka raised an eyebrow. "That's ambitious, Yumi. What will you **hakaru**?"
+
+"Everything," she said. "Temperature. Humidity. **Kaze** speed and direction. Barometric pressure. **Ame** quantity. All connected to a Raspberry Pi that logs data every five minutes."
+
+The **jikken** took two weeks to build. She soldered sensors, waterproofed the housing, wrote code to process the data. Every day after school she was on the rooftop, calibrating instruments and comparing her readings to the official Japan Meteorological Agency forecasts.
+
+Her data was surprisingly accurate. Within three days, she noticed patterns. The barometric pressure dropping a certain way always predicted **ame** within twelve hours. **Kaze** shifting from south to east meant a storm was forming offshore.
+
+"**Kagaku** is about patterns," she wrote in her project journal. "If you **hakaru** enough data, you can see the future."
+
+She called her system "Yumi-yosoku" — Yumi's Forecast. And it was about to save lives.`,
+      translatedWords: [
+        { word: "tenki", translation: "weather" },
+        { word: "kaze", translation: "wind" },
+        { word: "Sensei", translation: "Teacher" },
+        { word: "Okujou ni tenki kansoku sochi wo tsukuritai desu", translation: "I want to build a weather observation device on the rooftop" },
+        { word: "hakaru", translation: "to measure" },
+        { word: "Ame", translation: "Rain" },
+        { word: "jikken", translation: "experiment" },
+        { word: "ame", translation: "rain" },
+        { word: "Kagaku", translation: "Science" },
+        { word: "yosoku", translation: "forecast/prediction" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Typhoon Warning",
+      content: `It was a Tuesday morning when Yumi's weather station data made her blood run cold. She was checking the overnight readings before class, and the numbers were screaming.
+
+Barometric pressure: dropping fast — faster than she'd ever seen. **Kaze** direction: shifting rapidly from south to east to northeast. Humidity: 98%. Temperature: rising when it should be falling.
+
+Every pattern she'd learned pointed to one thing: **taifuu**. A typhoon was coming. And it was coming fast.
+
+The Japan Meteorological Agency hadn't issued a warning yet. Their nearest station was fifty kilometers away. But Yumi's rooftop sensors were right here, right now, and the data was clear.
+
+"**Kiken desu!**" she said, bursting into Mr. Tanaka's classroom. It's dangerous! "**Taifuu ga kimasu!**" A typhoon is coming!
+
+Mr. Tanaka looked at her data on the laptop screen. His face went serious.
+
+"How confident are you in these readings?"
+
+"I've been calibrating for three weeks. My **yosoku** has been accurate within two hours every time. This **taifuu** will hit by this afternoon."
+
+Mr. Tanaka made a phone call. Then another. Within thirty minutes, the school principal had contacted the local emergency services. By noon — four hours before the JMA issued their own warning — the community was preparing. Shops were boarding up. Families were moving to higher ground. The fishing boats were secured.
+
+**Taifuu** Nana-go hit at 4:47 PM. **Kaze** speeds of 150 kilometers per hour. **Ame** so heavy you couldn't see across the street. It was the worst storm in ten years.
+
+But because of Yumi's early **yosoku**, everyone was safe. No injuries. No casualties. The community had four extra hours of preparation — and those hours made all the difference.
+
+The next day, the mayor came to the school. He shook Yumi's hand in front of the whole student body.
+
+"**Anata no kagaku ga minna wo tasukemashita,**" he said. Your science saved everyone.
+
+Yumi looked at her weather station on the rooftop — her sensors, her code, her **jikken** that had become something real.
+
+"**Kagaku wa chikara desu,**" she said. Science is power. "If you **hakaru** carefully, and you pay attention, you can **tasukeru** people. That's what science is for."
+
+The **kiken** had been real. But **kagaku** had been stronger.`,
+      translatedWords: [
+        { word: "kaze", translation: "wind" },
+        { word: "taifuu", translation: "typhoon" },
+        { word: "Kiken desu!", translation: "It's dangerous!" },
+        { word: "Taifuu ga kimasu!", translation: "A typhoon is coming!" },
+        { word: "yosoku", translation: "forecast/prediction" },
+        { word: "Ame", translation: "Rain" },
+        { word: "Anata no kagaku ga minna wo tasukemashita", translation: "Your science saved everyone" },
+        { word: "Kagaku wa chikara desu", translation: "Science is power" },
+        { word: "hakaru", translation: "to measure" },
+        { word: "tasukeru", translation: "to help/save" },
+        { word: "kiken", translation: "danger" },
+        { word: "kagaku", translation: "science" },
+        { word: "jikken", translation: "experiment" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Yumi wa itsumo tenki ni miryou sarete imashita. Kagaku fair no tame ni, gakkou no okujou ni honmono no tenki kansokusho wo tsukuru koto ni shimashita.
+
+"Sensei, okujou ni tenki kansoku sochi wo tsukuritai desu."
+
+"Nani wo hakaru no?"
+
+"Zenbu. Ondo. Shitsudo. Kaze no sokudo. Ame no ryou."
+
+Jikken wa ni-shuukan kakarimashita. Mainichi houkago, sensa wo chousei shimashita.
+
+"Kagaku wa pataan desu. Juubun ni hakaru to, mirai ga miemasu."
+
+Kayoubi no asa, deeta ga kanojo wo furuewasemashita. Kiatsuga kyuugeki ni sagatte imashita. Kaze no houkou ga kawatte imashita.
+
+Subete no pataan ga hitotsu no koto wo sashite imashita: taifuu.
+
+"Kiken desu! Taifuu ga kimasu!"
+
+Tanaka-sensei wa kanojo no deeta wo mimashita. Denwa wo shimashita.
+
+Sanjuppun inai ni, chiiki shakai wa junbi wo hajimemashita. JMA ga keikoku wo dasu yojikan mae ni.
+
+Taifuu nana-gou wa gogo yoji yonjuunana-fun ni totsunyuu shimashita. Kaze wa jisoku hyaku gojuk kiro. Ame ga hidokute, toori no mukou ga mienai hodo.
+
+Shikashi, Yumi no hayai yosoku no okage de, minna anzen deshita.
+
+Shichou ga gakkou ni kimashita. "Anata no kagaku ga minna wo tasukemashita."
+
+"Kagaku wa chikara desu. Chuui bukaku hakaru to, hito wo tasukeru koto ga dekimasu."
+
+Kiken wa hontou deshita. Shikashi kagaku wa motto tsuyokatta.`,
+  quiz: [
+    { id: "kag-fb1", type: "fill-blank", question: "Yumi's station predicted a __________ (typhoon) was coming.", answer: "taifuu" },
+    { id: "kag-fb2", type: "fill-blank", question: "She could __________ (measure) wind speed and rain.", answer: "hakaru" },
+    { id: "kag-fb3", type: "fill-blank", question: "The __________ (wind) shifted direction rapidly.", answer: "kaze" },
+    { id: "kag-fb4", type: "fill-blank", question: "Her science helped __________ (save) the community.", answer: "tasukeru" },
+    { id: "kag-mc1", type: "multiple-choice", question: "What does 'kagaku' mean?", answer: "science", options: ["school", "science", "sky", "storm"] },
+    { id: "kag-mc2", type: "multiple-choice", question: "What does 'tenki' mean?", answer: "weather", options: ["time", "weather", "temple", "train"] },
+    { id: "kag-mc3", type: "multiple-choice", question: "What does 'kiken' mean?", answer: "danger", options: ["kitchen", "ticket", "danger", "machine"] },
+    { id: "kag-mc4", type: "multiple-choice", question: "What does 'yosoku' mean?", answer: "prediction/forecast", options: ["yesterday", "prediction/forecast", "youth", "yoga"] },
+    { id: "kag-tr1", type: "translate", question: "Translate to English: 'ame'", answer: "rain" },
+    { id: "kag-tr2", type: "translate", question: "How do you say 'experiment' in Japanese romaji?", answer: "jikken" },
+    { id: "kag-tr3", type: "translate", question: "Translate to English: 'taifuu'", answer: "typhoon" },
+    { id: "kag-tr4", type: "translate", question: "How do you say 'to measure' in Japanese romaji?", answer: "hakaru" }
+  ]
+};
+
+// ============================================================
+// 💪 SELF-HELP — "Kokoro no Tsuyosa" (Strength of Heart)
+// ============================================================
+
+export const kokoroNoTsuyosaEpisode: Episode = {
+  id: "kokoro-no-tsuyosa",
+  title: "Kokoro no Tsuyosa",
+  description: "A shy boy finds inner strength through martial arts and learns that true power is self-control",
+  vocab: [
+    { word: "kokoro", pronunciation: "koh-KOH-roh", english: "heart/mind" },
+    { word: "tsuyosa", pronunciation: "TSOO-yoh-sah", english: "strength" },
+    { word: "osore", pronunciation: "oh-SOH-reh", english: "fear" },
+    { word: "ganbaru", pronunciation: "gahn-BAH-roo", english: "to do one's best/persevere" },
+    { word: "shinjiru", pronunciation: "shin-JEE-roo", english: "to believe" },
+    { word: "renshuu", pronunciation: "REN-shoo", english: "practice/training" },
+    { word: "shippai", pronunciation: "SHIP-pai", english: "failure" },
+    { word: "seichou", pronunciation: "SAY-choh", english: "growth" },
+    { word: "jishin", pronunciation: "JEE-shin", english: "self-confidence" },
+    { word: "akiramenai", pronunciation: "ah-kee-rah-meh-NAI", english: "don't give up" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The First Class",
+      content: `Ren was the quietest kid in his class. Not shy, exactly — more like invisible. He sat in the back row, spoke only when called on, and ate lunch alone in the library. He wasn't bullied. He was just... overlooked.
+
+His mother signed him up for karate without asking. "You need to get out of your head," she said, handing him a white gi still in its plastic wrapper.
+
+The dojo was terrifying. Fourteen kids in white uniforms, shouting in unison, punching air with precision. **Sensei** Hayashi stood at the front — sixty years old, barely five feet tall, and radiating a calm authority that filled the room.
+
+"**Hajimemashite,**" Ren squeaked when introduced. Nice to meet you. His voice was barely audible.
+
+**Sensei** Hayashi looked at him for a long moment. "**Osore** is normal," she said quietly so only he could hear. Fear is normal. "**Demo, osore wa teki janai. Osore wa sensei desu.**" But fear is not the enemy. Fear is a teacher.
+
+The first class was humbling. Ren couldn't do a proper punch. His stance was wrong. His balance was off. Every other kid seemed natural, fluid. He felt like a broken robot.
+
+After class, he wanted to quit. He sat on the bench outside the dojo and stared at his shoes.
+
+**Sensei** Hayashi sat down next to him. "**Shippai** is not the end," she said. Failure is not the end. "**Shippai** is the beginning. Every master started exactly where you are now. The only difference is they chose to **ganbaru** — to keep going."
+
+"But I'm terrible," Ren said.
+
+"Of course you are. It's your first day. **Renshuu** — practice — is how you grow. **Seichou** comes from **shippai**, not from perfection."
+
+Ren looked at the dojo door. Inside, the next class was starting. More kids. More shouting.
+
+"**Akiramenai,**" **Sensei** said simply. Don't give up.
+
+Ren didn't quit. He came back the next day. And the next.`,
+      translatedWords: [
+        { word: "Sensei", translation: "Teacher/Master" },
+        { word: "Hajimemashite", translation: "Nice to meet you" },
+        { word: "Osore", translation: "Fear" },
+        { word: "Demo, osore wa teki janai. Osore wa sensei desu.", translation: "But fear is not the enemy. Fear is a teacher." },
+        { word: "Shippai", translation: "Failure" },
+        { word: "ganbaru", translation: "to keep going/persevere" },
+        { word: "Renshuu", translation: "Practice/Training" },
+        { word: "Seichou", translation: "Growth" },
+        { word: "shippai", translation: "failure" },
+        { word: "Akiramenai", translation: "Don't give up" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — The Tournament",
+      content: `Three months of **renshuu** changed Ren. Not overnight — slowly, like sunrise. His punches got sharper. His stances got lower and more stable. He learned to breathe through the hard parts — to find **kokoro** no **tsuyosa** when his body wanted to stop.
+
+But the biggest change wasn't physical. It was inside. **Jishin** — self-confidence — was growing like a small flame that got steadier each week.
+
+Then **Sensei** Hayashi announced the junior regional tournament.
+
+The **osore** came rushing back. A tournament? In front of people? Against kids who'd been training for years?
+
+"**Muri desu,**" Ren said. It's impossible.
+
+"**Muri janai,**" **Sensei** replied. It's not impossible. "You have trained. You have **ganbatta** — persevered through every class. The tournament is not about winning. It's about showing your **kokoro**."
+
+Ren entered the tournament. His first opponent was bigger. Faster. More experienced. The match lasted forty-five seconds. Ren lost.
+
+He sat in the corner, embarrassed and frustrated. **Shippai** again.
+
+**Sensei** Hayashi found him. "Did you give up during the match?"
+
+"No."
+
+"Did you try your best?"
+
+"Yes."
+
+"Then it was not **shippai**. It was **seichou**. You stood in front of a stronger opponent and you fought. Three months ago, you couldn't stand in front of this class without shaking. Today you fought in a tournament. Do you understand how far you've come?"
+
+Ren thought about it. Three months ago he ate lunch alone in the library. Today he had stepped onto a mat and faced an opponent. He had lost the match — but he had won something bigger.
+
+"**Kokoro no tsuyosa,**" he said. Strength of heart.
+
+**Sensei** nodded. "**Sou desu.** You now understand. **Jishin** is not about being the best. It's about **shinjiru** — believing in yourself even when things are hard. It's about **ganbaru** when you want to quit. And it's about knowing that **shippai** is just another step toward **seichou**."
+
+Ren stood up. He bowed to his **sensei**. And he went back out to watch the rest of the tournament — not as a loser, but as someone who had discovered something far more valuable than a trophy.
+
+**Kokoro no tsuyosa.** Strength of heart. And he would **akiramenai** — never give up.`,
+      translatedWords: [
+        { word: "renshuu", translation: "practice/training" },
+        { word: "kokoro", translation: "heart/mind" },
+        { word: "tsuyosa", translation: "strength" },
+        { word: "Jishin", translation: "Self-confidence" },
+        { word: "osore", translation: "fear" },
+        { word: "Muri desu", translation: "It's impossible" },
+        { word: "Muri janai", translation: "It's not impossible" },
+        { word: "ganbatta", translation: "persevered" },
+        { word: "Shippai", translation: "Failure" },
+        { word: "seichou", translation: "growth" },
+        { word: "Kokoro no tsuyosa", translation: "Strength of heart" },
+        { word: "Sou desu", translation: "That's right" },
+        { word: "shinjiru", translation: "to believe" },
+        { word: "ganbaru", translation: "to persevere" },
+        { word: "akiramenai", translation: "never give up" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Ren wa kurasu de ichiban shizuka na ko deshita. Okaasan ga karate ni mousikonde kuremashita.
+
+Doujou wa kowakatta. Sensei Hayashi wa iimashita: "Osore wa futsuu desu. Demo, osore wa teki janai. Osore wa sensei desu."
+
+Saisho no kurasu wa muzukashikatta. Ren wa tekitou na panchi mo dekinakatta.
+
+"Shippai wa owari janai. Shippai wa hajimari. Renshuu ga seichou wo motarasu."
+
+"Akiramenai."
+
+Ren wa yamemashita ga — tsugi no hi mo kimashita.
+
+Sankagetsu no renshuu ga Ren wo kaemashita. Panchi ga surudoku narimashita. Jishin ga sodatte imashita.
+
+Soshite sensei ga junio chihou taikai wo happyou shimashita.
+
+"Muri desu."
+
+"Muri janai. Ganbatta. Taikai wa kokoro wo miseru koto."
+
+Ren wa saisho no shiai de makemashita.
+
+"Akiramemashita ka?" "Iie."
+
+"Besuto wo tsukushimashita ka?" "Hai."
+
+"Sore wa shippai janai. Sore wa seichou. Sankagetsu mae, kurasu no mae ni tatsu koto mo dekinakatta. Kyou wa taikai de tatakatta."
+
+"Kokoro no tsuyosa."
+
+"Sou desu. Jishin wa ichiban ni naru koto janai. Shinjiru koto — muzukashii toki demo. Ganbaru koto. Shippai wa seichou e no ippo ni suginai."
+
+Ren wa tachiagarimashita. Sensei ni ojigi shimashita. Soshite taikai no nokori wo mi ni ikimashita — makenin to shite dewa naku, taisetsu na mono wo mitsuketa hito to shite.
+
+Kokoro no tsuyosa. Soshite akiramenai.`,
+  quiz: [
+    { id: "kok-fb1", type: "fill-blank", question: "Ren discovered __________ (strength) of heart through karate.", answer: "tsuyosa" },
+    { id: "kok-fb2", type: "fill-blank", question: "He had to overcome his __________ (fear) of the tournament.", answer: "osore" },
+    { id: "kok-fb3", type: "fill-blank", question: "__________ (failure) is the beginning, not the end.", answer: "shippai" },
+    { id: "kok-fb4", type: "fill-blank", question: "Sensei told him to __________ (not give up).", answer: "akiramenai" },
+    { id: "kok-mc1", type: "multiple-choice", question: "What does 'kokoro' mean?", answer: "heart/mind", options: ["color", "heart/mind", "cold", "corner"] },
+    { id: "kok-mc2", type: "multiple-choice", question: "What does 'ganbaru' mean?", answer: "to persevere/do one's best", options: ["to gamble", "to gather", "to persevere/do one's best", "to garden"] },
+    { id: "kok-mc3", type: "multiple-choice", question: "What does 'renshuu' mean?", answer: "practice/training", options: ["rental", "practice/training", "restaurant", "rescue"] },
+    { id: "kok-mc4", type: "multiple-choice", question: "What does 'jishin' mean?", answer: "self-confidence", options: ["earthquake", "self-confidence", "dictionary", "genius"] },
+    { id: "kok-tr1", type: "translate", question: "Translate to English: 'seichou'", answer: "growth" },
+    { id: "kok-tr2", type: "translate", question: "How do you say 'to believe' in Japanese romaji?", answer: "shinjiru" },
+    { id: "kok-tr3", type: "translate", question: "Translate to English: 'osore'", answer: "fear" },
+    { id: "kok-tr4", type: "translate", question: "How do you say 'strength' in Japanese romaji?", answer: "tsuyosa" }
+  ]
+};
+
+// ============================================================
+// 🏔️ ADVENTURE — "Fuji-san no Bouken" (Mt. Fuji Adventure)
+// ============================================================
+
+export const fujisanNoBoukenEpisode: Episode = {
+  id: "fuji-san-no-bouken",
+  title: "Fuji-san no Bouken",
+  description: "Two friends climb Mt. Fuji overnight to see the legendary sunrise from the summit",
+  vocab: [
+    { word: "yama", pronunciation: "YAH-mah", english: "mountain" },
+    { word: "choujou", pronunciation: "CHOH-joh", english: "summit/peak" },
+    { word: "hinode", pronunciation: "hee-NOH-deh", english: "sunrise" },
+    { word: "noboru", pronunciation: "noh-BOH-roo", english: "to climb" },
+    { word: "michi", pronunciation: "MEE-chee", english: "path/road" },
+    { word: "kurai", pronunciation: "koo-RAI", english: "dark" },
+    { word: "samui", pronunciation: "SAH-moo-ee", english: "cold" },
+    { word: "tsuku", pronunciation: "TSOO-koo", english: "to arrive" },
+    { word: "keshiki", pronunciation: "keh-SHEE-kee", english: "scenery/view" },
+    { word: "tomodachi", pronunciation: "toh-moh-DAH-chee", english: "friend" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Night Climb",
+      content: `They started climbing at midnight. Haru and his best **tomodachi** Sora stood at the Yoshida Trail fifth station, headlamps on, backpacks full of water and rice balls. Above them, **Fuji-san** disappeared into the darkness — the most famous **yama** in Japan, 3,776 meters of volcanic rock reaching toward the stars.
+
+"**Noboru yo!**" Sora said, grinning in the dark. Let's climb!
+
+**Michi** was a zigzag trail of volcanic gravel. Their headlamps cut narrow cones through the **kurai** night. Dozens of other climbers moved in a slow line ahead — tiny lights bobbing up the mountainside like fireflies.
+
+The air was already **samui** at 2,300 meters. By the time they reached the sixth station, Haru's fingers were numb inside his gloves.
+
+"**Samui ne,**" Sora said, breath making white clouds. It's cold, huh?
+
+"**Samui kedo, ganbaru,**" Haru replied. Cold, but I'll persevere.
+
+They climbed through station after station. Seventh. Eighth. Each one offered a bench, a vending machine with hot canned coffee, and a view of the lights of cities below — tiny golden clusters in the **kurai** darkness.
+
+**Michi** got steeper. The gravel turned to rock. Haru's legs burned. His lungs ached in the thin air. Each step took twice the effort of the one before.
+
+"**Choujou** is still two hours away," Sora said, checking the trail marker.
+
+Two hours. Haru looked up. He couldn't see **choujou** — just **kurai** rock and stars. But somewhere up there, above the clouds, the summit waited. And beyond it, **hinode**. The sunrise from the top of Japan.
+
+"**Ikimashou,**" Haru said. Let's go.`,
+      translatedWords: [
+        { word: "tomodachi", translation: "friend" },
+        { word: "yama", translation: "mountain" },
+        { word: "Noboru yo!", translation: "Let's climb!" },
+        { word: "Michi", translation: "Path" },
+        { word: "kurai", translation: "dark" },
+        { word: "samui", translation: "cold" },
+        { word: "Samui ne", translation: "It's cold, huh" },
+        { word: "Samui kedo, ganbaru", translation: "Cold, but I'll persevere" },
+        { word: "Choujou", translation: "Summit" },
+        { word: "hinode", translation: "sunrise" },
+        { word: "Ikimashou", translation: "Let's go" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Sunrise at the Summit",
+      content: `The final section was brutal. The trail turned into a scramble over volcanic boulders. Haru pulled himself up hand over hand, boots slipping on loose rock. **Michi** wasn't really a path anymore — it was just up.
+
+The **samui** was intense. Wind cut through every layer of clothing. Haru couldn't feel his face. But he could see other climbers' headlamps above, clustering at what had to be **choujou**.
+
+"**Mou sugu da!**" Sora shouted over the wind. Almost there!
+
+One more boulder. One more step. And then — flat ground. The crater rim of **Fuji-san**. They had **tsuita**. They had arrived.
+
+It was 4:47 AM. The eastern sky was changing color — deep black fading to navy, navy to dark purple, purple to the first hint of orange. **Hinode** was coming.
+
+Hundreds of climbers stood shoulder to shoulder on **choujou**, all facing east. Everyone was **samui**. Everyone was exhausted. And everyone was smiling.
+
+"**Mite!**" Sora pointed. Look!
+
+The sun broke the horizon.
+
+**Hinode** from the top of **Fuji-san** was unlike anything Haru had ever experienced. The light exploded — gold and orange and pink flooding across a sea of clouds below them. They were ABOVE the clouds. The entire world was beneath their feet. Other mountain peaks poked through the cloud sea like islands. The sky went from orange to gold to brilliant blue in minutes.
+
+"**Keshiki** ga sugoi..." Haru whispered, tears in his eyes from the wind and the beauty and the exhaustion and the joy. The view is amazing...
+
+"**Keshiki** ga saikou da,**" Sora agreed. The view is the best.
+
+They stood there for twenty minutes, watching the light change. Haru took a photo, then put his phone away. Like his father always said — some **keshiki** you have to keep in your **kokoro**, not your camera.
+
+The descent took five hours. By the time they reached the bottom, Haru's knees were jelly and his feet were blistered. But he was grinning.
+
+"**Yatta!**" he said. We did it! "We **nobotta** Fuji-san!"
+
+"**Tomodachi** to issho ni," Sora said, bumping his shoulder. Together with a friend.
+
+Haru looked back up at the **yama** — now lit by full morning sun, perfect and white against the blue sky. He had climbed through **kurai** night and **samui** wind to reach **choujou**. And the **keshiki** at **hinode** had been worth every single step.`,
+      translatedWords: [
+        { word: "Michi", translation: "Path" },
+        { word: "samui", translation: "cold" },
+        { word: "choujou", translation: "summit" },
+        { word: "Mou sugu da!", translation: "Almost there!" },
+        { word: "tsuita", translation: "arrived" },
+        { word: "Hinode", translation: "Sunrise" },
+        { word: "Mite!", translation: "Look!" },
+        { word: "Keshiki ga sugoi", translation: "The view is amazing" },
+        { word: "Keshiki ga saikou da", translation: "The view is the best" },
+        { word: "keshiki", translation: "scenery/view" },
+        { word: "kokoro", translation: "heart" },
+        { word: "Yatta!", translation: "We did it!" },
+        { word: "nobotta", translation: "climbed" },
+        { word: "Tomodachi to issho ni", translation: "Together with a friend" },
+        { word: "yama", translation: "mountain" },
+        { word: "kurai", translation: "dark" },
+        { word: "hinode", translation: "sunrise" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Karera wa mayonaka ni nobori hajimemashita. Haru to shin'yuu no Sora wa Yoshida-guchi gogougome ni tatte imashita.
+
+"Noboru yo!"
+
+Michi wa kazangan no jari no jiguzagu deshita. Kurai yoru no naka, heddoranpu ga hosoi hikari wo terasimashita.
+
+Kuuki wa sudeni samukatta. "Samui ne." "Samui kedo, ganbaru."
+
+Eki goto ni nobotte ikimashita. Nanagougme. Hachigougme. Michi wa motto kyuu ni narimashita.
+
+"Choujou wa mada ni-jikan."
+
+Kurai iwa to hoshi shika mienakatta. Demo doko ka ue ni choujou ga matte ita. Soshite hinode.
+
+"Ikimashou."
+
+Saigo no sekushon wa totemo taihen deshita. Michi wa mohaya michi dewa nakatta.
+
+"Mou sugu da!"
+
+Soshite — taira na jimen. Fuji-san no kureeta no fuchi. Tsuita.
+
+Gozen yoji yonjuu-nana-fun. Higashi no sora ga iro wo kaete ita. Hinode ga kuru.
+
+Hyaku-nin no tozansha ga choujou ni narandeita.
+
+"Mite!"
+
+Taiyou ga suiheisen wo yaburimashita. Hinode wa kin to orenji to pinku no hikari ga kumo no umi wo ooimashita. Karera wa kumo no ue ni ita.
+
+"Keshiki ga sugoi..."
+
+"Keshiki ga saikou da."
+
+Nijuppun-kan tatte, hikari no henka wo mimashita.
+
+Gezan wa gojikan kakarimashita.
+
+"Yatta! Fuji-san wo nobotta!"
+
+"Tomodachi to issho ni."
+
+Haru wa yama wo furikaeri mimashita. Kurai yoru to samui kaze wo koete choujou ni tsukimashita. Hinode no keshiki wa subete no ippo ni atai shimashita.`,
+  quiz: [
+    { id: "fuj-fb1", type: "fill-blank", question: "They climbed through the __________ (dark) night.", answer: "kurai" },
+    { id: "fuj-fb2", type: "fill-blank", question: "They reached the __________ (summit) at 4:47 AM.", answer: "choujou" },
+    { id: "fuj-fb3", type: "fill-blank", question: "The __________ (sunrise) from Fuji was incredible.", answer: "hinode" },
+    { id: "fuj-fb4", type: "fill-blank", question: "The __________ (scenery/view) was the best.", answer: "keshiki" },
+    { id: "fuj-mc1", type: "multiple-choice", question: "What does 'noboru' mean?", answer: "to climb", options: ["to notice", "to climb", "to nod", "to nominate"] },
+    { id: "fuj-mc2", type: "multiple-choice", question: "What does 'samui' mean?", answer: "cold", options: ["sad", "same", "cold", "salty"] },
+    { id: "fuj-mc3", type: "multiple-choice", question: "What does 'michi' mean?", answer: "path/road", options: ["match", "path/road", "much", "machine"] },
+    { id: "fuj-mc4", type: "multiple-choice", question: "What does 'tomodachi' mean?", answer: "friend", options: ["tomorrow", "together", "friend", "tomato"] },
+    { id: "fuj-tr1", type: "translate", question: "Translate to English: 'yama'", answer: "mountain" },
+    { id: "fuj-tr2", type: "translate", question: "How do you say 'to arrive' in Japanese romaji?", answer: "tsuku" },
+    { id: "fuj-tr3", type: "translate", question: "Translate to English: 'hinode'", answer: "sunrise" },
+    { id: "fuj-tr4", type: "translate", question: "How do you say 'cold' in Japanese romaji?", answer: "samui" }
+  ]
+};
+
+// ============================================================
+// 🔍 MYSTERY — "Kyoto no Nazo" (The Kyoto Mystery)
+// ============================================================
+
+export const kyotoNoNazoEpisode: Episode = {
+  id: "kyoto-no-nazo",
+  title: "Kyoto no Nazo",
+  description: "When temple artifacts go missing in Kyoto, two kids follow ancient clues to uncover the truth",
+  vocab: [
+    { word: "nazo", pronunciation: "NAH-zoh", english: "mystery/riddle" },
+    { word: "tera", pronunciation: "TEH-rah", english: "temple" },
+    { word: "hinto", pronunciation: "HIN-toh", english: "hint/clue" },
+    { word: "sagasu", pronunciation: "sah-GAH-soo", english: "to search" },
+    { word: "kakusu", pronunciation: "kah-KOO-soo", english: "to hide" },
+    { word: "hannin", pronunciation: "HAN-nin", english: "culprit" },
+    { word: "furui", pronunciation: "foo-ROO-ee", english: "old/ancient" },
+    { word: "kagi", pronunciation: "KAH-gee", english: "key" },
+    { word: "shinjitsu", pronunciation: "shin-JIT-soo", english: "truth" },
+    { word: "kaiketsu", pronunciation: "kai-KET-soo", english: "solution" }
+  ],
+  sections: [
+    {
+      id: "part1",
+      title: "Part 1 — The Missing Artifacts",
+      content: `Every autumn, the Golden Pavilion temple in Kyoto displayed its most precious artifacts — silk scrolls, gold-leaf fans, and a five-hundred-year-old tea set that had once belonged to a shogun. Thousands of visitors came to see them.
+
+So when the tea set vanished on the second day of the exhibition, the entire city buzzed with the **nazo**.
+
+Aiko and her cousin Daiki happened to be visiting the **tera** that morning. Aiko was twelve, observant, and never went anywhere without her notebook. Daiki was eleven, fearless, and never went anywhere without his camera.
+
+"**Dare ka ga chawan wo nusumimashita,**" a temple monk was telling the police. Someone stole the tea bowls. The display case was empty — the glass hadn't been broken, but the lock was open. No alarm had triggered.
+
+"How does someone steal from a **tera** without breaking anything?" Aiko murmured.
+
+"With a **kagi**," Daiki said. A key. "They had a **kagi** to the display case."
+
+Aiko was already writing in her notebook. "That means the **hannin** is someone with access. A staff member. A security guard. Or someone who stole a **kagi**."
+
+She looked around the exhibition room. Something caught her eye — on the floor near the case, a small piece of paper. Very old, very thin. She picked it up. On it was a haiku — a poem — written in **furui** Japanese calligraphy.
+
+"**Kore wa hinto da,**" she whispered. This is a clue.
+
+"Where water sleeps beneath the stone, the keeper's gift awaits alone."
+
+Aiko looked at Daiki. "This isn't a modern thief. Someone left a riddle. Let's **sagasu**."`,
+      translatedWords: [
+        { word: "nazo", translation: "mystery/riddle" },
+        { word: "tera", translation: "temple" },
+        { word: "Dare ka ga chawan wo nusumimashita", translation: "Someone stole the tea bowls" },
+        { word: "kagi", translation: "key" },
+        { word: "hannin", translation: "culprit" },
+        { word: "furui", translation: "old/ancient" },
+        { word: "Kore wa hinto da", translation: "This is a clue" },
+        { word: "sagasu", translation: "to search" }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Part 2 — Beneath the Stone",
+      content: `"Where water sleeps beneath the stone." Aiko read the haiku again. She knew this **tera** well — her family visited every year. Water that sleeps...
+
+"The koi pond!" Daiki said. "Behind the pavilion. It's been drained for winter maintenance."
+
+They hurried around the Golden Pavilion to the rock garden at the back. The koi pond was indeed drained — just smooth river stones covering the bottom. But in the center, one stone was different. Larger. Flatter. It had a small carved symbol on its surface — a chrysanthemum.
+
+"**Furui** carving," Aiko said. "This stone has been here for centuries."
+
+Together they lifted it. Underneath: a stone compartment, dry and clean. Inside it — the tea set. All five pieces, wrapped carefully in silk, exactly as they had been in the display case.
+
+"**Mitsuketa!**" Daiki shouted. Found it!
+
+But Aiko was looking at something else. A note, folded beside the tea set. New paper this time. She opened it.
+
+"I am the **hannin**, but I am not a thief. I am the temple's night watchman, Tanaka-san. For thirty years I have guarded these artifacts. Yesterday, I discovered that the new security company was planning to move them to a private collector's vault — sold without the temple's knowledge. I **kakushita** — hid — the tea set in this **furui** place to protect it. Please give this letter to the head priest. The **shinjitsu** must be known."
+
+Aiko and Daiki stared at each other.
+
+"The **hannin** was trying to **mamoru** the artifacts," Aiko said. Protect them. "Not steal them."
+
+They brought the tea set and the letter to the head priest. An investigation followed. Tanaka-san was right — the security company had been secretly arranging a sale. The contract was canceled. The tea set was returned to its rightful place.
+
+The head priest thanked Aiko and Daiki personally. "You **sagashita** — searched — for the **shinjitsu** when everyone else assumed the worst. That is wisdom."
+
+"**Nazo** wa **kaiketsu** shimashita,**" Aiko wrote in her notebook. The mystery is solved.
+
+But the real **kaiketsu** wasn't finding the tea set. It was understanding that sometimes the **hannin** is the hero, and the **shinjitsu** is more complicated than it seems.`,
+      translatedWords: [
+        { word: "tera", translation: "temple" },
+        { word: "Furui", translation: "Old/Ancient" },
+        { word: "Mitsuketa!", translation: "Found it!" },
+        { word: "hannin", translation: "culprit" },
+        { word: "kakushita", translation: "hid" },
+        { word: "furui", translation: "old/ancient" },
+        { word: "shinjitsu", translation: "truth" },
+        { word: "mamoru", translation: "to protect" },
+        { word: "sagashita", translation: "searched" },
+        { word: "Nazo", translation: "Mystery" },
+        { word: "kaiketsu", translation: "solution" }
+      ]
+    }
+  ],
+  fullTargetLanguageStory: `Maiaki, Kinkakuji wa ichiban taisetsu na bijutsuhin wo tenji shimashita. Chawan ga ni-nichi me ni kiemashita. Kyouto zentai ga nazo de mochikirimashita.
+
+Aiko to itoko no Daiki wa sono asa tera ni ite imashita.
+
+"Dare ka ga chawan wo nusumimashita." Tenjikesu wa akete imashita. Garasu wa warete inakatta. Aramu mo naranakatta.
+
+"Kagi ga atta nda," to Daiki. "Hannin wa akusesu dekiru hito."
+
+Aiko wa kesu no chikaku de furui kami wo mitsukemashita. Haiku ga kaite atta.
+
+"Kore wa hinto da."
+
+"Mizu ga ishi no shita de nemuru tokoro, mamoru mono no okurimono ga hitori de matsu."
+
+"Koi no ike! Fuyu no seibi de mizu ga nakunatte iru."
+
+Ike no soko ni, hitotsu no ishi ga chigatte ita. Ookikute taira de, kiku no chokoku ga atta. Furui chokoku.
+
+Ishi wo mochiagemasita. Shita ni — chawan ga atta. Kinu ni tsutsummarete.
+
+"Mitsuketa!"
+
+Tegami ga chawan no soba ni atta.
+
+"Watashi wa hannin desu ga, dorobou dewa arimasen. Watashi wa tera no yaei, Tanaka desu. Sanjuu-nen kan bijutsuhin wo mamotte kimashita. Kinou, atarashii keibi gaisha ga bijutsuhin wo kojin no korekutaa ni urou to shite iru koto wo hakken shimashita. Chawan wo kono furui basho ni kakushimashita. Shinjitsu wo shirasete kudasai."
+
+"Hannin wa bijutsuhin wo mamoru toshite ita."
+
+Chawan to tegami wo juushoku ni todokemashita. Chousa ga okonawaremashita. Tanaka-san wa tadashikatta. Keiyaku wa kaiyaku saremashita.
+
+"Shinjitsu wo sagashimashita."
+
+"Nazo wa kaiketsu shimashita."
+
+Hontou no kaiketsu wa chawan wo mitsukeru koto dewa nakatta. Hannin ga jitsu wa eiyu de aru koto wo rikai suru koto datta.`,
+  quiz: [
+    { id: "kyo-fb1", type: "fill-blank", question: "The missing tea set was a __________ (mystery) for all of Kyoto.", answer: "nazo" },
+    { id: "kyo-fb2", type: "fill-blank", question: "They found a __________ (clue) written as a haiku poem.", answer: "hinto" },
+    { id: "kyo-fb3", type: "fill-blank", question: "The artifacts were __________ (hidden) under a stone.", answer: "kakushita" },
+    { id: "kyo-fb4", type: "fill-blank", question: "The night watchman wanted to protect the __________ (truth).", answer: "shinjitsu" },
+    { id: "kyo-mc1", type: "multiple-choice", question: "What does 'tera' mean?", answer: "temple", options: ["tower", "temple", "tree", "tent"] },
+    { id: "kyo-mc2", type: "multiple-choice", question: "What does 'sagasu' mean?", answer: "to search", options: ["to sit", "to search", "to sing", "to sleep"] },
+    { id: "kyo-mc3", type: "multiple-choice", question: "What does 'furui' mean?", answer: "old/ancient", options: ["full", "funny", "old/ancient", "far"] },
+    { id: "kyo-mc4", type: "multiple-choice", question: "What does 'kagi' mean?", answer: "key", options: ["cage", "key", "king", "kite"] },
+    { id: "kyo-tr1", type: "translate", question: "Translate to English: 'hannin'", answer: "culprit" },
+    { id: "kyo-tr2", type: "translate", question: "How do you say 'solution' in Japanese romaji?", answer: "kaiketsu" },
+    { id: "kyo-tr3", type: "translate", question: "Translate to English: 'nazo'", answer: "mystery/riddle" },
+    { id: "kyo-tr4", type: "translate", question: "How do you say 'to hide' in Japanese romaji?", answer: "kakusu" }
+  ]
+};
+
+// ============================================================
+// NEW SERIES EXPORTS (History, Science, Self-Help, Adventure, Mystery)
+// ============================================================
+
+export const historySeries: Series = {
+  id: 'jp-samurai-no-michi',
+  title: 'Samurai no Michi',
+  description: 'Discover the way of the samurai through an ancient family scroll',
+  category: 'history',
+  language: 'japanese' as any,
+  episodes: [samuraiNoMichiEpisode]
+};
+
+export const scienceSeriesNew: Series = {
+  id: 'jp-kagaku-no-chikara',
+  title: 'Kagaku no Chikara',
+  description: 'A girl builds a weather station and predicts a typhoon that saves her community',
+  category: 'science',
+  language: 'japanese' as any,
+  episodes: [kagakuNoChikaraEpisode]
+};
+
+export const selfHelpSeries: Series = {
+  id: 'jp-kokoro-no-tsuyosa',
+  title: 'Kokoro no Tsuyosa',
+  description: 'A shy boy discovers inner strength through martial arts',
+  category: 'self-help',
+  language: 'japanese' as any,
+  episodes: [kokoroNoTsuyosaEpisode]
+};
+
+export const adventureSeries: Series = {
+  id: 'jp-fuji-san-no-bouken',
+  title: 'Fuji-san no Bouken',
+  description: 'Two friends climb Mt. Fuji overnight to see the legendary summit sunrise',
+  category: 'adventure',
+  language: 'japanese' as any,
+  episodes: [fujisanNoBoukenEpisode]
+};
+
+export const mysterySeries: Series = {
+  id: 'jp-kyoto-no-nazo',
+  title: 'Kyoto no Nazo',
+  description: 'Temple artifacts go missing in Kyoto and two kids follow ancient clues',
+  category: 'mystery',
+  language: 'japanese' as any,
+  episodes: [kyotoNoNazoEpisode]
+};
+
+
 // 📦 ALL SERIES EXPORT
 // ============================================================
 
@@ -1030,4 +1872,9 @@ export const allNewJapaneseSeries: Series[] = [
   techSeries,
   futureSeries,
   creativeSeries,
+  historySeries,
+  scienceSeriesNew,
+  selfHelpSeries,
+  adventureSeries,
+  mysterySeries,
 ];
