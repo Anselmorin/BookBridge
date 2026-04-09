@@ -1865,99 +1865,99 @@ export const mysterySeries: Series = {
 
 
 // ============================================================
-// 💼 BUSINESS — "レモネードのゆめ" (The Lemonade Dream)
+// 💼 BUSINESS — "remoneedo no yume" (The Lemonade Dream)
 // ============================================================
 
 export const lemonadeBusinessEpisode: Episode = {
   id: "remonedo-no-yume",
-  title: "レモネードのゆめ",
+  title: "remoneedo no yume",
   description: "A ten-year-old boy starts a lemonade stand and learns what it takes to run a real business",
   vocab: [
-    { word: "ビジネス", pronunciation: "bi-ji-ne-su", english: "business" },
-    { word: "売る (うる)", pronunciation: "u-ru", english: "to sell" },
-    { word: "お客さん (おきゃくさん)", pronunciation: "o-kya-ku-san", english: "the customer" },
-    { word: "お金 (おかね)", pronunciation: "o-ka-ne", english: "money" },
-    { word: "値段 (ねだん)", pronunciation: "ne-dan", english: "the price" },
-    { word: "利益 (りえき)", pronunciation: "ri-e-ki", english: "the profit" },
-    { word: "貯金する (ちょきんする)", pronunciation: "cho-kin su-ru", english: "to save (money)" },
-    { word: "計画 (けいかく)", pronunciation: "ke-i-ka-ku", english: "the plan" },
-    { word: "目標 (もくひょう)", pronunciation: "mo-ku-hyō", english: "the goal" },
-    { word: "成功 (せいこう)", pronunciation: "se-i-kō", english: "success" }
+    { word: "bijinesu", pronunciation: "bi-ji-ne-su", english: "business" },
+    { word: "uru (uru)", pronunciation: "u-ru", english: "to sell" },
+    { word: "okyakusan (okyakusan)", pronunciation: "o-kya-ku-san", english: "the customer" },
+    { word: "okane (okane)", pronunciation: "o-ka-ne", english: "money" },
+    { word: "nedan", pronunciation: "ne-dan", english: "the price" },
+    { word: "rieki (rieki)", pronunciation: "ri-e-ki", english: "the profit" },
+    { word: "chokin suru", pronunciation: "cho-kin su-ru", english: "to save (money)" },
+    { word: "keikaku", pronunciation: "ke-i-ka-ku", english: "the plan" },
+    { word: "mokuhyou ( mo kuhyou)", pronunciation: "mo-ku-hyō", english: "the goal" },
+    { word: "seikou", pronunciation: "se-i-kō", english: "success" }
   ],
   sections: [
     {
       id: "part1",
       title: "Part 1 — The Big Idea",
-      content: `Haruto stared at the broken skateboard in the hallway. A new one cost four thousand yen — money he definitely didn't have. But Haruto had **計画** (a plan).
+      content: `Haruto stared at the broken skateboard in the hallway. A new one cost four thousand yen — money he definitely didn't have. But Haruto had **keikaku** (a plan).
 
-"I'm going to start **ビジネス**," he announced at dinner. His older sister Yuki nearly dropped her chopsticks.
+"I'm going to start **bijinesu**," he announced at dinner. His older sister Yuki nearly dropped her chopsticks.
 
 "You're ten," she said.
 
-"So? **目標があるんだ。**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "ハルトのレモネード" — Haruto's Lemonade.
+"So? **mokuhyou ga  arunda.**" I have a goal. He held up a drawing of a lemonade stand with a big sign that read "haruto no remoneedo" — Haruto's Lemonade.
 
 His mom smiled. "How much will you charge?"
 
-Haruto had thought about this. "**値段** will be one hundred yen per cup. Lemons cost about twenty yen each. Sugar, water, cups — maybe another thirty yen. That means **利益** is about fifty yen per cup."
+Haruto had thought about this. "**nedan** will be one hundred yen per cup. Lemons cost about twenty yen each. Sugar, water, cups — maybe another thirty yen. That means **rieki** is about fifty yen per cup."
 
 "That's... actually not bad," Yuki admitted.
 
 The next morning, Haruto used his allowance to buy supplies. He set up a small table outside their apartment building with a bright yellow sign. He squeezed lemons until his hands were sore and mixed the lemonade in a big pitcher.
 
-His first **お客さん** was Tanaka-san from the third floor. "**いくらですか？**" How much is it?
+His first **okyakusan** was Tanaka-san from the third floor. "**ikura desuka?**" How much is it?
 
-"**百円です,**" Haruto said proudly. One hundred yen.
+"**hyaku en desu,**" Haruto said proudly. One hundred yen.
 
-Tanaka-san took a sip and smiled. "**おいしい！** Worth every yen."
+Tanaka-san took a sip and smiled. "**oishii!** Worth every yen."
 
-By the end of the day, Haruto had sold twelve cups. He counted **お金** carefully — twelve hundred yen. He subtracted the cost of supplies: four hundred and eighty yen.
+By the end of the day, Haruto had sold twelve cups. He counted **okane** carefully — twelve hundred yen. He subtracted the cost of supplies: four hundred and eighty yen.
 
-"**利益** is seven hundred and twenty yen," he whispered. It wasn't four thousand yen. Not yet. But the **ビジネス** had begun.`,
+"**rieki** is seven hundred and twenty yen," he whispered. It wasn't four thousand yen. Not yet. But the **bijinesu** had begun.`,
       translatedWords: [
-        { word: "計画", translation: "a plan" },
-        { word: "ビジネス", translation: "business" },
-        { word: "目標があるんだ", translation: "I have a goal" },
-        { word: "値段", translation: "The price" },
-        { word: "利益", translation: "the profit" },
-        { word: "お客さん", translation: "customer" },
-        { word: "いくらですか？", translation: "How much is it?" },
-        { word: "百円です", translation: "It's one hundred yen" },
-        { word: "おいしい！", translation: "Delicious!" },
-        { word: "お金", translation: "money" }
+        { word: "keikaku", translation: "a plan" },
+        { word: "bijinesu", translation: "business" },
+        { word: "mokuhyou ga  arunda", translation: "I have a goal" },
+        { word: "nedan", translation: "The price" },
+        { word: "rieki", translation: "the profit" },
+        { word: "okyakusan", translation: "customer" },
+        { word: "ikura desuka?", translation: "How much is it?" },
+        { word: "hyaku en desu", translation: "It's one hundred yen" },
+        { word: "oishii!", translation: "Delicious!" },
+        { word: "okane", translation: "money" }
       ]
     },
     {
       id: "part2",
       title: "Part 2 — Growing Pains",
-      content: `By Friday, word had spread. Haruto was **売っている** (selling) lemonade every afternoon after school, and **お客さんたち** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
+      content: `By Friday, word had spread. Haruto was **urittte iru** (selling) lemonade every afternoon after school, and **okyakusantachi** kept coming. But there was a problem — he was running out of cups before he ran out of customers.
 
-"You need to think bigger," Yuki said, watching him turn people away. "**もっといい計画が必要だよ。**" You need a better plan.
+"You need to think bigger," Yuki said, watching him turn people away. "** mo tt to iikeikaku ga hitsuyoudayo.**" You need a better plan.
 
-Haruto didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk, each cup would cost five yen instead of fifteen. That meant more **利益** per cup.
+Haruto didn't want to admit it, but she was right. That night, he sat at his desk and wrote down numbers. If he bought cups in bulk, each cup would cost five yen instead of fifteen. That meant more **rieki** per cup.
 
 "Mom, can you take me to the big store?" he asked.
 
 She raised an eyebrow. "That's a business expense. Are you sure?"
 
-"**投資だよ,**" Haruto said. It's an investment. He'd heard that word on a TV show about **ビジネス**.
+"**toushidayo,**" Haruto said. It's an investment. He'd heard that word on a TV show about **bijinesu**.
 
-He spent eight hundred yen on two hundred cups and a big bag of sugar. It felt scary spending **お金** to make **お金**, but **計画** made sense on paper.
+He spent eight hundred yen on two hundred cups and a big bag of sugar. It felt scary spending **okane** to make **okane**, but **keikaku** made sense on paper.
 
-On Saturday, he added a new flavor — strawberry — and raised **値段** to one hundred fifty yen. He made a new sign: "二つの味！" Two flavors!
+On Saturday, he added a new flavor — strawberry — and raised **nedan** to one hundred fifty yen. He made a new sign: "nitsu no aji!" Two flavors!
 
 The line stretched down the sidewalk. Kids from school came. Parents came. Even Yuki's friends bought cups and posted photos online.
 
-By Sunday night, Haruto counted everything. He'd sold sixty-eight cups over the weekend. After all costs, **利益** was four thousand two hundred yen.
+By Sunday night, Haruto counted everything. He'd sold sixty-eight cups over the weekend. After all costs, **rieki** was four thousand two hundred yen.
 
-He stared at the money. **目標** was four thousand yen for a skateboard. He'd passed it.
+He stared at the money. **mokuhyou** was four thousand yen for a skateboard. He'd passed it.
 
-"**やった！**" he shouted. I did it! He ran to the living room waving the bills.
+"**yattta!**" he shouted. I did it! He ran to the living room waving the bills.
 
-His mom hugged him. "**すごいね。** But what about the **ビジネス**? Are you going to stop?"
+His mom hugged him. "**sugoine.** But what about the **bijinesu**? Are you going to stop?"
 
 Haruto looked at the money, then at his lemonade supplies still stacked in the kitchen. He'd worked hard. People loved his lemonade. Why stop at one skateboard?
 
-"No," he said, grinning. "This is just the beginning. **成功** is just getting started."
+"No," he said, grinning. "This is just the beginning. **seikou** is just getting started."
 
 Yuki rolled her eyes but smiled. "Fine. But I want ten percent for marketing advice."
 
@@ -1965,135 +1965,135 @@ Yuki rolled her eyes but smiled. "Fine. But I want ten percent for marketing adv
 
 "Deal."
 
-Haruto's **ビジネス** was here to stay.`,
+Haruto's **bijinesu** was here to stay.`,
       translatedWords: [
-        { word: "売っている", translation: "selling" },
-        { word: "お客さんたち", translation: "the customers" },
-        { word: "もっといい計画が必要だよ", translation: "You need a better plan" },
-        { word: "利益", translation: "profit" },
-        { word: "投資だよ", translation: "It's an investment" },
-        { word: "ビジネス", translation: "business" },
-        { word: "お金", translation: "money" },
-        { word: "計画", translation: "the plan" },
-        { word: "値段", translation: "the price" },
-        { word: "目標", translation: "The goal" },
-        { word: "やった！", translation: "I did it!" },
-        { word: "すごいね", translation: "That's amazing" },
-        { word: "成功", translation: "success" }
+        { word: "urittte iru", translation: "selling" },
+        { word: "okyakusantachi", translation: "the customers" },
+        { word: " mo tt to iikeikaku ga hitsuyoudayo", translation: "You need a better plan" },
+        { word: "rieki", translation: "profit" },
+        { word: "toushidayo", translation: "It's an investment" },
+        { word: "bijinesu", translation: "business" },
+        { word: "okane", translation: "money" },
+        { word: "keikaku", translation: "the plan" },
+        { word: "nedan", translation: "the price" },
+        { word: "mokuhyou", translation: "The goal" },
+        { word: "yattta!", translation: "I did it!" },
+        { word: "sugoine", translation: "That's amazing" },
+        { word: "seikou", translation: "success" }
       ]
     }
   ],
-  fullTargetLanguageStory: `ハルトは廊下にある壊れたスケートボードを見つめていた。新しいのは四千円もする。絶対に持っていないお金だ。でもハルトには計画があった。
+  fullTargetLanguageStory: `haruto wa rouka ni  arukowashiretasuke-tobo-do wo mitsumeteita.atarashii no  wa yonsen en mo suru.zettai ni mochitttei naiokaneda. de  mo haruto ni  wa keikaku ga attta.
 
-「ビジネスを始めるよ」と夕食で宣言した。姉のユキは箸を落としそうになった。
+"bijinesu wo hajimeruyo" to yuushoku de sengen shita.ane no yuki wa hashi wo ochi to shiそu ni nattta.
 
-「あんた十歳でしょ」と彼女は言った。
+"antajussai de shiょ" to kareonna wa iittta.
 
-「だから何？目標があるんだ」彼は「ハルトのレモネード」と大きく書かれた看板付きのレモネードスタンドの絵を見せた。
+"da kara nani?mokuhyou ga  arunda"kare wa "haruto no remoneedo" to ookikukakikaretakanban tsukiki no remoneedosutando no e wo miseta.
 
-お母さんは微笑んだ。「いくらにするの？」
+ohahasan wa bishounda."ikura ni suru no ?"
 
-ハルトはこれについて考えていた。「値段は一杯百円。レモンは一個約二十円。砂糖、水、コップで約三十円。つまり利益は一杯あたり約五十円だよ。」
+haruto wa kore ni tsuite考eteita."nedan wa 一杯hyaku en.remon wa 一個約ni十en.satou,mizu,koップ de 約三十en.tsumaririeki wa 一杯atari約五十endayo."
 
-「それは...実は悪くないね」とユキは認めた。
+"そre wa ...実 wa 悪ku naine" to yuki wa 認meta.
 
-翌朝、ハルトはお小遣いで材料を買った。アパートの前に小さなテーブルを置き、明るい黄色の看板を立てた。手が痛くなるまでレモンを絞り、大きなピッチャーでレモネードを作った。
+翌asa,haruto wa o小遣i de zairyou wo 買ttta.aパ-to no 前 ni 小sanate-ブru wo 置ki,明rui黄色 no 看板 wo 立teta.手 ga 痛kunaru made remon wo 絞ri,ookinaピッchiャ- de remoneedo wo 作ttta.
 
-最初のお客さんは三階の田中さんだった。「いくらですか？」
+saisho no okyakusan wa sankai no 田中sandattta."ikura desuka?"
 
-「百円です」とハルトは誇らしげに言った。
+"hyaku en desu" to haruto wa 誇rashige ni iittta.
 
-田中さんは一口飲んで微笑んだ。「おいしい！百円の価値があるね。」
+田中san wa 一口飲n de bishounda."oishii!hyaku en no 価値 ga  arune."
 
-一日の終わりまでに、ハルトは十二杯売った。お金を丁寧に数えた——千二百円。材料費を引いた：四百八十円。
+一日 no 終wari made  ni ,haruto wa 十nihaiurittta.okane wo 丁寧 ni 数eta——千nihyaku en.zairyou費 wo 引ita：四hyaku八十en.
 
-「利益は七百二十円」と彼はつぶやいた。四千円じゃない。まだ。でもビジネスは始まった。
+"rieki wa 七hyakuni十en" to kare wa tsubuyaita.yonsen enjiゃ nai.mada. de  mo bijinesu wa 始mattta.
 
-金曜日までに、噂は広まっていた。ハルトは毎日放課後にレモネードを売っていて、お客さんたちは来続けた。でも問題があった——お客さんがいなくなる前にコップがなくなってしまうのだ。
+金曜日 made  ni ,噂 wa 広mattteita.haruto wa mainichi放課後 ni remoneedo wo urittteite,okyakusantachi wa 来続けta. de  mo mondai ga attta——okyakusan ga inakunaru前 ni koップ ga nakunattteshimau no da.
 
-「もっと大きく考えないと」とユキは人を断る彼を見ながら言った。「もっといい計画が必要だよ。」
+" mo tt to ookiku考e nai to " to yuki wa hito wo 断rukare wo mina ga raiittta." mo tt to iikeikaku ga hitsuyoudayo."
 
-ハルトは認めたくなかったが、彼女は正しかった。その夜、机に座って数字を書いた。まとめ買いすればコップ一個が十五円じゃなくて五円になる。つまり一杯あたりの利益が増える。
+haruto wa 認metakunakattta ga ,kareonna wa 正shikattta.そ no 夜,机 ni 座ttte数字 wo kakiita.ma to me買isurebakoップ一個 ga 十五enjiゃnakute五en ni naru.tsumari一杯atari no rieki ga 増eru.
 
-「お母さん、大きいお店に連れて行ってくれる？」と聞いた。
+"ohahasan,ookiiomise ni 連rete行tttekureru?" to 聞ita.
 
-お母さんは眉を上げた。「それはビジネスの経費よ。いいの？」
+ohahasan wa 眉 wo 上geta."そre wa bijinesu no 経費yo.ii no ?"
 
-「投資だよ」とハルトは言った。
+"toushidayo" to haruto wa iittta.
 
-八百円で二百個のコップと大きな砂糖の袋を買った。お金を使ってお金を稼ぐのは怖かったが、計画は紙の上では理にかなっていた。
+八hyaku en de nihyaku個 no koップ to ookinasatou no 袋 wo 買ttta.okane wo 使ttteokane wo 稼gu no  wa 怖kattta ga ,keikaku wa kami no 上 de  wa 理 ni kanattteita.
 
-土曜日、新しい味——いちご——を追加し、値段を百五十円に上げた。新しい看板を作った：「二つの味！」
+tsuchi曜日,atarashiiaji——ichigo—— wo 追加shi,nedan wo hyaku五十en ni 上geta.atarashii看板 wo 作ttta："nitsu no aji!"
 
-列は歩道に沿って伸びた。学校の子供たちが来た。親たちが来た。ユキの友達まで買って写真をネットに載せた。
+列 wa 歩michi ni 沿ttte伸bita.gakkou no kodomotachi ga 来ta.親tachi ga 来ta.yuki no tomodachi made 買ttte写真 wo neッto ni 載せta.
 
-日曜の夜、ハルトは全部数えた。週末に六十八杯売った。全ての費用の後、利益は四千二百円だった。
+日曜 no 夜,haruto wa zenbu数eta.週末 ni 六十八杯urittta.全te no 費用 no 後,rieki wa 四千nihyaku endattta.
 
-お金を見つめた。目標はスケートボードの四千円。超えていた。
+okane wo mitsumeta.mokuhyou wa suke-tobo-do no yonsen en.超eteita.
 
-「やった！」と叫んだ。お札を振りながらリビングに走った。
+"yattta!" to 叫nda.o札 wo 振rina ga rariビnグ ni hashittta.
 
-お母さんはハルトを抱きしめた。「すごいね。でもビジネスはどうするの？やめるの？」
+ohahasan wa haruto wo 抱kishimeta."sugoine. de  mo bijinesu wa dousuru no ?yameru no ?"
 
-ハルトはお金を見て、それからキッチンにまだ積んであるレモネードの材料を見た。一生懸命働いた。みんなレモネードが大好きだった。なぜスケートボード一つでやめるんだ？
+haruto wa okane wo mite,そre kara kiッchin ni mada積n de  aruremoneedo no zairyou wo mita.一生懸inochi働ita.minnaremoneedo ga oosukidattta.nazesuke-tobo-do一tsu de yamerunda?
 
-「やめない」と彼はにっこり笑って言った。「これはまだ始まりだよ。成功はこれからだ。」
+"yame nai" to kare wa  ni ttkori笑ttteiittta."kore wa mada始maridayo.seikou wa kore kara da."
 
-ユキは目をくるりとさせたが微笑んだ。「わかった。でもマーケティングのアドバイス料として十パーセントもらうからね。」
+yuki wa 目 wo kururi to saせta ga bishounda."wakattta. de  mo ma-keteィnグ no adoバisu料 to shite十パ-sento mo rau kara ne."
 
-「五パーセント」とハルトは返した。
+"五パ-sento" to haruto wa 返 shita.
 
-「それで手を打とう。」
+"そre de 手 wo 打 to u."
 
-ハルトのビジネスはここに留まることになった。`,
+haruto no bijinesu wa koko ni 留maruko to  ni nattta.`,
   quiz: [
     // Fill in the blank (4)
-    { id: "bus-fb1", type: "fill-blank", question: "\"Business\" in Japanese is ___", answer: "ビジネス" },
-    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in Japanese is ___", answer: "お客さん" },
-    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in Japanese is ___", answer: "利益" },
-    { id: "bus-fb4", type: "fill-blank", question: "\"To save money\" in Japanese is ___", answer: "貯金する" },
+    { id: "bus-fb1", type: "fill-blank", question: "\"Business\" in Japanese is ___", answer: "bijinesu" },
+    { id: "bus-fb2", type: "fill-blank", question: "\"The customer\" in Japanese is ___", answer: "okyakusan" },
+    { id: "bus-fb3", type: "fill-blank", question: "\"The profit\" in Japanese is ___", answer: "rieki" },
+    { id: "bus-fb4", type: "fill-blank", question: "\"To save money\" in Japanese is ___", answer: "chokin suru" },
 
     // Multiple choice (4)
     {
       id: "bus-mc1",
       type: "multiple-choice",
-      question: "What does '売る' mean?",
+      question: "What does 'uru' mean?",
       answer: "to sell",
       options: ["to buy", "to sell", "to save", "to spend"]
     },
     {
       id: "bus-mc2",
       type: "multiple-choice",
-      question: "What does '値段' mean?",
+      question: "What does 'nedan' mean?",
       answer: "the price",
       options: ["the value", "the price", "the profit", "the plan"]
     },
     {
       id: "bus-mc3",
       type: "multiple-choice",
-      question: "What does '目標' mean?",
+      question: "What does 'mokuhyou' mean?",
       answer: "the goal",
       options: ["the eye", "the mark", "the goal", "the model"]
     },
     {
       id: "bus-mc4",
       type: "multiple-choice",
-      question: "What does '成功' mean?",
+      question: "What does 'seikou' mean?",
       answer: "success",
       options: ["achievement", "success", "growth", "effort"]
     },
 
     // Translate (4)
-    { id: "bus-tr1", type: "translate", question: "Translate to Japanese: 'money'", answer: "お金" },
-    { id: "bus-tr2", type: "translate", question: "Translate to English: 'ビジネス'", answer: "business" },
-    { id: "bus-tr3", type: "translate", question: "Translate to Japanese: 'the plan'", answer: "計画" },
-    { id: "bus-tr4", type: "translate", question: "Translate to English: '貯金する'", answer: "to save (money)" }
+    { id: "bus-tr1", type: "translate", question: "Translate to Japanese: 'money'", answer: "okane" },
+    { id: "bus-tr2", type: "translate", question: "Translate to English: 'bijinesu'", answer: "business" },
+    { id: "bus-tr3", type: "translate", question: "Translate to Japanese: 'the plan'", answer: "keikaku" },
+    { id: "bus-tr4", type: "translate", question: "Translate to English: 'chokin suru'", answer: "to save (money)" }
   ]
 };
 
 export const businessSeries: Series = {
   id: "remonedo-no-yume",
-  title: "レモネードのゆめ",
+  title: "remoneedo no yume",
   description: "A ten-year-old boy starts a lemonade stand and learns what it takes to run a real business",
   category: "business",
   language: 'japanese' as any,
