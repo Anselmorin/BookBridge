@@ -1,0 +1,534 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { getEpisodeById, getSeriesById } from "../../../stories/data";
+import type { Episode, QuizQuestion, Series } from "../../../stories/data";
+
+// Fuzzy answer checking — strips accents, ignores case, allows close spellings
+function normalize(s: string): string {
+  return s
+    .toLowerCase()
+    .trim()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // strip accents
+    .replace(/[^a-z0-9\s]/g, "");   // strip punctuation
+}
+
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  const dp: number[][] = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+  return dp[m][n];
+}
+
+function isCloseEnough(userAnswer: string, correctAnswer: string): boolean {
+  const normUser = normalize(userAnswer);
+  const normCorrect = normalize(correctAnswer);
+  // Exact match after normalization (handles accents, case)
+  if (normUser === normCorrect) return true;
+  // Allow edit distance based on word length
+  const maxDist = normCorrect.length <= 4 ? 1 : 2;
+  return levenshtein(normUser, normCorrect) <= maxDist;
+}
+
+interface PageProps {
+  params: Promise<{ seriesId: string; episodeId: string }>;
+}
+
+export default function StoryReaderPage(props: PageProps) {
+  const [params, setParams] = useState<{ seriesId: string; episodeId: string } | null>(null);
+  const [episode, setEpisode] = useState<Episode | null>(null);
+  const [series, setSeries] = useState<Series | null>(null);
+  const [vocabExpanded, setVocabExpanded] = useState(false);
+  const [fullStoryExpanded, setFullStoryExpanded] = useState(false);
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [showResult, setShowResult] = useState<Record<string, boolean>>({});
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [score, setScore] = useState(0);
+  const [peekCount, setPeekCount] = useState(0);
+  const [isPeeking, setIsPeeking] = useState(false);
+  const quizRef = useState<HTMLElement | null>(null);
+
+  // Language-specific text
+  const languageConfig = {
+    spanish: {
+      keyWords: "Palabras Clave — Key Words",
+      keyWordsDesc: "Preview the vocabulary you'll encounter",
+      fullStory: "La Historia Completa — En Español",
+      fullStoryDesc: "Read the complete story in Spanish",
+      quiz: "Quiz — ¿Cuánto Aprendiste?",
+      quizDesc: "Test your understanding with interactive questions",
+      testYourLanguage: "Ready to test your Spanish?",
+      translateTo: "Translate to Spanish...",
+      felicidades: "¡Felicidades!"
+    },
+    japanese: {
+      keyWords: "キーワード — Key Words",
+      keyWordsDesc: "Preview the vocabulary you'll encounter",
+      fullStory: "完全な物語 — 日本語で",
+      fullStoryDesc: "Read the complete story in Japanese",
+      quiz: "クイズ — How much did you learn?",
+      quizDesc: "Test your understanding with interactive questions", 
+      testYourLanguage: "Ready to test your Japanese?",
+      translateTo: "Translate to Japanese (romaji okay)...",
+      felicidades: "おめでとう！ (Omedetou!)"
+    },
+    french: {
+      keyWords: "Mots Clés — Key Words",
+      keyWordsDesc: "Preview the vocabulary you'll encounter",
+      fullStory: "L'Histoire Complète — En Français",
+      fullStoryDesc: "Read the complete story in French",
+      quiz: "Quiz — Combien Avez-Vous Appris ?",
+      quizDesc: "Test your understanding with interactive questions",
+      testYourLanguage: "Ready to test your French?",
+      translateTo: "Translate to French...",
+      felicidades: "Félicitations !"
+    }
+  };
+
+  const currentLang = series?.language || 'spanish';
+  const config = languageConfig[currentLang as keyof typeof languageConfig] || languageConfig.spanish;
+
+  useEffect(() => {
+    props.params.then(resolvedParams => {
+      setParams(resolvedParams);
+      const foundSeries = getSeriesById(resolvedParams.seriesId);
+      const foundEpisode = getEpisodeById(resolvedParams.seriesId, resolvedParams.episodeId);
+      setSeries(foundSeries || null);
+      setEpisode(foundEpisode || null);
+    });
+  }, [props.params]);
+
+  // Anti-peek: detect scrolling above quiz section during quiz
+  useEffect(() => {
+    if (!quizStarted || quizCompleted) return;
+
+    const quizEl = document.getElementById("quiz-section");
+    if (!quizEl) return;
+
+    const handleScroll = () => {
+      const quizTop = quizEl.getBoundingClientRect().top;
+      // If quiz section top is below viewport (user scrolled up past it)
+      if (quizTop > window.innerHeight * 0.8) {
+        if (!isPeeking) {
+          setIsPeeking(true);
+          setPeekCount(prev => prev + 1);
+        }
+      } else {
+        setIsPeeking(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [quizStarted, quizCompleted, isPeeking]);
+
+  if (!params || !episode) {
+    return (
+      <div className="min-h-screen bg-[var(--prysm-bg)] text-[var(--prysm-text)] flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-4xl mb-4">📚</div>
+          <h1 className="text-2xl font-bold mb-2">Story Not Found</h1>
+          <p className="text-[var(--prysm-muted)] mb-6">The story you're looking for doesn't exist.</p>
+          <Link 
+            href="/bookbridge" 
+            className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold transition-colors"
+          >
+            Back to Library
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const handleAnswerSubmit = (questionId: string, answer: string) => {
+    const question = episode.quiz.find(q => q.id === questionId);
+    if (!question) return;
+
+    setAnswers(prev => ({ ...prev, [questionId]: answer }));
+    setShowResult(prev => ({ ...prev, [questionId]: true }));
+
+    // Auto-advance after showing result
+    setTimeout(() => {
+      if (currentQuestionIndex < episode.quiz.length - 1) {
+        setCurrentQuestionIndex(prev => prev + 1);
+      } else {
+        // Quiz completed - calculate final score
+        const finalAnswers = { ...answers, [questionId]: answer };
+        const correctCount = episode.quiz.filter(q => {
+          const userAnswer = finalAnswers[q.id] || "";
+          return isCloseEnough(userAnswer, q.answer);
+        }).length;
+        
+        // Deduct points for peeking (1 point per peek, minimum 0)
+        const finalScore = Math.max(0, correctCount - peekCount);
+        setScore(finalScore);
+        setQuizCompleted(true);
+      }
+    }, 1500);
+  };
+
+  const renderWordWithTooltips = (text: string, translatedWords: Array<{ word: string; translation: string }>) => {
+    let result = text;
+    
+    translatedWords.forEach(({ word, translation }) => {
+      const regex = new RegExp(`\\*\\*${word}\\*\\*`, 'gi');
+      result = result.replace(regex, `<span class="spanish-word" data-translation="${translation}">${word}</span>`);
+    });
+    
+    return result;
+  };
+
+  const renderQuestion = (question: QuizQuestion) => {
+    const hasAnswered = showResult[question.id];
+    const userAnswer = answers[question.id];
+    const isCorrect = userAnswer ? isCloseEnough(userAnswer, question.answer) : false;
+
+    return (
+      <div className="bg-[var(--prysm-surface)] border border-[var(--prysm-border)] rounded-xl p-6">
+        <div className="mb-4">
+          <span className="text-sm text-purple-400 font-medium">
+            Question {currentQuestionIndex + 1} of {episode.quiz.length}
+          </span>
+          <h3 className="text-lg font-semibold mt-1">{question.question}</h3>
+        </div>
+
+        {question.type === "fill-blank" && (
+          <div className="space-y-4">
+            <input
+              type="text"
+              placeholder="Type your answer..."
+              className="w-full px-4 py-3 rounded-lg bg-[var(--prysm-bg)] border border-[var(--prysm-border)] text-white placeholder-[var(--prysm-muted)] focus:border-purple-400 focus:outline-none"
+              disabled={hasAnswered}
+              defaultValue={userAnswer || ""}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !hasAnswered) {
+                  handleAnswerSubmit(question.id, e.currentTarget.value);
+                }
+              }}
+            />
+            {!hasAnswered && (
+              <button
+                onClick={(e) => {
+                  const input = e.currentTarget.previousElementSibling as HTMLInputElement;
+                  handleAnswerSubmit(question.id, input.value);
+                }}
+                className="px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
+              >
+                Submit
+              </button>
+            )}
+          </div>
+        )}
+
+        {question.type === "multiple-choice" && (
+          <div className="space-y-3">
+            {question.options?.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => !hasAnswered && handleAnswerSubmit(question.id, option)}
+                disabled={hasAnswered}
+                className={`w-full text-left px-4 py-3 rounded-lg border transition-colors ${
+                  hasAnswered
+                    ? option === question.answer
+                      ? "bg-green-500/20 border-green-400 text-green-300"
+                      : option === userAnswer
+                      ? "bg-red-500/20 border-red-400 text-red-300"
+                      : "bg-[var(--prysm-bg)] border-[var(--prysm-border)] text-[var(--prysm-muted)]"
+                    : "bg-[var(--prysm-bg)] border-[var(--prysm-border)] hover:border-purple-400 text-white"
+                }`}
+              >
+                {String.fromCharCode(97 + index)}) {option}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {question.type === "translate" && (
+          <div className="space-y-4">
+            <input
+              type="text"
+              placeholder="Translate to Spanish..."
+              className="w-full px-4 py-3 rounded-lg bg-[var(--prysm-bg)] border border-[var(--prysm-border)] text-white placeholder-[var(--prysm-muted)] focus:border-purple-400 focus:outline-none"
+              disabled={hasAnswered}
+              defaultValue={userAnswer || ""}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !hasAnswered) {
+                  handleAnswerSubmit(question.id, e.currentTarget.value);
+                }
+              }}
+            />
+            {!hasAnswered && (
+              <button
+                onClick={(e) => {
+                  const input = e.currentTarget.previousElementSibling as HTMLInputElement;
+                  handleAnswerSubmit(question.id, input.value);
+                }}
+                className="px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
+              >
+                Submit
+              </button>
+            )}
+          </div>
+        )}
+
+        {hasAnswered && (
+          <div className={`mt-4 p-4 rounded-lg ${isCorrect ? "bg-green-500/20 border border-green-400" : "bg-red-500/20 border border-red-400"}`}>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{isCorrect ? "✅" : "❌"}</span>
+              <span className={`font-medium ${isCorrect ? "text-green-300" : "text-red-300"}`}>
+                {isCorrect
+                  ? normalize(userAnswer || "") === normalize(question.answer)
+                    ? "Correct!"
+                    : "Close enough! ✨"
+                  : "Incorrect"}
+              </span>
+            </div>
+            {isCorrect && normalize(userAnswer || "") !== normalize(question.answer) && (
+              <p className="mt-2 text-sm text-gray-300">
+                Exact spelling: <span className="font-semibold text-white">{question.answer}</span>
+              </p>
+            )}
+            {!isCorrect && (
+              <p className="mt-2 text-sm text-gray-300">
+                Correct answer: <span className="font-semibold text-white">{question.answer}</span>
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-[var(--prysm-bg)] text-[var(--prysm-text)]">
+      {/* Header */}
+      <nav className="border-b border-[var(--prysm-border)] px-6 py-4">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <Link 
+            href="/bookbridge" 
+            className="text-sm text-[var(--prysm-muted)] hover:text-white transition-colors flex items-center gap-2"
+          >
+            ← Back to BookBridge
+          </Link>
+          <div className="text-center">
+            <h1 className="text-xl font-bold">{series?.title || "Loading..."}</h1>
+            <p className="text-sm text-[var(--prysm-muted)]">{episode.title}</p>
+          </div>
+          <div className="w-24"></div> {/* Spacer for centering */}
+        </div>
+      </nav>
+
+      <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
+        {/* Vocab Preview */}
+        <section className="bg-[var(--prysm-surface)] border border-[var(--prysm-border)] rounded-xl overflow-hidden">
+          <button
+            onClick={() => setVocabExpanded(!vocabExpanded)}
+            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-purple-500/10 transition-colors"
+          >
+            <div>
+              <h2 className="text-lg font-semibold">{config.keyWords}</h2>
+              <p className="text-sm text-[var(--prysm-muted)]">{config.keyWordsDesc}</p>
+            </div>
+            <span className={`text-xl transition-transform ${vocabExpanded ? "rotate-180" : ""}`}>
+              ▼
+            </span>
+          </button>
+          
+          {vocabExpanded && (
+            <div className="px-6 pb-6">
+              <div className="grid gap-3">
+                {episode.vocab.map((word, index) => (
+                  <div key={index} className="flex justify-between items-center py-2 border-b border-[var(--prysm-border)] last:border-b-0">
+                    <div className="flex-1">
+                      <span className="text-purple-400 font-medium">{word.word}</span>
+                      <span className="text-sm text-[var(--prysm-muted)] ml-2">({word.pronunciation})</span>
+                    </div>
+                    <span className="text-[var(--prysm-text)]">{word.english}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+        {/* Story Sections */}
+        <div className="space-y-6">
+          {episode.sections.map((section) => (
+            <section key={section.id} className="bg-[var(--prysm-surface)] border border-[var(--prysm-border)] rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-4 text-purple-400">{section.title}</h2>
+              <div 
+                className="prose prose-invert max-w-none leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: renderWordWithTooltips(section.content, section.translatedWords)
+                    .replace(/\n\n/g, '</p><p class="mt-4">')
+                    .replace(/^/, '<p>')
+                    .replace(/$/, '</p>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                }}
+              />
+              <style jsx>{`
+                .prose :global(.spanish-word) {
+                  color: #a855f7;
+                  cursor: pointer;
+                  position: relative;
+                  font-weight: 600;
+                }
+                .prose :global(.spanish-word:hover::after) {
+                  content: attr(data-translation);
+                  position: absolute;
+                  bottom: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: #1e1e2e;
+                  border: 1px solid #3b3b4f;
+                  padding: 4px 8px;
+                  border-radius: 6px;
+                  font-size: 14px;
+                  white-space: nowrap;
+                  z-index: 10;
+                  color: #e2e2e8;
+                  font-weight: normal;
+                }
+              `}</style>
+            </section>
+          ))}
+        </div>
+
+        {/* Full Spanish Story */}
+        <section className="bg-[var(--prysm-surface)] border border-[var(--prysm-border)] rounded-xl overflow-hidden">
+          <button
+            onClick={() => setFullStoryExpanded(!fullStoryExpanded)}
+            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-purple-500/10 transition-colors"
+          >
+            <div>
+              <h2 className="text-lg font-semibold">{config.fullStory}</h2>
+              <p className="text-sm text-[var(--prysm-muted)]">{config.fullStoryDesc}</p>
+            </div>
+            <span className={`text-xl transition-transform ${fullStoryExpanded ? "rotate-180" : ""}`}>
+              ▼
+            </span>
+          </button>
+          
+          {fullStoryExpanded && (
+            <div className="px-6 pb-6">
+              <div className="prose prose-invert max-w-none leading-relaxed text-[var(--prysm-text)]">
+                {episode.fullTargetLanguageStory.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="mb-4">{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+        {/* Peek Warning Banner */}
+        {isPeeking && quizStarted && !quizCompleted && (
+          <div className="fixed top-0 left-0 right-0 z-50 bg-red-500/90 text-white text-center py-3 px-6 font-semibold shadow-lg animate-pulse">
+            👀 Peeking detected! -1 point deducted. Scroll back to the quiz!
+          </div>
+        )}
+
+        {/* Interactive Quiz */}
+        <section id="quiz-section" className="bg-[var(--prysm-surface)] border border-[var(--prysm-border)] rounded-xl overflow-hidden">
+          <div className="px-6 py-4 border-b border-[var(--prysm-border)]">
+            <h2 className="text-lg font-semibold">{config.quiz}</h2>
+            <p className="text-sm text-[var(--prysm-muted)]">{config.quizDesc}</p>
+          </div>
+          
+          <div className="p-6">
+            {!quizStarted && !quizCompleted ? (
+              <div className="text-center">
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold mb-2">{config.testYourLanguage}</h3>
+                <p className="text-[var(--prysm-muted)] mb-6">
+                  {episode.quiz.length} questions covering vocabulary, comprehension, and translation.
+                </p>
+                <button
+                  onClick={() => setQuizStarted(true)}
+                  className="px-8 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold transition-colors"
+                >
+                  Start Quiz
+                </button>
+              </div>
+            ) : quizCompleted ? (
+              <div className="text-center">
+                <div className="text-6xl mb-4">🎉</div>
+                <h3 className="text-2xl font-bold mb-2">¡Felicidades!</h3>
+                <p className="text-xl mb-2">
+                  You scored <span className="text-purple-400 font-bold">{score}/{episode.quiz.length}</span>
+                </p>
+                {peekCount > 0 && (
+                  <p className="text-sm text-red-400 mb-2">
+                    👀 {peekCount} peek{peekCount > 1 ? "s" : ""} detected — {peekCount} point{peekCount > 1 ? "s" : ""} deducted
+                  </p>
+                )}
+                <p className="text-[var(--prysm-muted)] mb-6">
+                  {score === episode.quiz.length 
+                    ? "Perfect! You've mastered this episode."
+                    : score >= episode.quiz.length * 0.7
+                    ? "Great work! You're making excellent progress."
+                    : peekCount > 0
+                    ? "Try again without peeking! You'll learn more that way 😉"
+                    : "Good effort! Try reviewing the story again to improve."}
+                </p>
+                <div className="flex gap-4 justify-center">
+                  <button
+                    onClick={() => {
+                      setQuizStarted(false);
+                      setQuizCompleted(false);
+                      setCurrentQuestionIndex(0);
+                      setAnswers({});
+                      setShowResult({});
+                      setScore(0);
+                      setPeekCount(0);
+                      setIsPeeking(false);
+                    }}
+                    className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
+                  >
+                    Retake Quiz
+                  </button>
+                  <Link
+                    href="/bookbridge"
+                    className="px-6 py-3 rounded-lg border border-[var(--prysm-border)] hover:border-purple-400 text-white font-medium transition-colors"
+                  >
+                    Back to Library
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Progress Bar */}
+                <div className="mb-6">
+                  <div className="flex justify-between text-sm text-[var(--prysm-muted)] mb-2">
+                    <span>Progress</span>
+                    <span>{currentQuestionIndex + 1} / {episode.quiz.length}</span>
+                  </div>
+                  <div className="w-full bg-[var(--prysm-bg)] rounded-full h-2">
+                    <div 
+                      className="bg-purple-500 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${((currentQuestionIndex + 1) / episode.quiz.length) * 100}%` }}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Current Question */}
+                {renderQuestion(episode.quiz[currentQuestionIndex])}
+              </div>
+            )}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
