@@ -1916,6 +1916,8 @@ Cette nuit-là, pendant que tout le monde dormait, Inès s'est glissée dans la 
 Inès a apporté la vérité à la guide le lendemain matin, preuves à l'appui. La police est arrivée dans l'heure. Le gardien a avoué — il vendait des pièces en ligne depuis des mois. Le directeur du château a serré la main d'Inès. « Tu as résolu un mystère que nous ne savions même pas que nous avions. » Dans le bus du retour, Théo s'est glissé sur le siège à côté d'elle. « D'accord, détective. C'était vraiment incroyable. » Inès a souri et a ouvert son carnet. Il y avait toujours un autre mystère qui attendait.`
 };
 
+// (Removed duplicate history2/science2/selfHelp2/adventure2/mystery2 episodes — one series per category)
+
 // ============================================================
 // SERIES DEFINITIONS
 // ============================================================

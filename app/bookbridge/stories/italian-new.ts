@@ -2144,6 +2144,42 @@ La verità poteva aspettare fino a quando non aveva finito i compiti. Ma solo ap
 
 // ─── Series objects for new categories ───────────────────────────────────────
 
+export const sportsSeriesItalian = {
+  id: 'la-partita',
+  title: 'La Partita',
+  description: 'Marco dreams of playing for AS Roma — but first he has to survive the biggest tryout of his life',
+  category: 'sports',
+  language: 'italian' as any,
+  episodes: [laPartitaEpisode],
+};
+
+export const techSeriesItalian = {
+  id: 'il-programma',
+  title: 'Il Programma',
+  description: 'A kid discovers coding and builds an app that takes the school by storm',
+  category: 'tech',
+  language: 'italian' as any,
+  episodes: [ilProgrammaEpisode],
+};
+
+export const futureSeriesItalian = {
+  id: 'la-citta-del-futuro',
+  title: 'La Città del Futuro',
+  description: 'Two kids explore a futuristic city where nature and technology are one',
+  category: 'future',
+  language: 'italian' as any,
+  episodes: [laCittaDelFuturoEpisode],
+};
+
+export const creativeSeriesItalian = {
+  id: 'il-capolavoro',
+  title: 'Il Capolavoro',
+  description: 'A young street artist transforms her neighborhood one wall at a time',
+  category: 'creative',
+  language: 'italian' as any,
+  episodes: [ilCapolavoroEpisode],
+};
+
 export const historySeriesItalian = {
   id: 'l-ultimo-gladiatore',
   title: "L'Ultimo Gladiatore",
@@ -2191,6 +2227,10 @@ export const mysterySeriesItalian = {
 
 // ─── All Italian series (for convenience imports) ────────────────────────────
 export const allItalianSeries = [
+  sportsSeriesItalian,
+  techSeriesItalian,
+  futureSeriesItalian,
+  creativeSeriesItalian,
   historySeriesItalian,
   scienceSeriesItalian,
   selfHelpSeriesItalian,
