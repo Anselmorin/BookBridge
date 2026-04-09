@@ -158,15 +158,6 @@ export default function LibraryPage() {
     if (categoryCache[cacheKey]) return;
     if (categorizing === cacheKey) return;
 
-    // First try keyword detection
-    const kwCats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
-    if (kwCats.length > 0) {
-      categoryCache[cacheKey] = kwCats[0];
-      setAiCategories(prev => ({ ...prev, [cacheKey]: kwCats[0] }));
-      return;
-    }
-
-    // Fall back to AI
     setCategorizing(cacheKey);
     try {
       const res = await fetch("/api/categorize", {
@@ -183,11 +174,12 @@ export default function LibraryPage() {
         categoryCache[cacheKey] = data.category;
         setAiCategories(prev => ({ ...prev, [cacheKey]: data.category }));
       } else {
-        // AI not confident — ask user
+        // AI not confident — ask user to pick
         setPickerBook(book);
       }
     } catch {
-      // silently fail
+      // silently fail — just show the picker
+      setPickerBook(book);
     } finally {
       setCategorizing(null);
     }
@@ -207,8 +199,14 @@ export default function LibraryPage() {
       const data = await res.json();
       const docs: OLBook[] = data.docs ?? [];
       setResults(docs);
-      // Auto-categorize first 5 results with AI
-      docs.slice(0, 5).forEach(book => categorizeWithAI(book));
+      // Just run keyword detection upfront, no AI auto-popup
+      docs.forEach(book => {
+        const kwCats = detectCategories(book.subject ?? [], book.title, book.author_name?.[0]);
+        if (kwCats.length > 0) {
+          categoryCache[book.key] = kwCats[0];
+          setAiCategories(prev => ({ ...prev, [book.key]: kwCats[0] }));
+        }
+      });
     } catch {
       setResults([]);
     } finally {
